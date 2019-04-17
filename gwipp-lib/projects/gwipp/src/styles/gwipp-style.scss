@@ -1,2 +1,11 @@
-@import "~node_modules/bootstrap/dist/css/bootstrap.min.css";
-@import "~node_modules/@fortawesome/fontawesome-free/css/all.css";
+$theme-colors: (
+  "primary": #4682B4,
+  "warning": #FFD658,
+  "info": #5654BF
+);
+
+
+@import "~node_modules/bootstrap/scss/bootstrap";
+@import "~node_modules/@fortawesome/fontawesome-free/scss/fontawesome";
+
+@import "navbar/navbar";

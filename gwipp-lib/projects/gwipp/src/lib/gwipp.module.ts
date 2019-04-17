@@ -1,10 +1,8 @@
 import { NgModule } from '@angular/core';
-import { GwippComponent } from './gwipp.component';
 
 @NgModule({
-  declarations: [GwippComponent],
-  imports: [
-  ],
-  exports: [GwippComponent]
+  declarations: [],
+  imports: [],
+  exports: []
 })
 export class GwippModule { }
