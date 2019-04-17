@@ -1,0 +1,27 @@
+@import "~node_modules/bootstrap/scss/functions";
+@import "~node_modules/bootstrap/scss/variables";
+@import "~node_modules/bootstrap/scss/mixins";
+
+@import "../constants/constants";
+
+.gwipp-nav-bar {
+  position: relative;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  color: white;
+  height: $nav-bar-height;
+  background-color: $primary-color;
+
+  &-title {
+    height: 100%;
+    font-weight: bold;
+    font-size: xx-large;
+  }
+
+  &-item {
+    height: 100%;
+    font-weight: bold;
+    font-size: x-large;
+  }
+}

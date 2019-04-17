@@ -27,6 +27,8 @@
               "src/assets"
             ],
             "styles": [
+              "node_modules/bootstrap/dist/css/bootstrap.min.css",
+              "projects/gwipp/src/styles/gwipp-style.scss",
               "src/styles.scss"
             ],
             "scripts": [],
@@ -139,7 +141,7 @@
       "root": "projects/gwipp",
       "sourceRoot": "projects/gwipp/src",
       "projectType": "library",
-      "prefix": "lib",
+      "prefix": "gwipp",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-ng-packagr:build",
