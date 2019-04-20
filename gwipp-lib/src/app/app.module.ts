@@ -2,7 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
-import {IconModule, NavigationModule} from 'gwipp';
+import {ButtonModule, IconModule, NavigationModule} from 'gwipp';
 import {NavAttributesModule} from '../../projects/gwipp/src/lib/navigation/nav-attributes/nav-attributes.module';
 
 @NgModule({
@@ -13,7 +13,8 @@ import {NavAttributesModule} from '../../projects/gwipp/src/lib/navigation/nav-a
     BrowserModule,
     NavigationModule,
     NavAttributesModule,
-    IconModule
+    IconModule,
+    ButtonModule
   ],
   providers: [],
   bootstrap: [AppComponent]

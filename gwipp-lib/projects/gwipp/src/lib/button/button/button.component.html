@@ -1,0 +1,30 @@
+<div class="d-flex flex-column">
+  <button type="button" [class]="buttonStyle" [disabled]="!enabled" (click)="onClick()">
+    <div *ngIf="isWorking(); then working else active" class="font-weight-bold"></div>
+
+    <ng-template #working>
+      <div class="d-flex flex-row align-items-center justify-content-center">
+        <div>
+          <gwipp-icon [icon]="spinnerIcon" [animation]="sinnerAnimation"></gwipp-icon>
+        </div>
+        <div class="ml-1">
+          {{ config.label }}
+        </div>
+      </div>
+    </ng-template>
+
+    <ng-template #active>
+      {{ resolvedLabel() }}
+    </ng-template>
+
+  </button>
+
+  <ng-container *ngIf="hasError()">
+    <div class="mt-1 text-danger">
+      <div class="d-flex flex-row justify-content-end">
+        <gwipp-icon [icon]="errorIcon"></gwipp-icon>
+        <span class="ml-1">An Error Has Occurred</span>
+      </div>
+    </div>
+  </ng-container>
+</div>
