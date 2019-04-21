@@ -1,0 +1,23 @@
+<div class="d-flex flex-column">
+  <button type="button" [class]="buttonStyle" [disabled]="!enabled" (click)="onClick()">
+    <div class="d-flex flex-row align-items-center justify-content-center">
+
+      <ng-container *ngIf="isWorking()">
+        <div class="mr-1">
+          <gwipp-icon [icon]="spinnerIcon" [animation]="sinnerAnimation"></gwipp-icon>
+        </div>
+      </ng-container>
+
+      <ng-container *ngIf="needsConfirmation()">
+        <div class="d-flex flex-row align-items-center mr-1">
+          <input type="checkbox" #input (click)="onConfirm(input.checked)">
+        </div>
+      </ng-container>
+
+      <div>
+        {{ resolvedLabel() }}
+      </div>
+
+    </div>
+  </button>
+</div>
