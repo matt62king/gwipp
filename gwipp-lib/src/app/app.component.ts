@@ -14,4 +14,7 @@ export class AppComponent {
 
   @Button({label: 'Button', buttonType: ButtonType.PRIMARY})
   buttonConfig: ButtonConfiguration;
+
+  @Button({label: 'Confirm Button', buttonType: ButtonType.PRIMARY })
+  confirmConfig: ButtonConfiguration;
 }
