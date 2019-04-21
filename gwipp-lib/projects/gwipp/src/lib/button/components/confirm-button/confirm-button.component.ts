@@ -1,8 +1,8 @@
 import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
-import {ButtonEvent} from '../foundation/event/button-event';
-import {ButtonStyleBuilder} from '../foundation/util/button-style-builder.service';
-import {ButtonMode} from '../foundation/mode/button-mode';
-import {BaseButtonComponent} from '../foundation/base-button/base-button.component';
+import {ButtonEvent} from '../../foundation/event/button-event';
+import {ButtonStyleBuilder} from '../../foundation/util/button-style-builder.service';
+import {ButtonMode} from '../../foundation/mode/button-mode';
+import {BaseButtonComponent} from '../../foundation/base-button/base-button.component';
 
 @Component({
   selector: 'gwipp-confirm-button',

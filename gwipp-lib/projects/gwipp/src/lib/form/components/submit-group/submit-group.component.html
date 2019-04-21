@@ -1,0 +1,6 @@
+<div class="d-flex flex-row justify-content-end align-items-start">
+  <ng-container *ngIf="canCancel">
+    <gwipp-button class="mr-1" [buttonConfig]="cancelConfig" (click)="onCancel($event)"></gwipp-button>
+  </ng-container>
+  <gwipp-button [buttonConfig]="submitConfig" (click)="onSubmit($event)"></gwipp-button>
+</div>
