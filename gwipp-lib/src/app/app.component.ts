@@ -17,4 +17,10 @@ export class AppComponent {
 
   @Button({label: 'Confirm Button', buttonType: ButtonType.PRIMARY })
   confirmConfig: ButtonConfiguration;
+
+  @Button({label: 'Cancel', buttonType: ButtonType.SECONDARY})
+  cancelConfig: ButtonConfiguration;
+
+  @Button({label: 'Submit', buttonType: ButtonType.PRIMARY})
+  submitConfig: ButtonConfiguration;
 }

@@ -1,13 +1,13 @@
 import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
-import {HasButtonMode} from '../foundation/mode/has-button-mode';
-import {ButtonMode} from '../foundation/mode/button-mode';
-import {ButtonConfiguration} from '../foundation/configuation/button-configuration';
-import {ButtonStyleBuilder} from '../foundation/util/button-style-builder.service';
-import {ButtonEvent} from '../foundation/event/button-event';
-import {IconNames} from '../../icon/icon/constants/icon-names';
-import {IconAnimation} from '../../icon/icon/constants/icon-animation';
-import {ButtonType} from '../foundation/type/button-type';
-import {BaseButtonComponent} from '../foundation/base-button/base-button.component';
+import {HasButtonMode} from '../../foundation/mode/has-button-mode';
+import {ButtonMode} from '../../foundation/mode/button-mode';
+import {ButtonConfiguration} from '../../foundation/configuation/button-configuration';
+import {ButtonStyleBuilder} from '../../foundation/util/button-style-builder.service';
+import {ButtonEvent} from '../../foundation/event/button-event';
+import {IconNames} from '../../../icon/icon/constants/icon-names';
+import {IconAnimation} from '../../../icon/icon/constants/icon-animation';
+import {ButtonType} from '../../foundation/type/button-type';
+import {BaseButtonComponent} from '../../foundation/base-button/base-button.component';
 
 @Component({
   selector: 'gwipp-button',
