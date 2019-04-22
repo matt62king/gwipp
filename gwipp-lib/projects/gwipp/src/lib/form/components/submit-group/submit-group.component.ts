@@ -13,6 +13,7 @@ export class SubmitGroupComponent implements OnInit {
 
   @Input() cancelConfig: ButtonConfiguration;
   @Input() submitConfig: ButtonConfiguration;
+  @Input() enabled = true;
   @Input() canCancel = true;
 
   constructor() { }
@@ -21,10 +22,10 @@ export class SubmitGroupComponent implements OnInit {
   }
 
   onCancel(event: ButtonEvent): void {
-    this.formEvent.emit(new FormEvent(event.sender, FormEventType.CANCEL));
+    this.formEvent.emit(new FormEvent(null, event.sender, FormEventType.CANCEL));
   }
 
   onSubmit(event: ButtonEvent): void {
-    this.formEvent.emit(new FormEvent(event.sender, FormEventType.SUBMIT));
+    this.formEvent.emit(new FormEvent(null, event.sender, FormEventType.SUBMIT));
   }
 }
