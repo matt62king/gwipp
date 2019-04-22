@@ -21,4 +21,6 @@ export * from './lib/icon/icon/constants/icon-animation';
 export * from './lib/icon/icon/constants/icon-names';
 export * from './lib/icon/icon/constants/icon-size';
 
+export * from './lib/input/input.module';
+
 export * from './lib/navigation/navigation.module';
