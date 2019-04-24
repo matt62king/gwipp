@@ -12,5 +12,7 @@
 </div>
 
 <div class="mt-1 w-25">
-  <gwipp-form [formGroup]="formGroup" [config]="formConfig"></gwipp-form>
+  <gwipp-form [formGroup]="formGroup" [config]="formConfig">
+    <gwipp-text-field [config]="inputConfig" [formControl]="formGroup.controls['name']"></gwipp-text-field>
+  </gwipp-form>
 </div>

@@ -1,9 +1,8 @@
 import {Component, OnInit} from '@angular/core';
-import {Button, ButtonType, IconAnimation, IconSize} from 'gwipp';
+import {Button, ButtonType, Ginput, IconAnimation, IconSize, InputConfiguration} from 'gwipp';
 import {ButtonConfiguration} from '../../projects/gwipp/src/lib/button/foundation/configuation/button-configuration';
-import {Form} from '../../projects/gwipp/src/lib/foundation/configuration/congifurations';
 import {FormConfiguration} from '../../projects/gwipp/src/lib/form/foundation/configuration/form-configuration';
-import {FormBuilder, FormGroup} from '@angular/forms';
+import {FormBuilder, FormControl, FormGroup, Validators} from '@angular/forms';
 
 @Component({
   selector: 'app-root',
@@ -27,6 +26,9 @@ export class AppComponent implements OnInit{
   @Button({label: 'Submit', buttonType: ButtonType.PRIMARY})
   submitConfig: ButtonConfiguration;
 
+  @Ginput({label: 'Name', infoLabel: 'someone@example.com'})
+  inputConfig: InputConfiguration;
+
   formConfig: FormConfiguration;
   formGroup: FormGroup;
 
@@ -35,7 +37,9 @@ export class AppComponent implements OnInit{
   }
 
   ngOnInit(): void {
-    this.formGroup = this.formBuilder.group({});
+    this.formGroup = this.formBuilder.group({
+      name: new FormControl('', Validators.required)
+    });
 
     this.formConfig = new FormConfiguration({submitConfiguration: this.submitConfig, cancelConfiguration: this.cancelConfig});
   }
