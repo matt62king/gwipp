@@ -1,0 +1,31 @@
+<div [class.form-group]="config.inline"
+     [class.row]="config.inline">
+
+  <ng-container *ngIf="config.label.length > 0">
+    <label [for]="config.fieldId">
+    <span class="font-weight-bold">
+      {{ config.label }}
+    </span>
+      <small class="mr-1 text-muted" [hidden]="!config.optional">(Optional)</small>
+    </label>
+  </ng-container>
+
+  <input #input type="text" class="form-control gwipp-input"
+         [id]="config.fieldId" [disabled]="disabled"
+         (keyup)="onChange($event, input.value)"
+         (blur)="onBlur($event, input.value)">
+
+  <div *ngIf="errors.length > 0">
+    <div *ngFor="let error of errors" class="text-danger mt-1">
+      <div class="d-flex flex-row justify-content-end">
+        <gwipp-icon [icon]="errorIcon"></gwipp-icon>
+        <span class="ml-1">{{ error }}</span>
+      </div>
+    </div>
+  </div>
+
+  <small class="form-text text-muted" *ngIf="config.infoLabel.length > 0">
+    {{ config.infoLabel }}
+  </small>
+
+</div>

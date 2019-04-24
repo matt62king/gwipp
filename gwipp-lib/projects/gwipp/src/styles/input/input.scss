@@ -1,0 +1,41 @@
+@import "~node_modules/bootstrap/scss/functions";
+@import "~node_modules/bootstrap/scss/variables";
+@import "~node_modules/bootstrap/scss/mixins";
+
+@import "../constants/constants";
+
+@mixin border-thick {
+  border-width: $gwipp-border-thick !important;
+}
+
+@mixin input-border {
+  border-color: gray("300") !important;
+  border-radius: $gwipp-input-border-radius !important;
+}
+
+@mixin input-focus-border {
+  border-color: $primary-color !important;
+  border-radius: $gwipp-input-border-radius !important;
+
+  @include border-thick;
+}
+
+@mixin input-base {
+  height: $gwipp-input-height !important;
+  padding: 5px 10px 5px 10px !important;
+  outline: none !important;
+  @include input-border;
+}
+
+.gwipp-input {
+  @include input-base;
+  @include input-border;
+
+  &:focus {
+    @include input-focus-border;
+  }
+
+  &:focus-within {
+    @include  input-focus-border;
+  }
+}
