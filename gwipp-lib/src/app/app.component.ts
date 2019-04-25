@@ -29,6 +29,9 @@ export class AppComponent implements OnInit{
   @Ginput({label: 'Name', infoLabel: 'someone@example.com'})
   inputConfig: InputConfiguration;
 
+  @Ginput({label: 'Password', infoLabel: 'Min length of 8'})
+  passwordConfig: InputConfiguration;
+
   formConfig: FormConfiguration;
   formGroup: FormGroup;
 
