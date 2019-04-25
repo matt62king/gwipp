@@ -3,19 +3,24 @@ import {CommonModule} from '@angular/common';
 import {BaseInputComponent} from './foundation/base-input.component';
 import {TextFieldComponent} from './components/text-field/text-field.component';
 import {IconModule} from '../icon/icon.module';
+import { PasswordFieldComponent } from './components/password-field/password-field.component';
+import {OutputModule} from "../output/output.module";
 
 @NgModule({
   declarations: [
     BaseInputComponent,
-    TextFieldComponent
+    TextFieldComponent,
+    PasswordFieldComponent
   ],
   imports: [
     CommonModule,
     IconModule,
+    OutputModule
   ],
   exports: [
     BaseInputComponent,
-    TextFieldComponent
+    TextFieldComponent,
+    PasswordFieldComponent
   ]
 })
 export class InputModule { }

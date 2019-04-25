@@ -14,5 +14,6 @@
 <div class="mt-1 w-25">
   <gwipp-form [formGroup]="formGroup" [config]="formConfig">
     <gwipp-text-field [config]="inputConfig" [formControl]="formGroup.controls['name']"></gwipp-text-field>
+    <gwipp-password-field class="mt-2" [config]="passwordConfig" [hasStrength]="true"></gwipp-password-field>
   </gwipp-form>
 </div>
