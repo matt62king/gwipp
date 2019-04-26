@@ -1,0 +1,10 @@
+@mixin fill-space {
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+@mixin visibility($visibility) {
+  visibility: $visibility !important;
+}

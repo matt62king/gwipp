@@ -32,6 +32,9 @@ export class AppComponent implements OnInit{
   @Ginput({label: 'Password', infoLabel: 'Min length of 8'})
   passwordConfig: InputConfiguration;
 
+  @Ginput({label: 'Agree to Terms'})
+  switchConfig: InputConfiguration;
+
   formConfig: FormConfiguration;
   formGroup: FormGroup;
 
