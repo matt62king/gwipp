@@ -11,7 +11,7 @@ export class ButtonConfiguration implements ButtonConfigurationOptions {
       errorLabel?: string,
       confirmLabel?: string,
       label?: string,
-      buttonType?: ButtonType}) {
+      buttonType?: ButtonType} = {}) {
     this.errorLabel = options.errorLabel || 'Try Again';
     this.confirmLabel = options.confirmLabel || 'Confirm';
     this.label = options.label || '';
