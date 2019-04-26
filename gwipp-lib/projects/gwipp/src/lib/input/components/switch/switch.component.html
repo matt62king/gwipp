@@ -1,0 +1,18 @@
+<div class="d-flex flex-column">
+  <div class="d-flex flex-row">
+      <label class="switch">
+        <input type="checkbox" #input (click)="onChange($event, input.checked)" [checked]="innerValue">
+        <span class="switch-slider" (click)="onChange($event, input.checked)"></span>
+      </label>
+
+        <div class="flex-fill ml-2 font-weight-bold">
+          {{ config.label }}
+        </div>
+  </div>
+
+  <ng-container *ngIf="config.infoLabel.length > 0">
+    <small class="text-muted">
+      {{ config.infoLabel }}
+    </small>
+  </ng-container>
+</div>
