@@ -28,7 +28,17 @@ jobs:
       - run:
           command: |
             cd gwipp-lib/
-            ls
+            npm install
+
+      - persist_to_worksapce:
+          root: ~/repo
+          paths:
+            - gwipp-lib/node_modules
+
+      - run:
+          command: |
+            cd gwipp-lib/
+            npm install
 
   build:
     docker:
