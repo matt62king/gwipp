@@ -68,9 +68,12 @@ jobs:
           at: ~/repo
 
       - run:
+          command: echo "//registry.npmjs.org/:_authToken=$npm_TOKEN" > ~/repo/.npmrc
+
+      - run:
           command: |
             cd gwipp-lib/dist/gwipp/
-            ls
+            npm publish
 
 
 workflows:
@@ -78,15 +81,29 @@ workflows:
   build_and_test:
     jobs:
       - stage
+        filters:
+          tags:
+            only: /.*/
 
       - install:
           requires:
             - stage
+          filters:
+            tags:
+              only: /.*/
 
       - package:
           requires:
             - install
+          filters:
+            tags:
+              only: /.*/
 
       - publish:
           requires:
             - package
+          filters:
+            tags:
+              only: /^v\d+\.\d+\.\d+$/
+            branches:
+              ignore: /.*/
