@@ -19,7 +19,7 @@ jobs:
           paths:
             - gwipp-lib/*
 
-  verify:
+  install:
     <<: *defaults
     steps:
       - attach_workspace:
@@ -33,7 +33,28 @@ jobs:
       - persist_to_workspace:
           root: ~/repo
           paths:
-            - gwipp-lib/node_modules
+            - gwipp-lib/*
+
+      - run:
+          command: |
+            cd gwipp-lib/
+            ls
+
+  package:
+    <<: *defaults
+    steps:
+      - attach_workspace:
+          at: ~/repo
+
+      - run:
+          command: |
+            cd gwipp-lib
+            npm run package
+
+      - persist_to_workspace:
+          root: ~/repo
+          paths:
+            - gwipp-lib/*
 
       - run:
           command: |
@@ -73,7 +94,11 @@ workflows:
   build_and_test:
     jobs:
       - stage
-      - verify:
+
+      - install:
           requires:
             - stage
-#      - build
+
+      - package:
+          requires:
+            - install
