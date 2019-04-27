@@ -81,9 +81,9 @@ workflows:
   build_and_test:
     jobs:
       - stage
-        filters:
-          tags:
-            only: /.*/
+          filters:
+            tags:
+              only: /.*/
 
       - install:
           requires:
