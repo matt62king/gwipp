@@ -30,7 +30,7 @@ jobs:
             cd gwipp-lib/
             npm install
 
-      - persist_to_worksapce:
+      - persist_to_workspace:
           root: ~/repo
           paths:
             - gwipp-lib/node_modules
