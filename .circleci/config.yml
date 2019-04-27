@@ -23,8 +23,9 @@ jobs:
     <<: *defaults
     steps:
       - attach_workspace:
-          at: ~/repo/gwipp-lib
+          at: ~/repo
 
+      - run: cd gwipp-lib/
       - run: ls
 
   build:
