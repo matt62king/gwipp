@@ -24,6 +24,9 @@ export * from './lib/icon/icon/constants/icon-size';
 export * from './lib/input/input.module';
 export * from './lib/input/foundation/configuration/input-configuration';
 
+export * from './lib/menus/tab-menu/tab-menu.module';
+export * from './lib/menus/tab-menu/foundation/model/tabs';
+
 export * from './lib/navigation/navigation.module';
 
 export * from './lib/output/output.module';

@@ -7,6 +7,7 @@ import {NavAttributesModule} from '../../projects/gwipp/src/lib/navigation/nav-a
 import {FormModule} from '../../projects/gwipp/src/lib/form/form.module';
 import {ReactiveFormsModule} from '@angular/forms';
 import {OverlayModule} from "../../projects/gwipp/src/lib/views/overlay/overlay.module";
+import {TabMenuModule} from "../../projects/gwipp/src/lib/menus/tab-menu/tab-menu.module";
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import {OverlayModule} from "../../projects/gwipp/src/lib/views/overlay/overlay.
     FormModule,
     ReactiveFormsModule,
     InputModule,
-    OverlayModule
+    OverlayModule,
+    TabMenuModule
   ],
   providers: [],
   bootstrap: [AppComponent]

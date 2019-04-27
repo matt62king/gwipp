@@ -1,0 +1,23 @@
+@import "~node_modules/bootstrap/scss/functions";
+@import '~node_modules/bootstrap/scss/variables';
+@import '~node_modules/bootstrap/scss/mixins';
+
+@import '../constants/constants';
+@import '../mixins/mixins';
+
+.tab-menu {
+  border-bottom: 1px gray("300") solid;
+
+  &-item {
+    color: gray("400");
+
+    &:hover {
+      @include clickable;
+    }
+  }
+
+  &-item-selected {
+    border-bottom: $gwipp-border-thick $primary-color solid;
+    color: $primary-color;
+  }
+}
