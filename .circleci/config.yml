@@ -26,9 +26,9 @@ jobs:
           at: ~/repo
 
       - run:
-          - command: |
-              cd gwipp-lib/
-              ls
+          command: |
+            cd gwipp-lib/
+            ls
 
   build:
     docker:
