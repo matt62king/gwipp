@@ -38,7 +38,7 @@ jobs:
       - run:
           command: |
             cd gwipp-lib/
-            npm install
+            ls
 
   build:
     docker:
