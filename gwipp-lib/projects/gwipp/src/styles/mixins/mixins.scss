@@ -8,3 +8,11 @@
 @mixin visibility($visibility) {
   visibility: $visibility !important;
 }
+
+@mixin border($color, $width: 1px) {
+  border: {
+    width: $width;
+    style: solid;
+    color: $color;
+  }
+}
