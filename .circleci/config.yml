@@ -68,10 +68,9 @@ jobs:
           at: ~/repo
 
       - run:
-          command: echo "//registry.npmjs.org/:_authToken=$npm_AUTH" >> ~/repo/.npmrc
-
-      - run:
           command: |
+            echo "//registry.npmjs.org/:_authToken=$npm_AUTH" >> ~/repo/.npmrc
+            ls
             cd gwipp-lib/dist/gwipp/
             npm publish
 
