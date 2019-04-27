@@ -4,7 +4,6 @@ $theme-colors: (
   "info": #5654BF
 );
 
-
 @import "~node_modules/bootstrap/scss/bootstrap";
 @import "~node_modules/@fortawesome/fontawesome-free/scss/fontawesome";
 
@@ -12,3 +11,4 @@ $theme-colors: (
 @import "navbar/navbar";
 @import "input/input";
 @import "input/switch";
+@import "views/overlay";

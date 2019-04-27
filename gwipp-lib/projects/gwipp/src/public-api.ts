@@ -27,3 +27,5 @@ export * from './lib/input/foundation/configuration/input-configuration';
 export * from './lib/navigation/navigation.module';
 
 export * from './lib/output/output.module';
+
+export * from './lib/views/overlay/overlay.module';

@@ -1,0 +1,23 @@
+@import "~node_modules/bootstrap/scss/functions";
+@import '~node_modules/bootstrap/scss/variables';
+@import '~node_modules/bootstrap/scss/mixins';
+
+@import '../constants/constants';
+@import '../mixins/mixins';
+
+.overlay {
+  position: fixed;
+  background: rgba(0, 0, 0, 0.7);
+  transition: opacity 500ms;
+  z-index: 1000;
+
+  @include fill-space;
+
+  &-item {
+    background: white;
+    border-radius: 20px;
+    max-height: 90%;
+    overflow-y: auto;
+    @include border($primary-color, $gwipp-border-thick);
+  }
+}
