@@ -2,7 +2,7 @@
   <div class="d-flex flex-row tab-menu">
     <div *ngFor="let item of internalTabItems">
       <div class="d-flex flex-row align-items-center py-2 px-3 tab-menu-item" [class.tab-menu-item-selected]="item.selected">
-        <div class="flex-fill click-block" gfClickable (click)="onTabSelected(item)">
+        <div class="flex-fill click-block" gwippClickable (click)="onTabSelected(item)">
           {{ item.title }}
         </div>
       </div>
