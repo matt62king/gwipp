@@ -60,5 +60,7 @@ workflows:
   build_and_test:
     jobs:
       - stage
-      - verify
+      - verify:
+          requires:
+            - stage
 #      - build
