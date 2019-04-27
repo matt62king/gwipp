@@ -1,0 +1,22 @@
+@mixin fill-space {
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+@mixin visibility($visibility) {
+  visibility: $visibility !important;
+}
+
+@mixin border($color, $width: 1px) {
+  border: {
+    width: $width;
+    style: solid;
+    color: $color;
+  }
+}
+
+@mixin clickable {
+  cursor: pointer !important;
+}

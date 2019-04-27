@@ -1,0 +1,10 @@
+<div class="d-flex flex-column p-2" [formGroup]="formGroup">
+
+  <ng-content></ng-content>
+
+  <gwipp-submit-group [cancelConfig]="config.cancelConfiguration"
+                      [submitConfig]="config.submitConfiguration"
+                      [enabled]="formGroup.valid"
+                      (formEvent)="onCancelSubmit($event)">
+  </gwipp-submit-group>
+</div>

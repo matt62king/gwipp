@@ -1,0 +1,55 @@
+@import "~node_modules/bootstrap/scss/functions";
+@import '~node_modules/bootstrap/scss/variables';
+@import '~node_modules/bootstrap/scss/mixins';
+
+@import '../constants/constants';
+@import '../mixins/mixins';
+
+$slider-size: 17px;
+$transition-speed: .2s;
+
+@mixin switchSize {
+  height: 25px;
+  width: 46px;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  @include switchSize;
+
+  &-slider {
+    position: absolute;
+    cursor: pointer;
+    background-color: gray("300");
+    transition: $transition-speed;
+    @include fill-space;
+
+    &:before {
+      position: absolute;
+      content: "";
+      height: $slider-size;
+      width: $slider-size;
+      left: 4px;
+      bottom: 4px;
+      background-color: white;
+      transition: $transition-speed;
+    }
+  }
+
+  & input {
+    @include visibility(hidden);
+  }
+
+  & input:checked + .switch-slider {
+    background-color: $primary-color;
+  }
+
+  & input:focus + .switch-slider {
+    box-shadow: 0 0 1px $primary-color;
+  }
+
+  & input:checked + .switch-slider:before {
+    transform: translateX($slider-size + 2px);
+  }
+}

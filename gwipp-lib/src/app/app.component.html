@@ -1,0 +1,24 @@
+<gwipp-navigation-bar>
+  <div gwippNavBarTitle>Title</div>
+  <div gwippNavBarItem class="pl-2">Item</div>
+</gwipp-navigation-bar>
+
+<div class="mt-5 w-25">
+  <gwipp-button [buttonConfig]="buttonConfig"></gwipp-button>
+</div>
+
+<div class="mt-1 w-25">
+  <gwipp-confirm-button [buttonConfig]="confirmConfig"></gwipp-confirm-button>
+</div>
+
+<div class="mt-1 w-25">
+  <gwipp-form [formGroup]="formGroup" [config]="formConfig">
+    <gwipp-text-field [config]="inputConfig" [formControl]="formGroup.controls['name']"></gwipp-text-field>
+    <gwipp-password-field class="mt-2" [config]="passwordConfig" [hasStrength]="true"></gwipp-password-field>
+    <gwipp-switch class="mt-2" [config]="switchConfig"></gwipp-switch>
+  </gwipp-form>
+</div>
+
+<gwipp-overlay-view title="Test Overlay">
+  <gwipp-tab-menu [tabItems]="tabItems"></gwipp-tab-menu>
+</gwipp-overlay-view>

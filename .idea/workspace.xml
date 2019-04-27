@@ -1,0 +1,1018 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="2e539de5-c170-452a-95d4-0e40249e080e" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/gwipp-lib/projects/gwipp/src/lib/menus/tab-menu/foundation/model/tab-item.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gwipp-lib/projects/gwipp/src/lib/menus/tab-menu/foundation/model/tabs.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gwipp-lib/projects/gwipp/src/lib/menus/tab-menu/tab-menu.component.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gwipp-lib/projects/gwipp/src/lib/menus/tab-menu/tab-menu.component.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gwipp-lib/projects/gwipp/src/lib/menus/tab-menu/tab-menu.module.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gwipp-lib/projects/gwipp/src/styles/menu/tab-menu.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gwipp-lib/projects/gwipp/src/public-api.ts" beforeDir="false" afterPath="$PROJECT_DIR$/gwipp-lib/projects/gwipp/src/public-api.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gwipp-lib/projects/gwipp/src/styles/gwipp-style.scss" beforeDir="false" afterPath="$PROJECT_DIR$/gwipp-lib/projects/gwipp/src/styles/gwipp-style.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gwipp-lib/projects/gwipp/src/styles/mixins/mixins.scss" beforeDir="false" afterPath="$PROJECT_DIR$/gwipp-lib/projects/gwipp/src/styles/mixins/mixins.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gwipp-lib/src/app/app.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/gwipp-lib/src/app/app.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gwipp-lib/src/app/app.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/gwipp-lib/src/app/app.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gwipp-lib/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/gwipp-lib/src/app/app.module.ts" afterDir="false" />
+    </list>
+    <list id="5f7c411c-2c18-461f-9826-aa6a4c59594b" name="ignore-on-commit" comment="" />
+    <ignored path="$PROJECT_DIR$/.tmp/" />
+    <ignored path="$PROJECT_DIR$/temp/" />
+    <ignored path="$PROJECT_DIR$/tmp/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/gwipp-lib/projects/gwipp/src/lib/menus/tab-menu/tab-menu.component.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="165">
+              <caret line="11" column="19" selection-start-line="11" selection-start-column="19" selection-end-line="11" selection-end-column="19" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/gwipp-lib/projects/gwipp/src/lib/menus/tab-menu/foundation/model/tab-item.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="270">
+              <caret line="18" column="1" selection-start-line="18" selection-start-column="1" selection-end-line="18" selection-end-column="1" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/gwipp-lib/projects/gwipp/src/lib/foundation/event/gwipp-event.ts">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/gwipp-lib/projects/gwipp/src/public-api.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="405">
+              <caret line="27" column="59" selection-start-line="27" selection-start-column="59" selection-end-line="27" selection-end-column="59" />
+              <folding>
+                <element signature="n#!!doc" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/gwipp-lib/projects/gwipp/src/lib/menus/tab-menu/tab-menu.component.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="45">
+              <caret line="3" selection-start-line="3" selection-end-line="3" />
+              <folding>
+                <element signature="e#0#77#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/gwipp-lib/src/app/app.component.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="270">
+              <caret line="40" column="22" selection-start-line="40" selection-start-column="22" selection-end-line="40" selection-end-column="22" />
+              <folding>
+                <element signature="e#0#48#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/gwipp-lib/projects/gwipp/src/lib/foundation/configuration/congifurations.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="240">
+              <caret line="16" column="23" selection-start-line="16" selection-start-column="23" selection-end-line="16" selection-end-column="23" />
+              <folding>
+                <element signature="e#0#109#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/gwipp-lib/projects/gwipp/src/lib/menus/tab-menu/foundation/model/tabs.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="105">
+              <caret line="7" column="42" selection-start-line="7" selection-start-column="42" selection-end-line="7" selection-end-column="42" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/gwipp-lib/src/app/app.component.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="330">
+              <caret line="22" column="40" selection-start-line="22" selection-start-column="40" selection-end-line="22" selection-end-column="40" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/gwipp-lib/projects/gwipp/src/lib/gwipp.module.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="15">
+              <caret line="1" selection-start-line="1" selection-end-line="1" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="TypeScript File" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>&quot;</find>
+    </findStrings>
+    <replaceStrings>
+      <replace>'</replace>
+    </replaceStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/gwipp-lib/projects/gwipp/src/lib/form/foundation/configuration/form-configuration-options.ts" />
+        <option value="$PROJECT_DIR$/gwipp-lib/projects/gwipp/src/lib/form/form.module.ts" />
+        <option value="$PROJECT_DIR$/gwipp-lib/projects/gwipp/src/lib/form/foundation/consts/form-mode.ts" />
+        <option value="$PROJECT_DIR$/gwipp-lib/projects/gwipp/src/lib/form/foundation/event/form-event.ts" />
+        <option value="$PROJECT_DIR$/gwipp-lib/projects/gwipp/src/lib/form/components/form/form.component.ts" />
+        <option value="$PROJECT_DIR$/gwipp-lib/projects/gwipp/src/lib/form/components/submit-group/submit-group.component.ts" />
+        <option value="$PROJECT_DIR$/gwipp-lib/projects/gwipp/src/lib/form/components/form/form.component.html" />
+        <option value="$PROJECT_DIR$/gwipp-lib/src/app/app.module.ts" />
+        <option value="$PROJECT_DIR$/gwipp-lib/projects/gwipp/src/lib/form/foundation/configuration/form-configuration.ts" />
+        <option value="$PROJECT_DIR$/gwipp-lib/projects/gwipp/src/lib/button/foundation/configuation/button-configuration.ts" />
+        <option value="$PROJECT_DIR$/gwipp-lib/projects/gwipp/src/lib/foundation/configuration/congifurations.ts" />
+        <option value="$PROJECT_DIR$/gwipp-lib/projects/gwipp/src/lib/input/components/base-input/base-input.component.ts" />
+        <option value="$PROJECT_DIR$/gwipp-lib/projects/gwipp/src/lib/input/foundation/configuration/input-configuration-options.ts" />
+        <option value="$PROJECT_DIR$/gwipp-lib/projects/gwipp/src/lib/button/components/button/button.component.ts" />
+        <option value="$PROJECT_DIR$/gwipp-lib/projects/gwipp/src/styles/constants/constants.scss" />
+        <option value="$PROJECT_DIR$/gwipp-lib/projects/gwipp/src/lib/form/components/submit-group/submit-group.component.html" />
+        <option value="$PROJECT_DIR$/gwipp-lib/projects/gwipp/src/lib/input/components/text-field/text-field.component.ts" />
+        <option value="$PROJECT_DIR$/gwipp-lib/projects/gwipp/src/lib/input/components/text-field/text-field.component.html" />
+        <option value="$PROJECT_DIR$/gwipp-lib/projects/gwipp/src/styles/input/input.scss" />
+        <option value="$PROJECT_DIR$/gwipp-lib/projects/gwipp/src/lib/input/foundation/base-input.component.ts" />
+        <option value="$PROJECT_DIR$/gwipp-lib/projects/gwipp/src/lib/input/foundation/configuration/input-configuration.ts" />
+        <option value="$PROJECT_DIR$/gwipp-lib/projects/gwipp/src/lib/foundation/style/colors/colors.ts" />
+        <option value="$PROJECT_DIR$/gwipp-lib/projects/gwipp/src/lib/icon/icon/constants/icon-names.ts" />
+        <option value="$PROJECT_DIR$/gwipp-lib/projects/gwipp/src/lib/output/output.module.ts" />
+        <option value="$PROJECT_DIR$/gwipp-lib/projects/gwipp/src/lib/output/component/progress-bar/progress-bar.component.html" />
+        <option value="$PROJECT_DIR$/gwipp-lib/projects/gwipp/src/lib/output/component/progress-bar/progress-bar.component.ts" />
+        <option value="$PROJECT_DIR$/gwipp-lib/projects/gwipp/src/lib/input/components/password-field/password-field.component.html" />
+        <option value="$PROJECT_DIR$/gwipp-lib/projects/gwipp/src/styles/metrics/metrics.scss" />
+        <option value="$PROJECT_DIR$/gwipp-lib/projects/gwipp/src/lib/input/components/password-field/password-field.component.ts" />
+        <option value="$PROJECT_DIR$/gwipp-lib/projects/gwipp/src/styles/input/switch.scss" />
+        <option value="$PROJECT_DIR$/gwipp-lib/projects/gwipp/src/lib/input/components/switch/switch.component.html" />
+        <option value="$PROJECT_DIR$/gwipp-lib/projects/gwipp/src/lib/input/input.module.ts" />
+        <option value="$PROJECT_DIR$/gwipp-lib/projects/gwipp/src/lib/input/components/switch/switch.component.ts" />
+        <option value="$PROJECT_DIR$/gwipp-lib/projects/gwipp/package.json" />
+        <option value="$PROJECT_DIR$/.circleci/config.yml" />
+        <option value="$PROJECT_DIR$/gwipp-lib/projects/gwipp/src/lib/views/overlay/overlay-view/overlay-view.component.html" />
+        <option value="$PROJECT_DIR$/gwipp-lib/projects/gwipp/src/lib/views/overlay/overlay-view/overlay-view.component.ts" />
+        <option value="$PROJECT_DIR$/gwipp-lib/projects/gwipp/src/styles/views/overlay.scss" />
+        <option value="$PROJECT_DIR$/gwipp-lib/projects/gwipp/src/lib/menus/tab-menu/tab-menu.module.ts" />
+        <option value="$PROJECT_DIR$/gwipp-lib/projects/gwipp/src/styles/mixins/mixins.scss" />
+        <option value="$PROJECT_DIR$/gwipp-lib/projects/gwipp/src/styles/menu/tab-menu.scss" />
+        <option value="$PROJECT_DIR$/gwipp-lib/projects/gwipp/src/styles/gwipp-style.scss" />
+        <option value="$PROJECT_DIR$/gwipp-lib/projects/gwipp/src/lib/menus/tab-menu/foundation/model/tab-item" />
+        <option value="$PROJECT_DIR$/gwipp-lib/projects/gwipp/src/lib/gwipp.module.ts" />
+        <option value="$PROJECT_DIR$/gwipp-lib/projects/gwipp/src/lib/menus/tab-menu/tab-menu.component.html" />
+        <option value="$PROJECT_DIR$/gwipp-lib/projects/gwipp/src/public-api.ts" />
+        <option value="$PROJECT_DIR$/gwipp-lib/projects/gwipp/src/lib/menus/tab-menu/foundation/model/tab-item.ts" />
+        <option value="$PROJECT_DIR$/gwipp-lib/projects/gwipp/src/lib/menus/tab-menu/tab-menu.component.ts" />
+        <option value="$PROJECT_DIR$/gwipp-lib/projects/gwipp/src/lib/menus/tab-menu/foundation/model/tabs.ts" />
+        <option value="$PROJECT_DIR$/gwipp-lib/src/app/app.component.ts" />
+        <option value="$PROJECT_DIR$/gwipp-lib/src/app/app.component.html" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="285" />
+    <option name="y" value="27" />
+    <option name="width" value="1400" />
+    <option name="height" value="1000" />
+  </component>
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="gwipp" type="b2602c69:ProjectViewProjectNode" />
+              <item name="gwipp" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="gwipp" type="b2602c69:ProjectViewProjectNode" />
+              <item name="gwipp" type="462c0819:PsiDirectoryNode" />
+              <item name="gwipp-lib" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="gwipp" type="b2602c69:ProjectViewProjectNode" />
+              <item name="gwipp" type="462c0819:PsiDirectoryNode" />
+              <item name="gwipp-lib" type="462c0819:PsiDirectoryNode" />
+              <item name="projects" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="gwipp" type="b2602c69:ProjectViewProjectNode" />
+              <item name="gwipp" type="462c0819:PsiDirectoryNode" />
+              <item name="gwipp-lib" type="462c0819:PsiDirectoryNode" />
+              <item name="projects" type="462c0819:PsiDirectoryNode" />
+              <item name="gwipp" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="gwipp" type="b2602c69:ProjectViewProjectNode" />
+              <item name="gwipp" type="462c0819:PsiDirectoryNode" />
+              <item name="gwipp-lib" type="462c0819:PsiDirectoryNode" />
+              <item name="projects" type="462c0819:PsiDirectoryNode" />
+              <item name="gwipp" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="gwipp" type="b2602c69:ProjectViewProjectNode" />
+              <item name="gwipp" type="462c0819:PsiDirectoryNode" />
+              <item name="gwipp-lib" type="462c0819:PsiDirectoryNode" />
+              <item name="projects" type="462c0819:PsiDirectoryNode" />
+              <item name="gwipp" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="lib" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="gwipp" type="b2602c69:ProjectViewProjectNode" />
+              <item name="gwipp" type="462c0819:PsiDirectoryNode" />
+              <item name="gwipp-lib" type="462c0819:PsiDirectoryNode" />
+              <item name="projects" type="462c0819:PsiDirectoryNode" />
+              <item name="gwipp" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="lib" type="462c0819:PsiDirectoryNode" />
+              <item name="menus" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="gwipp" type="b2602c69:ProjectViewProjectNode" />
+              <item name="gwipp" type="462c0819:PsiDirectoryNode" />
+              <item name="gwipp-lib" type="462c0819:PsiDirectoryNode" />
+              <item name="projects" type="462c0819:PsiDirectoryNode" />
+              <item name="gwipp" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="lib" type="462c0819:PsiDirectoryNode" />
+              <item name="menus" type="462c0819:PsiDirectoryNode" />
+              <item name="tab-menu" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="gwipp" type="b2602c69:ProjectViewProjectNode" />
+              <item name="gwipp" type="462c0819:PsiDirectoryNode" />
+              <item name="gwipp-lib" type="462c0819:PsiDirectoryNode" />
+              <item name="projects" type="462c0819:PsiDirectoryNode" />
+              <item name="gwipp" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="lib" type="462c0819:PsiDirectoryNode" />
+              <item name="menus" type="462c0819:PsiDirectoryNode" />
+              <item name="tab-menu" type="462c0819:PsiDirectoryNode" />
+              <item name="foundation" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="gwipp" type="b2602c69:ProjectViewProjectNode" />
+              <item name="gwipp" type="462c0819:PsiDirectoryNode" />
+              <item name="gwipp-lib" type="462c0819:PsiDirectoryNode" />
+              <item name="projects" type="462c0819:PsiDirectoryNode" />
+              <item name="gwipp" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="lib" type="462c0819:PsiDirectoryNode" />
+              <item name="menus" type="462c0819:PsiDirectoryNode" />
+              <item name="tab-menu" type="462c0819:PsiDirectoryNode" />
+              <item name="foundation" type="462c0819:PsiDirectoryNode" />
+              <item name="model" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="gwipp" type="b2602c69:ProjectViewProjectNode" />
+              <item name="gwipp" type="462c0819:PsiDirectoryNode" />
+              <item name="gwipp-lib" type="462c0819:PsiDirectoryNode" />
+              <item name="projects" type="462c0819:PsiDirectoryNode" />
+              <item name="gwipp" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="styles" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="gwipp" type="b2602c69:ProjectViewProjectNode" />
+              <item name="gwipp" type="462c0819:PsiDirectoryNode" />
+              <item name="gwipp-lib" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="gwipp" type="b2602c69:ProjectViewProjectNode" />
+              <item name="gwipp" type="462c0819:PsiDirectoryNode" />
+              <item name="gwipp-lib" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="editor.config.ad.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="ts.external.directory.path" value="$PROJECT_DIR$/gwipp-lib/node_modules/typescript/lib" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/gwipp-lib/projects/gwipp/src/lib/input/foundation" />
+      <recent name="$PROJECT_DIR$/gwipp-lib/projects/gwipp/src/lib/button/components" />
+      <recent name="$PROJECT_DIR$/gwipp-lib/projects/gwipp/src/lib/form/components" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="2e539de5-c170-452a-95d4-0e40249e080e" name="Default Changelist" comment="" />
+      <created>1555382160475</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1555382160475</updated>
+      <workItem from="1555382161743" duration="262000" />
+      <workItem from="1555809060026" duration="52358000" />
+    </task>
+    <task id="LOCAL-00001" summary="GWIP-2 set up base button component">
+      <created>1555737568567</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1555737568567</updated>
+    </task>
+    <task id="LOCAL-00002" summary="GWIP-3 set up confirm button">
+      <created>1555817326375</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1555817326375</updated>
+    </task>
+    <task id="LOCAL-00003" summary="GWIP-4 set up form submit group buttons">
+      <created>1555822613909</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1555822613909</updated>
+    </task>
+    <task id="LOCAL-00004" summary="GWIP-7 add form configuration">
+      <created>1555825618073</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1555825618073</updated>
+    </task>
+    <task id="LOCAL-00005" summary="GWIP-8 set up form component">
+      <created>1555905986345</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1555905986345</updated>
+    </task>
+    <task id="LOCAL-00006" summary="GWIP-11 input configuration">
+      <created>1555908881386</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1555908881386</updated>
+    </task>
+    <task id="LOCAL-00007" summary="GWIP-10 base input component">
+      <created>1555910422918</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1555910422918</updated>
+    </task>
+    <task id="LOCAL-00008" summary="GWIP-12 added text field input">
+      <created>1556082686774</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1556082686774</updated>
+    </task>
+    <task id="LOCAL-00009" summary="GWIP-13 password input field">
+      <created>1556166353439</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1556166353440</updated>
+    </task>
+    <task id="LOCAL-00010" summary="GWIP-14 switch component">
+      <created>1556245808892</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1556245808892</updated>
+    </task>
+    <task id="LOCAL-00011" summary="GWIP-17 npm publish">
+      <created>1556253798350</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1556253798350</updated>
+    </task>
+    <task id="LOCAL-00012" summary="GWIP-17 npm publish">
+      <created>1556341546701</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1556341546701</updated>
+    </task>
+    <task id="LOCAL-00013" summary="GWIP-17 npm publish">
+      <created>1556341830067</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1556341830067</updated>
+    </task>
+    <task id="LOCAL-00014" summary="GWIP-17 npm publish">
+      <created>1556341961994</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1556341961994</updated>
+    </task>
+    <task id="LOCAL-00015" summary="GWIP-17 npm publish">
+      <created>1556342626113</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1556342626113</updated>
+    </task>
+    <task id="LOCAL-00016" summary="GWIP-17 npm publish">
+      <created>1556342743161</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1556342743161</updated>
+    </task>
+    <task id="LOCAL-00017" summary="GWIP-17 npm publish">
+      <created>1556342907523</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1556342907523</updated>
+    </task>
+    <task id="LOCAL-00018" summary="GWIP-17 npm publish">
+      <created>1556343195065</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1556343195065</updated>
+    </task>
+    <task id="LOCAL-00019" summary="GWIP-17 npm publish">
+      <created>1556343277449</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1556343277449</updated>
+    </task>
+    <task id="LOCAL-00020" summary="GWIP-17 npm publish">
+      <created>1556343909534</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1556343909534</updated>
+    </task>
+    <task id="LOCAL-00021" summary="GWIP-17 npm publish">
+      <created>1556343991143</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1556343991143</updated>
+    </task>
+    <task id="LOCAL-00022" summary="GWIP-17 npm publish">
+      <created>1556344136448</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1556344136448</updated>
+    </task>
+    <task id="LOCAL-00023" summary="GWIP-17 npm publish">
+      <created>1556344522783</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1556344522783</updated>
+    </task>
+    <task id="LOCAL-00024" summary="GWIP-17 npm publish">
+      <created>1556344704556</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1556344704556</updated>
+    </task>
+    <task id="LOCAL-00025" summary="GWIP-17 npm publish">
+      <created>1556345031716</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1556345031716</updated>
+    </task>
+    <task id="LOCAL-00026" summary="GWIP-17 npm publish">
+      <created>1556345830447</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1556345830447</updated>
+    </task>
+    <task id="LOCAL-00027" summary="GWIP-17 npm publish">
+      <created>1556345899186</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1556345899186</updated>
+    </task>
+    <task id="LOCAL-00028" summary="GWIP-17 npm publish">
+      <created>1556345967661</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1556345967661</updated>
+    </task>
+    <task id="LOCAL-00029" summary="GWIP-18 overlay view">
+      <created>1556388682053</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1556388682053</updated>
+    </task>
+    <option name="localTasksCounter" value="30" />
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="67750000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="67" y="25" width="1853" height="1055" extended-state="6" />
+    <layout>
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="TypeScript" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32937366" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="8" weight="0.32937366" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="9" visible="true" weight="0.32937366" />
+      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="GWIP-2 set up base button component" />
+    <MESSAGE value="GWIP-3 set up confirm button" />
+    <MESSAGE value="GWIP-4 set up form submit group buttons" />
+    <MESSAGE value="GWIP-7 add form configuration" />
+    <MESSAGE value="GWIP-8 set up form component" />
+    <MESSAGE value="GWIP-11 input configuration" />
+    <MESSAGE value="GWIP-10 base input component" />
+    <MESSAGE value="GWIP-12 added text field input" />
+    <MESSAGE value="GWIP-13 password input field" />
+    <MESSAGE value="GWIP-14 switch component" />
+    <MESSAGE value="GWIP-17 npm publish" />
+    <MESSAGE value="GWIP-18 overlay view" />
+    <option name="LAST_COMMIT_MESSAGE" value="GWIP-18 overlay view" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/gwipp-lib/projects/gwipp/src/lib/form/foundation/configuration/form-configuration.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="21" lean-forward="true" selection-start-line="5" selection-start-column="21" selection-end-line="5" selection-end-column="21" />
+          <folding>
+            <element signature="e#0#70#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gwipp-lib/projects/gwipp/src/lib/button/components/button/button.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="28" column="12" lean-forward="true" selection-start-line="23" selection-start-column="6" selection-end-line="28" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gwipp-lib/projects/gwipp/src/lib/button/components/button/button.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" column="45" lean-forward="true" selection-start-line="11" selection-start-column="2" selection-end-line="11" selection-end-column="45" />
+          <folding>
+            <element signature="e#0#77#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gwipp-lib/projects/gwipp/src/styles/navbar/navbar.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" selection-start-line="4" selection-end-line="4" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gwipp-lib/projects/gwipp/src/lib/form/components/submit-group/submit-group.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" selection-start-line="6" selection-end-line="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gwipp-lib/projects/gwipp/src/styles/input/input.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="24" column="39" selection-start-line="24" selection-start-column="39" selection-end-line="24" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gwipp-lib/projects/gwipp/src/lib/input/foundation/configuration/input-configuration-options.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="21" selection-start-line="7" selection-start-column="21" selection-end-line="7" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gwipp-lib/projects/gwipp/src/lib/input/foundation/configuration/input-configuration.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="16" selection-start-line="5" selection-start-column="16" selection-end-line="5" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gwipp-lib/src/app/app.module.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" selection-start-line="8" selection-end-line="8" />
+          <folding>
+            <element signature="e#0#58#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gwipp-lib/projects/gwipp/src/lib/foundation/style/style.module.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gwipp-lib/projects/gwipp/src/lib/foundation/style/colors/colors.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="20" selection-start-column="20" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gwipp-lib/projects/gwipp/src/lib/input/components/text-field/text-field.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="449">
+          <caret line="75" column="3" selection-start-line="61" selection-start-column="1" selection-end-line="75" selection-end-column="3" />
+          <folding>
+            <element signature="e#0#60#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gwipp-lib/projects/gwipp/src/lib/icon/icon/constants/icon-names.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="1" selection-start-line="5" selection-start-column="1" selection-end-line="5" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gwipp-lib/projects/gwipp/src/lib/input/components/text-field/text-field.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="24" column="8" selection-start-line="17" selection-start-column="2" selection-end-line="24" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gwipp-lib/projects/gwipp/src/lib/output/output.module.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" column="24" selection-start-line="12" selection-start-column="24" selection-end-line="12" selection-end-column="24" />
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gwipp-lib/projects/gwipp/src/lib/output/component/progress-bar/progress-bar.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="6" selection-start-line="2" selection-start-column="6" selection-end-line="2" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gwipp-lib/projects/gwipp/src/lib/output/component/progress-bar/progress-bar.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="59">
+          <caret line="12" column="19" selection-start-line="12" selection-start-column="19" selection-end-line="12" selection-end-column="19" />
+          <folding>
+            <element signature="e#0#89#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gwipp-lib/projects/gwipp/src/styles/metrics/metrics.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="1" selection-start-line="6" selection-start-column="1" selection-end-line="6" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gwipp-lib/projects/gwipp/src/lib/input/foundation/base-input.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="494">
+          <caret line="50" column="12" selection-start-line="50" selection-start-column="12" selection-end-line="50" selection-end-column="12" />
+          <folding>
+            <element signature="e#0#100#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gwipp-lib/projects/gwipp/src/lib/input/input.module.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="25" column="19" selection-start-line="25" selection-start-column="19" selection-end-line="25" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gwipp-lib/projects/gwipp/src/lib/input/components/switch/switch.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" column="12" selection-start-line="3" selection-start-column="12" selection-end-line="3" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gwipp-lib/projects/gwipp/src/lib/input/components/password-field/password-field.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="28" selection-start-line="28" selection-end-line="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gwipp-lib/projects/gwipp/src/lib/input/components/password-field/password-field.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="104">
+          <caret line="29" column="58" selection-start-line="29" selection-start-column="2" selection-end-line="29" selection-end-column="58" />
+          <folding>
+            <element signature="e#0#78#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gwipp-lib/projects/gwipp/src/lib/input/components/switch/switch.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="24" selection-start-line="24" selection-end-line="24" />
+          <folding>
+            <element signature="e#0#60#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gwipp-lib/projects/gwipp/ng-package.json">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gwipp-lib/projects/gwipp/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="15" selection-start-line="15" selection-end-line="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gwipp-lib/dist/gwipp/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="360">
+            <caret line="24" selection-start-line="24" selection-end-line="24" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gwipp-lib/dist/gwipp/public-api.d.ts">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gwipp-lib/dist/gwipp/package.json">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gwipp-lib/package.json">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.circleci/config.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1230">
+          <caret line="82" column="14" selection-start-line="82" selection-start-column="14" selection-end-line="82" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gwipp-lib/projects/gwipp/src/styles/input/switch.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret selection-end-line="5" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gwipp-lib/projects/gwipp/src/lib/views/overlay/overlay-view/overlay-view.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" selection-start-line="12" selection-end-line="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gwipp-lib/projects/gwipp/src/lib/views/overlay/overlay-view/overlay-view.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="13" selection-start-line="13" selection-end-line="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gwipp-lib/projects/gwipp/src/lib/menus/tab-menu/tab-menu.module.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="11" selection-start-line="4" selection-start-column="11" selection-end-line="4" selection-end-column="11" />
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gwipp-lib/projects/gwipp/src/styles/views/overlay.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret selection-end-line="5" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gwipp-lib/projects/gwipp/src/styles/mixins/mixins.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="20" column="29" selection-start-line="20" selection-start-column="29" selection-end-line="20" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gwipp-lib/projects/gwipp/src/styles/constants/constants.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" column="25" selection-start-line="9" selection-start-column="25" selection-end-line="9" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gwipp-lib/projects/gwipp/src/styles/menu/tab-menu.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="21" column="3" selection-start-line="21" selection-start-column="3" selection-end-line="21" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gwipp-lib/projects/gwipp/src/styles/gwipp-style.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" column="22" selection-start-line="9" selection-start-column="22" selection-end-line="9" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gwipp-lib/projects/gwipp/src/lib/foundation/event/gwipp-event.ts">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gwipp-lib/projects/gwipp/src/lib/gwipp.module.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" selection-start-line="1" selection-end-line="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gwipp-lib/projects/gwipp/src/public-api.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="405">
+          <caret line="27" column="59" selection-start-line="27" selection-start-column="59" selection-end-line="27" selection-end-column="59" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gwipp-lib/projects/gwipp/src/lib/foundation/configuration/congifurations.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="16" column="23" selection-start-line="16" selection-start-column="23" selection-end-line="16" selection-end-column="23" />
+          <folding>
+            <element signature="e#0#109#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gwipp-lib/projects/gwipp/src/lib/menus/tab-menu/foundation/model/tab-item">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="18" column="1" lean-forward="true" selection-end-line="18" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gwipp-lib/projects/gwipp/src/lib/menus/tab-menu/tab-menu.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" column="19" selection-start-line="11" selection-start-column="19" selection-end-line="11" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gwipp-lib/projects/gwipp/src/lib/menus/tab-menu/foundation/model/tab-item.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="18" column="1" selection-start-line="18" selection-start-column="1" selection-end-line="18" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gwipp-lib/projects/gwipp/src/lib/menus/tab-menu/foundation/model/tabs.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="42" selection-start-line="7" selection-start-column="42" selection-end-line="7" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gwipp-lib/projects/gwipp/src/lib/menus/tab-menu/tab-menu.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" selection-start-line="3" selection-end-line="3" />
+          <folding>
+            <element signature="e#0#77#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gwipp-lib/src/app/app.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="40" column="22" selection-start-line="40" selection-start-column="22" selection-end-line="40" selection-end-column="22" />
+          <folding>
+            <element signature="e#0#48#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gwipp-lib/src/app/app.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="22" column="40" selection-start-line="22" selection-start-column="40" selection-end-line="22" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>
