@@ -14,20 +14,21 @@ jobs:
       - checkout
 
       - restore_cache:
-          key: v1-dependencies-{{ checksum "package.json" }}
+          key: v1-dependencies-{{ checksum "gwipp-lib/package.json" }}
 
       - run: cd gwipp-lib
+      - run: ls
       - run: npm install
 
       - save_cache:
-          key: v1-dependencies-{{ checksum "package.json" }}
+          key: v1-dependencies-{{ checksum "gwipp-lib/package.json" }}
           paths:
             - node_modules
 
       - run: npm run build_lib
 
       - save_cache:
-          key: v1-dependencies-{{ checksum "package.json" }}
+          key: v1-dependencies-{{ checksum "gwipp-lib/package.json" }}
           paths:
             - dist
 
