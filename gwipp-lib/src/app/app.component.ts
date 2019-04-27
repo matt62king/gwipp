@@ -3,6 +3,8 @@ import {Button, ButtonType, Ginput, IconAnimation, IconSize, InputConfiguration}
 import {ButtonConfiguration} from '../../projects/gwipp/src/lib/button/foundation/configuation/button-configuration';
 import {FormConfiguration} from '../../projects/gwipp/src/lib/form/foundation/configuration/form-configuration';
 import {FormBuilder, FormControl, FormGroup, Validators} from '@angular/forms';
+import {Tabs} from '../../projects/gwipp/src/lib/menus/tab-menu/foundation/model/tabs';
+import {TabItem} from "../../projects/gwipp/src/lib/menus/tab-menu/foundation/model/tab-item";
 
 @Component({
   selector: 'app-root',
@@ -34,6 +36,9 @@ export class AppComponent implements OnInit{
 
   @Ginput({label: 'Agree to Terms'})
   switchConfig: InputConfiguration;
+
+  @Tabs(['Sign In', 'Create Account'])
+  tabItems: TabItem[];
 
   formConfig: FormConfiguration;
   formGroup: FormGroup;

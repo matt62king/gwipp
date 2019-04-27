@@ -16,3 +16,7 @@
     color: $color;
   }
 }
+
+@mixin clickable {
+  cursor: pointer !important;
+}
