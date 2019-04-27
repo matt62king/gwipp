@@ -61,33 +61,17 @@ jobs:
             cd gwipp-lib/
             ls
 
-  build:
-    docker:
-      - image: circleci/node:7.10
-
-    working_directory: ~/repo
-
+  publish:
+    <<: *defaults
     steps:
-      - checkout
+      - attach_workspace:
+          at: ~/repo
 
-      - restore_cache:
-          key: v1-dependencies-{{ checksum "gwipp-lib/package.json" }}
+      - run:
+          command: |
+            cd gwipp-lib/dist/gwipp/
+            ls
 
-      - run: cd gwipp-lib/
-      - run: ls
-      - run: npm install
-
-      - save_cache:
-          key: v1-dependencies-{{ checksum "gwipp-lib/package.json" }}
-          paths:
-            - node_modules
-
-      - run: npm run build_lib
-
-      - save_cache:
-          key: v1-dependencies-{{ checksum "gwipp-lib/package.json" }}
-          paths:
-            - dist
 
 workflows:
   version: 2
@@ -102,3 +86,7 @@ workflows:
       - package:
           requires:
             - install
+
+      - publish:
+          requires:
+            - package
