@@ -28,6 +28,7 @@ export * from './lib/menus/tab-menu/tab-menu.module';
 export * from './lib/menus/tab-menu/foundation/model/tabs';
 
 export * from './lib/navigation/navigation.module';
+export * from './lib/navigation/nav-attributes/nav-attributes.module';
 
 export * from './lib/output/output.module';
 
