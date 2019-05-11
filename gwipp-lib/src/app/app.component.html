@@ -12,13 +12,14 @@
 </div>
 
 <div class="mt-1 w-25">
-  <gwipp-form [formGroup]="formGroup" [config]="formConfig">
+  <gwipp-form [formGroup]="formGroup" (formEvent)="onFormEvent($event)" #form>
     <gwipp-text-field [config]="inputConfig" [formControl]="formGroup.controls['name']"></gwipp-text-field>
-    <gwipp-password-field class="mt-2" [config]="passwordConfig" [hasStrength]="true"></gwipp-password-field>
-    <gwipp-switch class="mt-2" [config]="switchConfig"></gwipp-switch>
+    <gwipp-password-field class="mt-2" [config]="passwordConfig" [hasStrength]="true"
+                          [formControl]="formGroup.controls['password']"></gwipp-password-field>
+    <gwipp-switch class="mt-2" [config]="switchConfig" [formControl]="formGroup.controls['agree']"></gwipp-switch>
   </gwipp-form>
 </div>
 
-<gwipp-overlay-view title="Test Overlay">
-  <gwipp-tab-menu [tabItems]="tabItems"></gwipp-tab-menu>
-</gwipp-overlay-view>
+<!--<gwipp-overlay-view title="Test Overlay">-->
+<!--  <gwipp-tab-menu [tabItems]="tabItems"></gwipp-tab-menu>-->
+<!--</gwipp-overlay-view>-->
