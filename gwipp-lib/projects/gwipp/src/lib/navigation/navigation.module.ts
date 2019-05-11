@@ -14,7 +14,8 @@ import { NavigationBarComponent } from './navigation-bar/navigation-bar.componen
     NavAttributesModule
   ],
   exports: [
-    NavigationBarComponent
+    NavigationBarComponent,
+    NavAttributesModule
   ]
 })
 export class NavigationModule { }

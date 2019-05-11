@@ -1,20 +1,27 @@
-import {Component, OnInit} from '@angular/core';
-import {Button, ButtonType, Ginput, IconAnimation, IconSize, InputConfiguration} from 'gwipp';
+import {Component, OnInit, ViewChild} from '@angular/core';
+import {ButtonType, IconAnimation, IconSize, InputConfiguration} from 'gwipp';
 import {ButtonConfiguration} from '../../projects/gwipp/src/lib/button/foundation/configuation/button-configuration';
-import {FormConfiguration} from '../../projects/gwipp/src/lib/form/foundation/configuration/form-configuration';
 import {FormBuilder, FormControl, FormGroup, Validators} from '@angular/forms';
 import {Tabs} from '../../projects/gwipp/src/lib/menus/tab-menu/foundation/model/tabs';
-import {TabItem} from "../../projects/gwipp/src/lib/menus/tab-menu/foundation/model/tab-item";
+import {TabItem} from '../../projects/gwipp/src/lib/menus/tab-menu/foundation/model/tab-item';
+import {FormEvent} from '../../projects/gwipp/src/lib/form/foundation/event/form-event';
+import {FormEventType} from '../../projects/gwipp/src/lib/form/foundation/event/form-event-type';
+import {FormMode} from '../../projects/gwipp/src/lib/form/foundation/consts/form-mode';
+import {FormComponent} from '../../projects/gwipp/src/lib/form/components/form/form.component';
+import {Button} from '../../projects/gwipp/src/lib/button/decorators/button.decorator';
+import {InputConfig} from '../../projects/gwipp/src/lib/input/decorators/input.decorators';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent implements OnInit{
+export class AppComponent implements OnInit {
   title = 'gwipp-lib';
   iconSize = IconSize.TEN_X;
   animation = IconAnimation.SPIN;
+
+  @ViewChild('form') form: FormComponent;
 
   @Button({label: 'Button', buttonType: ButtonType.PRIMARY})
   buttonConfig: ButtonConfiguration;
@@ -28,19 +35,18 @@ export class AppComponent implements OnInit{
   @Button({label: 'Submit', buttonType: ButtonType.PRIMARY})
   submitConfig: ButtonConfiguration;
 
-  @Ginput({label: 'Name', infoLabel: 'someone@example.com'})
+  @InputConfig({label: 'Name', infoLabel: 'someone@example.com'})
   inputConfig: InputConfiguration;
 
-  @Ginput({label: 'Password', infoLabel: 'Min length of 8'})
+  @InputConfig({label: 'Password', infoLabel: 'Min length of 8'})
   passwordConfig: InputConfiguration;
 
-  @Ginput({label: 'Agree to Terms'})
+  @InputConfig({label: 'Agree to Terms'})
   switchConfig: InputConfiguration;
 
   @Tabs(['Sign In', 'Create Account'])
   tabItems: TabItem[];
 
-  formConfig: FormConfiguration;
   formGroup: FormGroup;
 
   constructor(private formBuilder: FormBuilder) {
@@ -49,9 +55,20 @@ export class AppComponent implements OnInit{
 
   ngOnInit(): void {
     this.formGroup = this.formBuilder.group({
-      name: new FormControl('', Validators.required)
+      name: new FormControl('', Validators.required),
+      password: new FormControl('', Validators.required),
+      agree: new FormControl('', Validators.required)
     });
+  }
 
-    this.formConfig = new FormConfiguration({submitConfiguration: this.submitConfig, cancelConfiguration: this.cancelConfig});
+  onFormEvent(formEvent: FormEvent): void {
+    switch (formEvent.eventType) {
+      case FormEventType.CANCEL :
+        this.formGroup.reset();
+        break;
+      case FormEventType.SUBMIT :
+        this.form.formMode = FormMode.SUBMITTING;
+        break;
+    }
   }
 }
