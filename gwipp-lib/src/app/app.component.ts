@@ -1,5 +1,5 @@
 import {Component, OnInit, ViewChild} from '@angular/core';
-import {Button, ButtonType, Ginput, IconAnimation, IconSize, InputConfiguration} from 'gwipp';
+import {ButtonType, IconAnimation, IconSize, InputConfiguration} from 'gwipp';
 import {ButtonConfiguration} from '../../projects/gwipp/src/lib/button/foundation/configuation/button-configuration';
 import {FormBuilder, FormControl, FormGroup, Validators} from '@angular/forms';
 import {Tabs} from '../../projects/gwipp/src/lib/menus/tab-menu/foundation/model/tabs';
@@ -8,6 +8,8 @@ import {FormEvent} from '../../projects/gwipp/src/lib/form/foundation/event/form
 import {FormEventType} from '../../projects/gwipp/src/lib/form/foundation/event/form-event-type';
 import {FormMode} from '../../projects/gwipp/src/lib/form/foundation/consts/form-mode';
 import {FormComponent} from '../../projects/gwipp/src/lib/form/components/form/form.component';
+import {Button} from '../../projects/gwipp/src/lib/button/decorators/button.decorator';
+import {InputConfig} from '../../projects/gwipp/src/lib/input/decorators/input.decorators';
 
 @Component({
   selector: 'app-root',
@@ -33,13 +35,13 @@ export class AppComponent implements OnInit {
   @Button({label: 'Submit', buttonType: ButtonType.PRIMARY})
   submitConfig: ButtonConfiguration;
 
-  @Ginput({label: 'Name', infoLabel: 'someone@example.com'})
+  @InputConfig({label: 'Name', infoLabel: 'someone@example.com'})
   inputConfig: InputConfiguration;
 
-  @Ginput({label: 'Password', infoLabel: 'Min length of 8'})
+  @InputConfig({label: 'Password', infoLabel: 'Min length of 8'})
   passwordConfig: InputConfiguration;
 
-  @Ginput({label: 'Agree to Terms'})
+  @InputConfig({label: 'Agree to Terms'})
   switchConfig: InputConfiguration;
 
   @Tabs(['Sign In', 'Create Account'])

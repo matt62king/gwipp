@@ -2,12 +2,9 @@ import {Component, EventEmitter, Input, OnInit, Output, ViewChild} from '@angula
 import {FormEvent} from '../../foundation/event/form-event';
 import {FormGroup} from '@angular/forms';
 import {FormMode} from '../../foundation/consts/form-mode';
-import {FormConfigurationOptions} from '../../foundation/configuration/form-configuration-options';
-import {Button} from '../../../foundation/configuration/congifurations';
-import {ButtonConfiguration} from '../../../button/foundation/configuation/button-configuration';
-import {ButtonType} from '../../../button/foundation/type/button-type';
 import {SubmitGroupComponent} from '../submit-group/submit-group.component';
 import {ButtonMode} from '../../../button/foundation/mode/button-mode';
+import {FormConfiguration} from '../../foundation/configuration/form-configuration';
 
 @Component({
   selector: 'gwipp-form',
@@ -18,13 +15,7 @@ export class FormComponent implements OnInit {
 
   @Output() formEvent: EventEmitter<FormEvent> = new EventEmitter();
 
-  @Button({label: 'Cancel', buttonType: ButtonType.SECONDARY})
-  cancelButton: ButtonConfiguration;
-
-  @Button({label: 'Submit'})
-  submitButton: ButtonConfiguration;
-
-  @Input() config: FormConfigurationOptions = {submitConfiguration: this.submitButton, cancelConfiguration: this.cancelButton};
+  @Input() config: FormConfiguration = new FormConfiguration();
   @Input() formGroup: FormGroup;
 
   constructor() { }
