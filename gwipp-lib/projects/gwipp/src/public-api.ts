@@ -16,6 +16,8 @@ export * from './lib/form/foundation/event/form-event';
 export * from './lib/form/foundation/event/form-event-type';
 
 export * from './lib/foundation/event/gwipp-event';
+export * from './lib/foundation/style/colors/colors';
+export * from './lib/foundation/style/style.module';
 
 export * from './lib/icon/icon.module';
 export * from './lib/icon/icon/constants/icon-animation';
