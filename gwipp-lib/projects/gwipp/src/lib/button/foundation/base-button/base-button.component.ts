@@ -13,7 +13,7 @@ import {HasButtonMode} from '../mode/has-button-mode';
   template: '<div></div>'
 })
 export class BaseButtonComponent implements OnInit, HasButtonMode {
-  @Output() click: EventEmitter<ButtonEvent> = new EventEmitter();
+  @Output() buttonClick: EventEmitter<ButtonEvent> = new EventEmitter();
 
   @Input() enabled = true;
 
@@ -46,7 +46,7 @@ export class BaseButtonComponent implements OnInit, HasButtonMode {
   }
 
   onClick(): void {
-    this.click.emit(new ButtonEvent(this));
+    this.buttonClick.emit(new ButtonEvent(this));
   }
 
   isActive(): boolean {
