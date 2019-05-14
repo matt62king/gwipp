@@ -5,7 +5,7 @@
   <gwipp-submit-group [cancelConfig]="config.cancelConfiguration"
                       [submitConfig]="config.submitConfiguration"
                       [submitEnabled]="formGroup.valid"
-                      [cancelEnabled]="formGroup.dirty"
+                      [cancelEnabled]="formGroup.dirty || config.cancelAlwaysEnabled"
                       (formEvent)="onCancelSubmit($event)" #submitGroup>
   </gwipp-submit-group>
 </div>

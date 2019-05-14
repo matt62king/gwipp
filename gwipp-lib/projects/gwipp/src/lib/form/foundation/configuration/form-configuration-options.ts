@@ -3,5 +3,6 @@ import {ButtonConfiguration} from '../../../button/foundation/configuation/butto
 export interface FormConfigurationOptions {
   cancelConfiguration?: ButtonConfiguration;
   submitConfiguration?: ButtonConfiguration;
+  cancelAlwaysEnabled?: boolean;
   canCancel?: boolean;
 }
