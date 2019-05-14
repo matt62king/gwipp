@@ -38,4 +38,8 @@
   &:focus-within {
     @include  input-focus-border;
   }
+
+  &-lable {
+    margin-bottom: 0px !important;
+  }
 }
