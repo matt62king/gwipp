@@ -4,18 +4,23 @@ import { CommonModule } from '@angular/common';
 import { NavAttributesModule } from './nav-attributes/nav-attributes.module';
 
 import { NavigationBarComponent } from './navigation-bar/navigation-bar.component';
+import { NavDropMenuComponent } from './nav-items/nav-drop-menu/nav-drop-menu.component';
+import {StyleModule} from '../foundation/style/style.module';
 
 @NgModule({
   declarations: [
-    NavigationBarComponent
+    NavigationBarComponent,
+    NavDropMenuComponent
   ],
   imports: [
     CommonModule,
-    NavAttributesModule
+    NavAttributesModule,
+    StyleModule
   ],
   exports: [
     NavigationBarComponent,
-    NavAttributesModule
+    NavAttributesModule,
+    NavDropMenuComponent
   ]
 })
 export class NavigationModule { }

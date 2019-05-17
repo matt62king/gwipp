@@ -1,0 +1,13 @@
+<div gwippNavBarItem>
+  <div class="d-flex flex-column">
+    <div gwippClickable (click)="toggleMenu()">
+      Drop Menu
+    </div>
+
+    <ng-container *ngIf="showMenu">
+      <div class="gwipp-nav-bar-drop-menu p-2" #menuContent>
+        Drop Menu Content
+      </div>
+    </ng-container>
+  </div>
+</div>

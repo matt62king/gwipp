@@ -20,3 +20,7 @@
 @mixin clickable {
   cursor: pointer !important;
 }
+
+@mixin drop-shadow {
+  box-shadow: 0px 6px 12px gray('300');
+}

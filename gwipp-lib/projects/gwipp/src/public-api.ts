@@ -49,6 +49,7 @@ export * from './lib/menus/tab-menu/foundation/model/tabs';
 
 export * from './lib/navigation/navigation.module';
 export * from './lib/navigation/nav-attributes/nav-attributes.module';
+export * from './lib/navigation/nav-items/nav-drop-menu/nav-drop-menu.component';
 export * from './lib/navigation/navigation-bar/navigation-bar.component';
 
 export * from './lib/output/output.module';
