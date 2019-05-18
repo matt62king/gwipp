@@ -5,8 +5,8 @@
     </div>
 
     <ng-container *ngIf="showMenu">
-      <div class="gwipp-nav-bar-drop-menu p-2" #menuContent>
-        Drop Menu Content
+      <div class="gwipp-nav-bar-drop-menu p-2">
+        <ng-container *ngTemplateOutlet="itemDetail.menuTemplate"></ng-container>
       </div>
     </ng-container>
   </div>
