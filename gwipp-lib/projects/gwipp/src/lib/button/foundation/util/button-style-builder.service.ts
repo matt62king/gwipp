@@ -1,16 +1,13 @@
 import {Injectable} from '@angular/core';
 import {StyleModule} from '../../../foundation/style/style.module';
 import {ButtonType} from '../type/button-type';
+import {ButtonActionType} from '../type/button-action.type';
 
 @Injectable({providedIn: StyleModule})
 export class ButtonStyleBuilder {
 
-  constructor() {
-
-  }
-
-  public buildForType(buttonType: ButtonType): string {
-    return 'btn btn-lg ' + this.styleForType(buttonType);
+  public buildForType(buttonType: ButtonType, buttonAction: ButtonActionType): string {
+    return `btn btn-lg  ${this.styleForType(buttonType)} ${this.styleForAction(buttonAction)}`;
   }
 
   private styleForType(buttonType: ButtonType): string {
@@ -25,6 +22,17 @@ export class ButtonStyleBuilder {
         return 'btn-danger';
       case ButtonType.NONE :
         return '';
+      default :
+        return '';
     }
   }
+
+  private styleForAction(buttonAction: ButtonActionType): string {
+    if (buttonAction === ButtonActionType.ACTION) {
+      return 'gwipp-btn-action';
+    }
+
+    return '';
+  }
+
 }
