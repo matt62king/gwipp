@@ -72,11 +72,6 @@ jobs:
             cd gwipp-lib
             npm run build
 
-      - persist_to_workspace:
-          root: ~/repo
-          paths:
-            - gwipp-lib/*
-
       - run:
           command: |
             cd gwipp-lib/
@@ -162,21 +157,22 @@ workflows:
 
       - build:
           requires:
-            - build-lib
+            - install
           filters:
             tags:
               only: /.*/
 
       - lint:
           requires:
-            - build
-            - build-lib
+            - install
           filters:
             tags:
               only: /.*/
 
       - package:
           requires:
+            - build
+            - build-lib
             - lint
           filters:
             tags:
