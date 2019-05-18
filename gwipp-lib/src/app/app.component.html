@@ -1,7 +1,14 @@
 <gwipp-navigation-bar>
   <div gwippNavBarTitle>Title</div>
   <div gwippNavBarItem class="pl-2">Item</div>
-  <gwipp-nav-drop-menu class="ml-2" title="Drop Menu"></gwipp-nav-drop-menu>
+
+  <gwipp-nav-drop-menu class="ml-2" title="Drop Menu">
+    <nav-item-detail>
+      <ng-template nav-menu>
+        <div class="text-dark">Drop Menu Content</div>
+      </ng-template>
+    </nav-item-detail>
+  </gwipp-nav-drop-menu>
 </gwipp-navigation-bar>
 
 <div class="mt-5 w-25">
