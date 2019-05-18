@@ -1,4 +1,4 @@
-import {Component, ElementRef, OnInit, ViewChild} from '@angular/core';
+import {Component, ElementRef, Input, OnInit, ViewChild} from '@angular/core';
 
 @Component({
   selector: 'gwipp-nav-drop-menu',
@@ -6,6 +6,8 @@ import {Component, ElementRef, OnInit, ViewChild} from '@angular/core';
 })
 export class NavDropMenuComponent implements OnInit {
   @ViewChild('menuContent') menu: ElementRef;
+
+  @Input() title: string;
 
   showMenu: boolean;
 
