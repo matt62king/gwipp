@@ -2,20 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2e539de5-c170-452a-95d4-0e40249e080e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/gwipp-lib/projects/gwipp/src/lib/button/foundation/type/button-action.type.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gwipp-lib/projects/gwipp/src/styles/input/button.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.circleci/config.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.circleci/config.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gwipp-lib/projects/gwipp/src/lib/button/foundation/base-button/base-button.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/gwipp-lib/projects/gwipp/src/lib/button/foundation/base-button/base-button.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gwipp-lib/projects/gwipp/src/lib/button/foundation/configuation/button-configuration-options.ts" beforeDir="false" afterPath="$PROJECT_DIR$/gwipp-lib/projects/gwipp/src/lib/button/foundation/configuation/button-configuration-options.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gwipp-lib/projects/gwipp/src/lib/button/foundation/configuation/button-configuration.ts" beforeDir="false" afterPath="$PROJECT_DIR$/gwipp-lib/projects/gwipp/src/lib/button/foundation/configuation/button-configuration.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gwipp-lib/projects/gwipp/src/lib/button/foundation/util/button-style-builder.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/gwipp-lib/projects/gwipp/src/lib/button/foundation/util/button-style-builder.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gwipp-lib/projects/gwipp/src/public-api.ts" beforeDir="false" afterPath="$PROJECT_DIR$/gwipp-lib/projects/gwipp/src/public-api.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gwipp-lib/projects/gwipp/src/styles/constants/constants.scss" beforeDir="false" afterPath="$PROJECT_DIR$/gwipp-lib/projects/gwipp/src/styles/constants/constants.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gwipp-lib/projects/gwipp/src/styles/gwipp-style.scss" beforeDir="false" afterPath="$PROJECT_DIR$/gwipp-lib/projects/gwipp/src/styles/gwipp-style.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gwipp-lib/projects/gwipp/src/styles/navbar/navbar.scss" beforeDir="false" afterPath="$PROJECT_DIR$/gwipp-lib/projects/gwipp/src/styles/navbar/navbar.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gwipp-lib/src/app/app.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/gwipp-lib/src/app/app.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gwipp-lib/src/app/app.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/gwipp-lib/src/app/app.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gwipp-lib/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/gwipp-lib/src/app/app.module.ts" afterDir="false" />
     </list>
     <list id="5f7c411c-2c18-461f-9826-aa6a4c59594b" name="ignore-on-commit" comment="" />
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -44,8 +32,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/gwipp-lib/projects/gwipp/src/lib/button/foundation/util/button-style-builder.service.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="465">
-              <caret line="31" column="28" selection-start-line="31" selection-start-column="28" selection-end-line="31" selection-end-column="28" />
+            <state relative-caret-position="480">
+              <caret line="44" column="5" lean-forward="true" selection-start-line="44" selection-start-column="5" selection-end-line="44" selection-end-column="5" />
               <folding>
                 <element signature="e#0#41#0" expanded="true" />
               </folding>
@@ -54,40 +42,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/gwipp-lib/projects/gwipp/src/styles/input/button.scss">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="45">
-              <caret line="3" column="52" selection-start-line="3" selection-start-column="52" selection-end-line="3" selection-end-column="52" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/gwipp-lib/projects/gwipp/src/styles/constants/constants.scss">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="6" column="28" selection-start-line="6" selection-start-column="28" selection-end-line="6" selection-end-column="28" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/gwipp-lib/projects/gwipp/src/lib/button/foundation/configuation/button-configuration.ts">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
-              <caret line="15" column="40" selection-start-line="15" selection-start-column="40" selection-end-line="15" selection-end-column="40" />
-              <folding>
-                <element signature="e#0#74#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/gwipp-lib/src/app/app.component.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="195">
-              <caret line="35" column="81" selection-start-line="35" selection-start-column="81" selection-end-line="35" selection-end-column="81" />
+            <state relative-caret-position="314">
+              <caret line="49" lean-forward="true" selection-start-line="49" selection-end-line="49" />
               <folding>
                 <element signature="e#0#59#0" expanded="true" />
               </folding>
@@ -95,11 +53,42 @@
           </provider>
         </entry>
       </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/gwipp-lib/projects/gwipp/src/lib/form/foundation/configuration/form-configuration.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="300">
+              <caret line="20" selection-start-line="20" selection-end-line="20" />
+              <folding>
+                <element signature="e#0#70#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.circleci/config.yml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="269">
+              <caret line="178" column="19" selection-start-line="178" selection-start-column="19" selection-end-line="178" selection-end-column="19" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/gwipp-lib/angular.json">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/gwipp-lib/package.json">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/gwipp-lib/projects/gwipp/src/lib/button/foundation/type/button-action.type.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="45">
-              <caret line="3" column="8" lean-forward="true" selection-start-line="3" selection-start-column="8" selection-end-line="3" selection-end-column="8" />
+            <state relative-caret-position="60">
+              <caret line="4" column="16" selection-start-line="4" selection-start-column="16" selection-end-line="4" selection-end-column="16" />
             </state>
           </provider>
         </entry>
@@ -114,22 +103,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/gwipp-lib/projects/gwipp/src/lib/button/foundation/configuation/button-configuration-options.ts">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="8" column="14" lean-forward="true" selection-start-line="8" selection-start-column="2" selection-end-line="8" selection-end-column="14" />
-              <folding>
-                <element signature="e#0#47#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/gwipp-lib/src/app/app.component.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="249">
-              <caret line="22" column="18" selection-start-line="22" selection-start-column="18" selection-end-line="22" selection-end-column="18" />
+            <state relative-caret-position="315">
+              <caret line="36" column="32" selection-start-line="36" selection-start-column="32" selection-end-line="36" selection-end-column="32" />
             </state>
           </provider>
         </entry>
@@ -157,7 +134,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/gwipp-lib/projects/gwipp/src/lib/input/foundation/configuration/input-configuration-options.ts" />
         <option value="$PROJECT_DIR$/gwipp-lib/projects/gwipp/src/lib/button/components/button/button.component.ts" />
         <option value="$PROJECT_DIR$/gwipp-lib/projects/gwipp/src/lib/form/components/submit-group/submit-group.component.html" />
         <option value="$PROJECT_DIR$/gwipp-lib/projects/gwipp/src/lib/input/components/text-field/text-field.component.ts" />
@@ -193,21 +169,22 @@
         <option value="$PROJECT_DIR$/gwipp-lib/projects/gwipp/src/lib/foundation/style/attributes/clickable.directive.ts" />
         <option value="$PROJECT_DIR$/gwipp-lib/projects/gwipp/src/lib/menus/tab-menu/tab-menu.component.html" />
         <option value="$PROJECT_DIR$/gwipp-lib/projects/gwipp/src/lib/menus/tab-menu/tab-menu.module.ts" />
-        <option value="$PROJECT_DIR$/.circleci/config.yml" />
         <option value="$PROJECT_DIR$/gwipp-lib/projects/gwipp/src/lib/button/foundation/type/button-type.ts" />
-        <option value="$PROJECT_DIR$/gwipp-lib/projects/gwipp/src/lib/button/foundation/type/button-action.type.ts" />
         <option value="$PROJECT_DIR$/gwipp-lib/projects/gwipp/src/lib/button/foundation/configuation/button-configuration-options.ts" />
         <option value="$PROJECT_DIR$/gwipp-lib/projects/gwipp/src/styles/navbar/navbar.scss" />
         <option value="$PROJECT_DIR$/gwipp-lib/projects/gwipp/src/styles/input/button.scss" />
         <option value="$PROJECT_DIR$/gwipp-lib/projects/gwipp/src/styles/gwipp-style.scss" />
-        <option value="$PROJECT_DIR$/gwipp-lib/src/app/app.component.html" />
         <option value="$PROJECT_DIR$/gwipp-lib/projects/gwipp/src/public-api.ts" />
         <option value="$PROJECT_DIR$/gwipp-lib/src/app/app.module.ts" />
-        <option value="$PROJECT_DIR$/gwipp-lib/src/app/app.component.ts" />
         <option value="$PROJECT_DIR$/gwipp-lib/projects/gwipp/src/lib/button/foundation/configuation/button-configuration.ts" />
         <option value="$PROJECT_DIR$/gwipp-lib/projects/gwipp/src/lib/button/foundation/base-button/base-button.component.ts" />
-        <option value="$PROJECT_DIR$/gwipp-lib/projects/gwipp/src/lib/button/foundation/util/button-style-builder.service.ts" />
         <option value="$PROJECT_DIR$/gwipp-lib/projects/gwipp/src/styles/constants/constants.scss" />
+        <option value="$PROJECT_DIR$/gwipp-lib/projects/gwipp/src/lib/button/foundation/type/button-action.type.ts" />
+        <option value="$PROJECT_DIR$/gwipp-lib/projects/gwipp/src/lib/button/foundation/util/button-style-builder.service.ts" />
+        <option value="$PROJECT_DIR$/gwipp-lib/src/app/app.component.html" />
+        <option value="$PROJECT_DIR$/gwipp-lib/src/app/app.component.ts" />
+        <option value="$PROJECT_DIR$/gwipp-lib/projects/gwipp/src/lib/form/foundation/configuration/form-configuration.ts" />
+        <option value="$PROJECT_DIR$/.circleci/config.yml" />
       </list>
     </option>
   </component>
@@ -236,6 +213,11 @@
             <path>
               <item name="gwipp" type="b2602c69:ProjectViewProjectNode" />
               <item name="gwipp" type="462c0819:PsiDirectoryNode" />
+              <item name=".circleci" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="gwipp" type="b2602c69:ProjectViewProjectNode" />
+              <item name="gwipp" type="462c0819:PsiDirectoryNode" />
               <item name="gwipp-lib" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -267,137 +249,6 @@
               <item name="gwipp" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="lib" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="gwipp" type="b2602c69:ProjectViewProjectNode" />
-              <item name="gwipp" type="462c0819:PsiDirectoryNode" />
-              <item name="gwipp-lib" type="462c0819:PsiDirectoryNode" />
-              <item name="projects" type="462c0819:PsiDirectoryNode" />
-              <item name="gwipp" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="lib" type="462c0819:PsiDirectoryNode" />
-              <item name="button" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="gwipp" type="b2602c69:ProjectViewProjectNode" />
-              <item name="gwipp" type="462c0819:PsiDirectoryNode" />
-              <item name="gwipp-lib" type="462c0819:PsiDirectoryNode" />
-              <item name="projects" type="462c0819:PsiDirectoryNode" />
-              <item name="gwipp" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="lib" type="462c0819:PsiDirectoryNode" />
-              <item name="button" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="gwipp" type="b2602c69:ProjectViewProjectNode" />
-              <item name="gwipp" type="462c0819:PsiDirectoryNode" />
-              <item name="gwipp-lib" type="462c0819:PsiDirectoryNode" />
-              <item name="projects" type="462c0819:PsiDirectoryNode" />
-              <item name="gwipp" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="lib" type="462c0819:PsiDirectoryNode" />
-              <item name="button" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="button" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="gwipp" type="b2602c69:ProjectViewProjectNode" />
-              <item name="gwipp" type="462c0819:PsiDirectoryNode" />
-              <item name="gwipp-lib" type="462c0819:PsiDirectoryNode" />
-              <item name="projects" type="462c0819:PsiDirectoryNode" />
-              <item name="gwipp" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="lib" type="462c0819:PsiDirectoryNode" />
-              <item name="button" type="462c0819:PsiDirectoryNode" />
-              <item name="foundation" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="gwipp" type="b2602c69:ProjectViewProjectNode" />
-              <item name="gwipp" type="462c0819:PsiDirectoryNode" />
-              <item name="gwipp-lib" type="462c0819:PsiDirectoryNode" />
-              <item name="projects" type="462c0819:PsiDirectoryNode" />
-              <item name="gwipp" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="lib" type="462c0819:PsiDirectoryNode" />
-              <item name="button" type="462c0819:PsiDirectoryNode" />
-              <item name="foundation" type="462c0819:PsiDirectoryNode" />
-              <item name="base-button" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="gwipp" type="b2602c69:ProjectViewProjectNode" />
-              <item name="gwipp" type="462c0819:PsiDirectoryNode" />
-              <item name="gwipp-lib" type="462c0819:PsiDirectoryNode" />
-              <item name="projects" type="462c0819:PsiDirectoryNode" />
-              <item name="gwipp" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="lib" type="462c0819:PsiDirectoryNode" />
-              <item name="button" type="462c0819:PsiDirectoryNode" />
-              <item name="foundation" type="462c0819:PsiDirectoryNode" />
-              <item name="configuation" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="gwipp" type="b2602c69:ProjectViewProjectNode" />
-              <item name="gwipp" type="462c0819:PsiDirectoryNode" />
-              <item name="gwipp-lib" type="462c0819:PsiDirectoryNode" />
-              <item name="projects" type="462c0819:PsiDirectoryNode" />
-              <item name="gwipp" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="lib" type="462c0819:PsiDirectoryNode" />
-              <item name="button" type="462c0819:PsiDirectoryNode" />
-              <item name="foundation" type="462c0819:PsiDirectoryNode" />
-              <item name="type" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="gwipp" type="b2602c69:ProjectViewProjectNode" />
-              <item name="gwipp" type="462c0819:PsiDirectoryNode" />
-              <item name="gwipp-lib" type="462c0819:PsiDirectoryNode" />
-              <item name="projects" type="462c0819:PsiDirectoryNode" />
-              <item name="gwipp" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="lib" type="462c0819:PsiDirectoryNode" />
-              <item name="button" type="462c0819:PsiDirectoryNode" />
-              <item name="foundation" type="462c0819:PsiDirectoryNode" />
-              <item name="util" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="gwipp" type="b2602c69:ProjectViewProjectNode" />
-              <item name="gwipp" type="462c0819:PsiDirectoryNode" />
-              <item name="gwipp-lib" type="462c0819:PsiDirectoryNode" />
-              <item name="projects" type="462c0819:PsiDirectoryNode" />
-              <item name="gwipp" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="styles" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="gwipp" type="b2602c69:ProjectViewProjectNode" />
-              <item name="gwipp" type="462c0819:PsiDirectoryNode" />
-              <item name="gwipp-lib" type="462c0819:PsiDirectoryNode" />
-              <item name="projects" type="462c0819:PsiDirectoryNode" />
-              <item name="gwipp" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="styles" type="462c0819:PsiDirectoryNode" />
-              <item name="constants" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="gwipp" type="b2602c69:ProjectViewProjectNode" />
-              <item name="gwipp" type="462c0819:PsiDirectoryNode" />
-              <item name="gwipp-lib" type="462c0819:PsiDirectoryNode" />
-              <item name="projects" type="462c0819:PsiDirectoryNode" />
-              <item name="gwipp" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="styles" type="462c0819:PsiDirectoryNode" />
-              <item name="input" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="gwipp" type="b2602c69:ProjectViewProjectNode" />
-              <item name="gwipp" type="462c0819:PsiDirectoryNode" />
-              <item name="gwipp-lib" type="462c0819:PsiDirectoryNode" />
-              <item name="projects" type="462c0819:PsiDirectoryNode" />
-              <item name="gwipp" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="styles" type="462c0819:PsiDirectoryNode" />
-              <item name="navbar" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="gwipp" type="b2602c69:ProjectViewProjectNode" />
@@ -694,11 +545,25 @@
       <option name="project" value="LOCAL" />
       <updated>1556395795531</updated>
     </task>
-    <option name="localTasksCounter" value="34" />
+    <task id="LOCAL-00034" summary="GWIP-35 button actions">
+      <created>1558209984701</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1558209984701</updated>
+    </task>
+    <task id="LOCAL-00035" summary="GWIP-36 outline and link buttons">
+      <created>1558211790550</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1558211790551</updated>
+    </task>
+    <option name="localTasksCounter" value="36" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="77831000" />
+    <option name="totallyTimeSpent" value="80527000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="67" y="25" width="1853" height="1055" extended-state="6" />
@@ -741,7 +606,9 @@
     <MESSAGE value="GWIP-17 npm publish" />
     <MESSAGE value="GWIP-18 overlay view" />
     <MESSAGE value="GWIP-20 tab menu" />
-    <option name="LAST_COMMIT_MESSAGE" value="GWIP-20 tab menu" />
+    <MESSAGE value="GWIP-35 button actions" />
+    <MESSAGE value="GWIP-36 outline and link buttons" />
+    <option name="LAST_COMMIT_MESSAGE" value="GWIP-36 outline and link buttons" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -756,23 +623,7 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/gwipp-lib/dist/gwipp/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="360">
-            <caret line="24" selection-start-line="24" selection-end-line="24" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gwipp-lib/dist/gwipp/public-api.d.ts">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/gwipp-lib/dist/gwipp/package.json">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gwipp-lib/package.json">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/gwipp-lib/projects/gwipp/src/styles/input/switch.scss">
@@ -904,13 +755,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.circleci/config.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" column="4" selection-start-line="12" selection-start-column="4" selection-end-line="12" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/gwipp-lib/projects/gwipp/src/lib/navigation/nav-items/nav-drop-menu/nav-drop-menu.component.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
@@ -1038,23 +882,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/gwipp-lib/src/app/app.component.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="35" column="81" selection-start-line="35" selection-start-column="81" selection-end-line="35" selection-end-column="81" />
-          <folding>
-            <element signature="e#0#59#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gwipp-lib/src/app/app.component.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="249">
-          <caret line="22" column="18" selection-start-line="22" selection-start-column="18" selection-end-line="22" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/gwipp-lib/projects/gwipp/src/lib/button/foundation/configuation/button-configuration-options.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
@@ -1071,26 +898,6 @@
           <caret line="15" column="40" selection-start-line="15" selection-start-column="40" selection-end-line="15" selection-end-column="40" />
           <folding>
             <element signature="e#0#74#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gwipp-lib/projects/gwipp/src/lib/button/foundation/base-button/base-button.component.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="269">
-          <caret line="33" column="20" selection-start-line="33" selection-start-column="20" selection-end-line="33" selection-end-column="20" />
-          <folding>
-            <element signature="e#0#77#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gwipp-lib/projects/gwipp/src/lib/button/foundation/util/button-style-builder.service.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="465">
-          <caret line="31" column="28" selection-start-line="31" selection-start-column="28" selection-end-line="31" selection-end-column="28" />
-          <folding>
-            <element signature="e#0#41#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1116,10 +923,70 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/gwipp-lib/projects/gwipp/src/lib/button/foundation/base-button/base-button.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="269">
+          <caret line="33" column="20" selection-start-line="33" selection-start-column="20" selection-end-line="33" selection-end-column="20" />
+          <folding>
+            <element signature="e#0#77#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/gwipp-lib/projects/gwipp/src/lib/button/foundation/type/button-action.type.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="8" lean-forward="true" selection-start-line="3" selection-start-column="8" selection-end-line="3" selection-end-column="8" />
+        <state relative-caret-position="60">
+          <caret line="4" column="16" selection-start-line="4" selection-start-column="16" selection-end-line="4" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gwipp-lib/projects/gwipp/src/lib/button/foundation/util/button-style-builder.service.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="480">
+          <caret line="44" column="5" lean-forward="true" selection-start-line="44" selection-start-column="5" selection-end-line="44" selection-end-column="5" />
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gwipp-lib/src/app/app.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="36" column="32" selection-start-line="36" selection-start-column="32" selection-end-line="36" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gwipp-lib/src/app/app.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="314">
+          <caret line="49" lean-forward="true" selection-start-line="49" selection-end-line="49" />
+          <folding>
+            <element signature="e#0#59#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gwipp-lib/projects/gwipp/src/lib/form/foundation/configuration/form-configuration.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="20" selection-start-line="20" selection-end-line="20" />
+          <folding>
+            <element signature="e#0#70#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gwipp-lib/angular.json">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gwipp-lib/package.json">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.circleci/config.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="269">
+          <caret line="178" column="19" selection-start-line="178" selection-start-column="19" selection-end-line="178" selection-end-column="19" />
         </state>
       </provider>
     </entry>
