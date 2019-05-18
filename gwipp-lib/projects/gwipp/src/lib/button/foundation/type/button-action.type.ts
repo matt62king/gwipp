@@ -1,5 +1,6 @@
 export enum ButtonActionType {
   ACTION,
   PROCEED,
-  CANCEL
+  CANCEL_LINK,
+  CANCEL_OUTLINE
 }
