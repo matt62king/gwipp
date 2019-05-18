@@ -36,11 +36,17 @@ export class AppComponent implements OnInit {
   @Button({label: 'Action', buttonType: ButtonType.PRIMARY, buttonAction: ButtonActionType.ACTION})
   actionButton: ButtonConfiguration;
 
-  @Button({label: 'Cancel', buttonType: ButtonType.SECONDARY})
-  cancelConfig: ButtonConfiguration;
+  @Button({label: 'Outline', buttonType: ButtonType.PRIMARY, buttonAction: ButtonActionType.CANCEL_OUTLINE})
+  outlineButton: ButtonConfiguration;
 
-  @Button({label: 'Submit', buttonType: ButtonType.PRIMARY})
-  submitConfig: ButtonConfiguration;
+  @Button({label: 'Link', buttonType: ButtonType.PRIMARY, buttonAction: ButtonActionType.CANCEL_LINK})
+  linkButton: ButtonConfiguration;
+
+  // @Button({label: 'Cancel', buttonType: ButtonType.SECONDARY, buttonAction: ButtonActionType.CANCEL_LINK})
+  // cancelConfig: ButtonConfiguration;
+  //
+  // @Button({label: 'Submit', buttonType: ButtonType.PRIMARY})
+  // submitConfig: ButtonConfiguration;
 
   @InputConfig({label: 'Name', infoLabel: 'someone@example.com'})
   inputConfig: InputConfiguration;

@@ -7,24 +7,44 @@ import {ButtonActionType} from '../type/button-action.type';
 export class ButtonStyleBuilder {
 
   public buildForType(buttonType: ButtonType, buttonAction: ButtonActionType): string {
-    return `btn btn-lg  ${this.styleForType(buttonType)} ${this.styleForAction(buttonAction)}`;
+    return `btn btn-lg  ${this.styleForType(buttonType, buttonAction)} ${this.styleForAction(buttonAction)}`;
   }
 
-  private styleForType(buttonType: ButtonType): string {
+  private styleForType(buttonType: ButtonType, buttonAction: ButtonActionType): string {
+    let color: string;
+
     switch (buttonType) {
       case ButtonType.SUCCESS :
-        return 'btn-success';
+        color = '-success';
+        break;
       case ButtonType.SECONDARY :
-        return 'btn-secondary';
+        color = '-secondary';
+        break;
       case ButtonType.PRIMARY :
-        return 'btn-primary';
+        color = '-primary';
+        break;
       case ButtonType.DANGER :
-        return 'btn-danger';
+        color = '-danger';
+        break;
       case ButtonType.NONE :
-        return '';
+        color = '';
+        break;
       default :
-        return '';
+        color = '-primary';
+        break;
     }
+
+    let outline = '';
+
+    if (buttonAction === ButtonActionType.CANCEL_OUTLINE) {
+      outline = '-outline';
+    }
+
+    if (buttonAction === ButtonActionType.CANCEL_LINK) {
+      return `btn-link text${color}`;
+    }
+
+    return `btn${outline}${color}`;
   }
 
   private styleForAction(buttonAction: ButtonActionType): string {
