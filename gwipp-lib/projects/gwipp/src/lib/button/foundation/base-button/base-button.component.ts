@@ -19,11 +19,11 @@ export class BaseButtonComponent implements OnInit, HasButtonMode {
 
   config: ButtonConfiguration;
   buttonStyle: string;
-  buttonMode: ButtonMode = ButtonMode.ACTIVE;
 
+  buttonMode: ButtonMode = ButtonMode.ACTIVE;
   spinnerIcon = IconNames.SPINNER;
   sinnerAnimation = IconAnimation.SPIN;
-  
+
   constructor(protected styleBuilder: ButtonStyleBuilder) { }
 
   ngOnInit() {

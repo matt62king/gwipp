@@ -1,7 +1,7 @@
 import {TabItem} from './tab-item';
 
 export const Tabs = (tabs: string[]) =>
-  (target: Object, propertyKey: string) => {
+  (target: object, propertyKey: string) => {
     let tabItems: TabItem[] = [];
 
     tabs.forEach((tab, index) =>
