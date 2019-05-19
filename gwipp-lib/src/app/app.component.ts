@@ -42,12 +42,6 @@ export class AppComponent implements OnInit {
   @Button({label: 'Link', buttonType: ButtonType.PRIMARY, buttonAction: ButtonActionType.CANCEL_LINK})
   linkButton: ButtonConfiguration;
 
-  // @Button({label: 'Cancel', buttonType: ButtonType.SECONDARY, buttonAction: ButtonActionType.CANCEL_LINK})
-  // cancelConfig: ButtonConfiguration;
-  //
-  // @Button({label: 'Submit', buttonType: ButtonType.PRIMARY})
-  // submitConfig: ButtonConfiguration;
-
   @InputConfig({label: 'Name', infoLabel: 'someone@example.com'})
   inputConfig: InputConfiguration;
 
@@ -69,7 +63,7 @@ export class AppComponent implements OnInit {
   ngOnInit(): void {
     this.formGroup = this.formBuilder.group({
       name: new FormControl('', Validators.required),
-      password: new FormControl('', Validators.required),
+      password: new FormControl('', [Validators.required, Validators.minLength(8)]),
       agree: new FormControl('', Validators.required)
     });
   }
