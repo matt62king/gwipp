@@ -51,7 +51,7 @@ export * from './lib/menus/tab-menu/foundation/model/tabs';
 export * from './lib/navigation/navigation.module';
 export * from './lib/navigation/nav-attributes/nav-attributes.module';
 export * from './lib/navigation/nav-items/nav-item-detail.directive';
-export * from './lib/navigation/nav-items/nav-drop-menu/nav-drop-menu.component';
+export * from './lib/navigation/nav-items/nav-drop-menu/nav-menu-item.component';
 export * from './lib/navigation/nav-items/nav-drop-menu/nav-menu.directive';
 export * from './lib/navigation/nav-items/nav-item/nav-item.component';
 export * from './lib/navigation/navigation-bar/navigation-bar.component';
