@@ -1,14 +1,26 @@
 <gwipp-navigation-bar>
-  <div gwippNavBarTitle>Title</div>
-  <div gwippNavBarItem class="pl-2">Item</div>
-
-  <gwipp-nav-drop-menu class="ml-2" title="Drop Menu">
+  <gwipp-nav-item>
     <nav-item-detail>
+      <ng-template nav-title>Title</ng-template>
+    </nav-item-detail>
+  </gwipp-nav-item>
+
+  <gwipp-nav-item class="ml-2">
+    <nav-item-detail>
+      <ng-template nav-item>Item</ng-template>
+    </nav-item-detail>
+  </gwipp-nav-item>
+
+  <gwipp-nav-menu-item class="ml-2">
+    <nav-item-detail>
+      <ng-template nav-item>Drop Menu</ng-template>
+
       <ng-template nav-menu>
         <div class="text-dark">Drop Menu Content</div>
       </ng-template>
+
     </nav-item-detail>
-  </gwipp-nav-drop-menu>
+  </gwipp-nav-menu-item>
 </gwipp-navigation-bar>
 
 <div class="d-flex flex-row mt-5 mx-2">

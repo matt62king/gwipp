@@ -28,6 +28,7 @@
 
   &-drop-menu {
     color: black;
+    background-color: white;
     position: absolute;
     top: $gwipp-nav-bar-height;
     @include border(gray('300'));
