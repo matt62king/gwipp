@@ -54,14 +54,14 @@
   </gwipp-form>
 </div>
 
-<gwipp-toast>
-  <ng-template toast-detail>
-    <div class="text-dark">
-      Toaster detail
-    </div>
-  </ng-template>
-</gwipp-toast>
+<div class="d-flex flex-row mt-5 mx-2">
+  <gwipp-button [buttonConfig]="toastButton" (buttonClick)="toast(toastDetail)"></gwipp-button>
+</div>
 
-<!--<gwipp-overlay-view title="Test Overlay">-->
-<!--  <gwipp-tab-menu [tabItems]="tabItems"></gwipp-tab-menu>-->
-<!--</gwipp-overlay-view>-->
+<ng-template toast-detail #toastDetail>
+  <div class="text-dark">
+    Toaster detail
+  </div>
+</ng-template>
+
+<gwipp-toast></gwipp-toast>

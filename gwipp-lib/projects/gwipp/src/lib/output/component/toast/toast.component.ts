@@ -2,6 +2,8 @@ import {Component, ContentChild, OnInit, TemplateRef} from '@angular/core';
 import {IconNames} from '../../../icon/icon/constants/icon-names';
 import {Observable} from 'rxjs';
 import {ToastDetailDirective} from './toast-detail.directive';
+import {ToastState} from './model/toast-state';
+import {ToastService} from './service/toast.service';
 
 @Component({
   selector: 'gwipp-toast',
@@ -12,15 +14,16 @@ export class ToastComponent implements OnInit {
   @ContentChild(ToastDetailDirective, {read: TemplateRef})
   detail: TemplateRef<any>;
 
-  show$: Observable<boolean>;
+  show$: Observable<ToastState>;
   closeIcon = IconNames.TIMES;
 
-  constructor() { }
+  constructor(private toastService: ToastService) { }
 
   ngOnInit() {
+    this.show$ = this.toastService.register();
   }
 
   closeToaster(): void {
-
+    this.toastService.toast(false);
   }
 }
