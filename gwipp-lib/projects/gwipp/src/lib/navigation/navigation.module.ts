@@ -6,13 +6,15 @@ import {NavDropMenuComponent} from './nav-items/nav-drop-menu/nav-drop-menu.comp
 import {StyleModule} from '../foundation/style/style.module';
 import {NavMenuDirective} from './nav-items/nav-drop-menu/nav-menu.directive';
 import { NavItemDetailDirective } from './nav-items/nav-item-detail.directive';
+import { NavItemComponent } from './nav-items/nav-item/nav-item.component';
 
 @NgModule({
   declarations: [
     NavigationBarComponent,
     NavDropMenuComponent,
     NavMenuDirective,
-    NavItemDetailDirective
+    NavItemDetailDirective,
+    NavItemComponent
   ],
   imports: [
     CommonModule,
@@ -24,7 +26,8 @@ import { NavItemDetailDirective } from './nav-items/nav-item-detail.directive';
     NavAttributesModule,
     NavDropMenuComponent,
     NavItemDetailDirective,
-    NavMenuDirective
+    NavMenuDirective,
+    NavItemComponent
   ]
 })
 export class NavigationModule { }

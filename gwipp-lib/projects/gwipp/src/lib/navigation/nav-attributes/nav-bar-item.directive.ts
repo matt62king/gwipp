@@ -1,7 +1,7 @@
 import {Directive, ElementRef, Renderer2} from '@angular/core';
 
 @Directive({
-  selector: '[gwippNavBarItem]'
+  selector: '[nav-item]'
 })
 export class NavBarItemDirective {
 
