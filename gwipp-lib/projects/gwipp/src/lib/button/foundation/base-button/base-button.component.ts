@@ -19,11 +19,11 @@ export class BaseButtonComponent implements OnInit, HasButtonMode {
 
   config: ButtonConfiguration;
   buttonStyle: string;
-  buttonMode: ButtonMode = ButtonMode.ACTIVE;
 
+  buttonMode: ButtonMode = ButtonMode.ACTIVE;
   spinnerIcon = IconNames.SPINNER;
   sinnerAnimation = IconAnimation.SPIN;
-  
+
   constructor(protected styleBuilder: ButtonStyleBuilder) { }
 
   ngOnInit() {
@@ -32,16 +32,16 @@ export class BaseButtonComponent implements OnInit, HasButtonMode {
   @Input()
   public set buttonConfig(bc: ButtonConfiguration) {
     this.config = bc;
-    this.buttonStyle = this.styleBuilder.buildForType(bc.buttonType);
+    this.buttonStyle = this.styleBuilder.buildForType(bc.buttonType, bc.buttonAction);
   }
 
   setButtonMode(mode: ButtonMode): void {
     this.buttonMode = mode;
 
     if (mode === ButtonMode.ERROR) {
-      this.buttonStyle = this.styleBuilder.buildForType(ButtonType.DANGER);
+      this.buttonStyle = this.styleBuilder.buildForType(ButtonType.DANGER, this.config.buttonAction);
     } else {
-      this.buttonStyle = this.styleBuilder.buildForType(this.config.buttonType);
+      this.buttonStyle = this.styleBuilder.buildForType(this.config.buttonType, this.config.buttonAction);
     }
   }
 

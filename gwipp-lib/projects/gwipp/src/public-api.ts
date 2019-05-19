@@ -12,6 +12,7 @@ export * from './lib/button/foundation/configuation/button-configuration';
 export * from './lib/button/foundation/configuation/button-configuration-options';
 export * from './lib/button/foundation/event/button-event';
 export * from './lib/button/foundation/mode/button-mode';
+export * from './lib/button/foundation/type/button-action.type';
 export * from './lib/button/foundation/type/button-type';
 
 export * from './lib/form/form.module';

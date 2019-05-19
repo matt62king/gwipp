@@ -1,5 +1,4 @@
 import {Component, OnInit, ViewChild} from '@angular/core';
-import {ButtonType, IconAnimation, IconSize, InputConfiguration} from 'gwipp';
 import {ButtonConfiguration} from '../../projects/gwipp/src/lib/button/foundation/configuation/button-configuration';
 import {FormBuilder, FormControl, FormGroup, Validators} from '@angular/forms';
 import {Tabs} from '../../projects/gwipp/src/lib/menus/tab-menu/foundation/model/tabs';
@@ -10,6 +9,11 @@ import {FormMode} from '../../projects/gwipp/src/lib/form/foundation/consts/form
 import {FormComponent} from '../../projects/gwipp/src/lib/form/components/form/form.component';
 import {Button} from '../../projects/gwipp/src/lib/button/decorators/button.decorator';
 import {InputConfig} from '../../projects/gwipp/src/lib/input/decorators/input.decorators';
+import {ButtonType} from '../../projects/gwipp/src/lib/button/foundation/type/button-type';
+import {ButtonActionType} from '../../projects/gwipp/src/lib/button/foundation/type/button-action.type';
+import {IconSize} from '../../projects/gwipp/src/lib/icon/icon/constants/icon-size';
+import {IconAnimation} from '../../projects/gwipp/src/lib/icon/icon/constants/icon-animation';
+import {InputConfiguration} from '../../projects/gwipp/src/lib/input/foundation/configuration/input-configuration';
 
 @Component({
   selector: 'app-root',
@@ -26,14 +30,17 @@ export class AppComponent implements OnInit {
   @Button({label: 'Button', buttonType: ButtonType.PRIMARY})
   buttonConfig: ButtonConfiguration;
 
-  @Button({label: 'Confirm Button', buttonType: ButtonType.PRIMARY })
+  @Button({label: 'Confirm Button', buttonType: ButtonType.DANGER })
   confirmConfig: ButtonConfiguration;
 
-  @Button({label: 'Cancel', buttonType: ButtonType.SECONDARY})
-  cancelConfig: ButtonConfiguration;
+  @Button({label: 'Action', buttonType: ButtonType.PRIMARY, buttonAction: ButtonActionType.ACTION})
+  actionButton: ButtonConfiguration;
 
-  @Button({label: 'Submit', buttonType: ButtonType.PRIMARY})
-  submitConfig: ButtonConfiguration;
+  @Button({label: 'Outline', buttonType: ButtonType.PRIMARY, buttonAction: ButtonActionType.CANCEL_OUTLINE})
+  outlineButton: ButtonConfiguration;
+
+  @Button({label: 'Link', buttonType: ButtonType.PRIMARY, buttonAction: ButtonActionType.CANCEL_LINK})
+  linkButton: ButtonConfiguration;
 
   @InputConfig({label: 'Name', infoLabel: 'someone@example.com'})
   inputConfig: InputConfiguration;
@@ -56,7 +63,7 @@ export class AppComponent implements OnInit {
   ngOnInit(): void {
     this.formGroup = this.formBuilder.group({
       name: new FormControl('', Validators.required),
-      password: new FormControl('', Validators.required),
+      password: new FormControl('', [Validators.required, Validators.minLength(8)]),
       agree: new FormControl('', Validators.required)
     });
   }
