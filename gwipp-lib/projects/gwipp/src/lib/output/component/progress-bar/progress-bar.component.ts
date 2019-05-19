@@ -1,5 +1,5 @@
 import {Component, ElementRef, Input, OnInit, Renderer2, ViewChild} from '@angular/core';
-import {Colors} from "../../../foundation/style/colors/colors";
+import {Colors} from '../../../foundation/style/colors/colors';
 
 @Component({
   selector: 'gwipp-progress-bar',

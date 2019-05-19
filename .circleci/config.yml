@@ -61,42 +61,42 @@ jobs:
             cd gwipp-lib/
             ls
 
-  build:
-    <<: *defaults
-    steps:
-      - attach_workspace:
-          at: ~/repo
-
-      - run:
-          command: |
-            cd gwipp-lib
-            npm run build
-
-      - run:
-          command: |
-            cd gwipp-lib/
-            ls
-
-  lint:
-    <<: *defaults
-    steps:
-      - attach_workspace:
-          at: ~/repo
-
-      - run:
-          command: |
-            cd gwipp-lib
-            npm run lint
-
-      - persist_to_workspace:
-          root: ~/repo
-          paths:
-            - gwipp-lib/*
-
-      - run:
-          command: |
-            cd gwipp-lib/
-            ls
+#  build:
+#    <<: *defaults
+#    steps:
+#      - attach_workspace:
+#          at: ~/repo
+#
+#      - run:
+#          command: |
+#            cd gwipp-lib
+#            npm run build
+#
+#      - run:
+#          command: |
+#            cd gwipp-lib/
+#            ls
+#
+#  lint:
+#    <<: *defaults
+#    steps:
+#      - attach_workspace:
+#          at: ~/repo
+#
+#      - run:
+#          command: |
+#            cd gwipp-lib
+#            npm run lint
+#
+#      - persist_to_workspace:
+#          root: ~/repo
+#          paths:
+#            - gwipp-lib/*
+#
+#      - run:
+#          command: |
+#            cd gwipp-lib/
+#            ls
 
   package:
     <<: *defaults
@@ -155,25 +155,25 @@ workflows:
             tags:
               only: /.*/
 
-      - build:
-          requires:
-            - install
-          filters:
-            tags:
-              only: /.*/
-
-      - lint:
-          requires:
-            - install
-          filters:
-            tags:
-              only: /.*/
+#      - build:
+#          requires:
+#            - install
+#          filters:
+#            tags:
+#              only: /.*/
+#
+#      - lint:
+#          requires:
+#            - install
+#          filters:
+#            tags:
+#              only: /.*/
 
       - package:
           requires:
-            - build
+#            - build
             - build-lib
-            - lint
+#            - lint
           filters:
             tags:
               only: /.*/
