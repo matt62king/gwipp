@@ -1,4 +1,4 @@
-import {Component, OnInit, ViewChild} from '@angular/core';
+import {Component, OnInit, TemplateRef, ViewChild} from '@angular/core';
 import {ButtonConfiguration} from '../../projects/gwipp/src/lib/button/foundation/configuation/button-configuration';
 import {FormBuilder, FormControl, FormGroup, Validators} from '@angular/forms';
 import {Tabs} from '../../projects/gwipp/src/lib/menus/tab-menu/foundation/model/tabs';
@@ -14,6 +14,7 @@ import {ButtonActionType} from '../../projects/gwipp/src/lib/button/foundation/t
 import {IconSize} from '../../projects/gwipp/src/lib/icon/icon/constants/icon-size';
 import {IconAnimation} from '../../projects/gwipp/src/lib/icon/icon/constants/icon-animation';
 import {InputConfiguration} from '../../projects/gwipp/src/lib/input/foundation/configuration/input-configuration';
+import {ToastService} from '../../projects/gwipp/src/lib/output/component/toast/service/toast.service';
 
 @Component({
   selector: 'app-root',
@@ -42,6 +43,9 @@ export class AppComponent implements OnInit {
   @Button({label: 'Link', buttonType: ButtonType.PRIMARY, buttonAction: ButtonActionType.CANCEL_LINK})
   linkButton: ButtonConfiguration;
 
+  @Button({label: 'Toast', buttonType: ButtonType.PRIMARY, buttonAction: ButtonActionType.ACTION})
+  toastButton: ButtonConfiguration;
+
   @InputConfig({label: 'Name', infoLabel: 'someone@example.com'})
   inputConfig: InputConfiguration;
 
@@ -56,7 +60,8 @@ export class AppComponent implements OnInit {
 
   formGroup: FormGroup;
 
-  constructor(private formBuilder: FormBuilder) {
+  constructor(private formBuilder: FormBuilder,
+              private toastService: ToastService) {
 
   }
 
@@ -77,5 +82,9 @@ export class AppComponent implements OnInit {
         this.form.formMode = FormMode.SUBMITTING;
         break;
     }
+  }
+
+  toast(template: TemplateRef<any>): void {
+    this.toastService.toast(true, template);
   }
 }
