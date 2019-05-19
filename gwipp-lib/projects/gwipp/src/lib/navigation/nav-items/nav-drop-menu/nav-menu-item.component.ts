@@ -2,10 +2,10 @@ import {Component, ContentChild, ElementRef, Input, OnInit, ViewChild} from '@an
 import {NavItemDetailDirective} from '../nav-item-detail.directive';
 
 @Component({
-  selector: 'gwipp-nav-drop-menu',
-  templateUrl: './nav-drop-menu.component.html'
+  selector: 'gwipp-nav-menu-item',
+  templateUrl: './nav-menu-item.component.html'
 })
-export class NavDropMenuComponent {
+export class NavMenuItemComponent {
   @Input() title: string;
 
   @ContentChild(NavItemDetailDirective)
