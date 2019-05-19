@@ -1,13 +1,15 @@
-<div gwippNavBarItem>
-  <div class="d-flex flex-column">
-    <div gwippClickable (click)="toggleMenu()">
-      {{ title }}
-    </div>
-
-    <ng-container *ngIf="showMenu">
-      <div class="gwipp-nav-bar-drop-menu p-2">
-        <ng-container *ngTemplateOutlet="itemDetail.menuTemplate"></ng-container>
+<ng-container *ngIf="itemDetail.itemTemplate">
+  <div class="gwipp-nav-bar-item">
+    <div class="d-flex flex-column">
+      <div gwippClickable (click)="toggleMenu()">
+        <ng-container *ngTemplateOutlet="itemDetail.itemTemplate"></ng-container>
       </div>
-    </ng-container>
+
+      <ng-container *ngIf="showMenu">
+        <div class="gwipp-nav-bar-drop-menu p-2">
+          <ng-container *ngTemplateOutlet="itemDetail.menuTemplate"></ng-container>
+        </div>
+      </ng-container>
+    </div>
   </div>
-</div>
+</ng-container>
