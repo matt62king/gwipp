@@ -3,3 +3,9 @@
     <ng-container [ngTemplateOutlet]="itemDetail.titleTemplate"></ng-container>
   </div>
 </ng-container>
+
+<ng-container *ngIf="itemDetail.itemTemplate">
+  <div class="gwipp-nav-bar-item">
+    <ng-container [ngTemplateOutlet]="itemDetail.itemTemplate"></ng-container>
+  </div>
+</ng-container>
