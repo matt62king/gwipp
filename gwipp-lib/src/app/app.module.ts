@@ -12,6 +12,7 @@ import {NavigationModule} from '../../projects/gwipp/src/lib/navigation/navigati
 import {IconModule} from '../../projects/gwipp/src/lib/icon/icon.module';
 import {ButtonModule} from '../../projects/gwipp/src/lib/button/button.module';
 import {OutputModule} from '../../projects/gwipp/src/lib/output/output.module';
+import {ToastModule} from '../../projects/gwipp/src/lib/views/toast/toast.module';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import {OutputModule} from '../../projects/gwipp/src/lib/output/output.module';
     OverlayModule,
     TabMenuModule,
     NavigationModule,
-    OutputModule
+    OutputModule,
+    ToastModule
   ],
   providers: [],
   bootstrap: [AppComponent]

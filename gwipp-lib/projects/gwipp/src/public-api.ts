@@ -58,10 +58,12 @@ export * from './lib/navigation/navigation-bar/navigation-bar.component';
 
 export * from './lib/output/output.module';
 export * from './lib/output/component/progress-bar/progress-bar.component';
-export * from './lib/output/component/toast/toast.component';
-export * from './lib/output/component/toast/toast-detail.directive';
-export * from './lib/output/component/toast/model/toast-state';
-export * from './lib/output/component/toast/service/toast.service';
 
 export * from './lib/views/overlay/overlay.module';
 export * from './lib/views/overlay/overlay-view/overlay-view.component';
+export * from './lib/views/toast/toast.module';
+export * from './lib/views/toast/model/toast-position';
+export * from './lib/views/toast/model/toast-state';
+export * from './lib/views/toast/service/toast.service';
+export * from './lib/views/toast/toast-view/toast.component';
+export * from './lib/views/toast/toast-view/toast-detail.directive';

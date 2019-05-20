@@ -5,6 +5,11 @@
   bottom: 0;
 }
 
+@mixin center-vertical {
+  left: 50%;
+  transform: translateX(-50%);
+}
+
 @mixin visibility($visibility) {
   visibility: $visibility !important;
 }
