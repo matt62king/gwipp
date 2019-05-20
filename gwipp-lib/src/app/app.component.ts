@@ -11,10 +11,9 @@ import {Button} from '../../projects/gwipp/src/lib/button/decorators/button.deco
 import {InputConfig} from '../../projects/gwipp/src/lib/input/decorators/input.decorators';
 import {ButtonType} from '../../projects/gwipp/src/lib/button/foundation/type/button-type';
 import {ButtonActionType} from '../../projects/gwipp/src/lib/button/foundation/type/button-action.type';
-import {IconSize} from '../../projects/gwipp/src/lib/icon/icon/constants/icon-size';
-import {IconAnimation} from '../../projects/gwipp/src/lib/icon/icon/constants/icon-animation';
 import {InputConfiguration} from '../../projects/gwipp/src/lib/input/foundation/configuration/input-configuration';
-import {ToastService} from '../../projects/gwipp/src/lib/output/component/toast/service/toast.service';
+import {ToastService} from '../../projects/gwipp/src/lib/views/toast/service/toast.service';
+import {ToastPosition} from '../../projects/gwipp/src/lib/views/toast/model/toast-position';
 
 @Component({
   selector: 'app-root',
@@ -23,8 +22,8 @@ import {ToastService} from '../../projects/gwipp/src/lib/output/component/toast/
 })
 export class AppComponent implements OnInit {
   title = 'gwipp-lib';
-  iconSize = IconSize.TEN_X;
-  animation = IconAnimation.SPIN;
+  // iconSize = IconSize.TEN_X;
+  // animation = IconAnimation.SPIN;
 
   @ViewChild('form') form: FormComponent;
 

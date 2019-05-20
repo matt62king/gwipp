@@ -2,8 +2,8 @@ import {Component, ContentChild, OnInit, TemplateRef} from '@angular/core';
 import {IconNames} from '../../../icon/icon/constants/icon-names';
 import {Observable} from 'rxjs';
 import {ToastDetailDirective} from './toast-detail.directive';
-import {ToastState} from './model/toast-state';
-import {ToastService} from './service/toast.service';
+import {ToastState} from '../model/toast-state';
+import {ToastService} from '../service/toast.service';
 
 @Component({
   selector: 'gwipp-toast',
@@ -25,5 +25,9 @@ export class ToastComponent implements OnInit {
 
   closeToaster(): void {
     this.toastService.toast(false);
+  }
+
+  getToasterClass(position: string): string {
+    return `gwipp-toast gwipp-toast-${position} p-3`;
   }
 }

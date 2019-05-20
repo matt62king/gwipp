@@ -1,6 +1,6 @@
 <ng-container *ngIf="(show$ | async) as toastState">
   <div *ngIf="toastState.visible">
-    <div class="gwipp-toast gwipp-toast-bottom-right p-3">
+    <div [class]="getToasterClass(toastState.position)">
       <div class="d-flex flex-row">
         <div>
           <ng-container [ngTemplateOutlet]="toastState.template"></ng-container>
