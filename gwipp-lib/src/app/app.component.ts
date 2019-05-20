@@ -1,4 +1,4 @@
-import {Component, OnInit, ViewChild} from '@angular/core';
+import {Component, OnInit, TemplateRef, ViewChild} from '@angular/core';
 import {ButtonConfiguration} from '../../projects/gwipp/src/lib/button/foundation/configuation/button-configuration';
 import {FormBuilder, FormControl, FormGroup, Validators} from '@angular/forms';
 import {Tabs} from '../../projects/gwipp/src/lib/menus/tab-menu/foundation/model/tabs';
@@ -11,9 +11,9 @@ import {Button} from '../../projects/gwipp/src/lib/button/decorators/button.deco
 import {InputConfig} from '../../projects/gwipp/src/lib/input/decorators/input.decorators';
 import {ButtonType} from '../../projects/gwipp/src/lib/button/foundation/type/button-type';
 import {ButtonActionType} from '../../projects/gwipp/src/lib/button/foundation/type/button-action.type';
-import {IconSize} from '../../projects/gwipp/src/lib/icon/icon/constants/icon-size';
-import {IconAnimation} from '../../projects/gwipp/src/lib/icon/icon/constants/icon-animation';
 import {InputConfiguration} from '../../projects/gwipp/src/lib/input/foundation/configuration/input-configuration';
+import {ToastService} from '../../projects/gwipp/src/lib/views/toast/service/toast.service';
+import {ToastPosition} from '../../projects/gwipp/src/lib/views/toast/model/toast-position';
 
 @Component({
   selector: 'app-root',
@@ -22,8 +22,8 @@ import {InputConfiguration} from '../../projects/gwipp/src/lib/input/foundation/
 })
 export class AppComponent implements OnInit {
   title = 'gwipp-lib';
-  iconSize = IconSize.TEN_X;
-  animation = IconAnimation.SPIN;
+  // iconSize = IconSize.TEN_X;
+  // animation = IconAnimation.SPIN;
 
   @ViewChild('form') form: FormComponent;
 
@@ -42,6 +42,9 @@ export class AppComponent implements OnInit {
   @Button({label: 'Link', buttonType: ButtonType.PRIMARY, buttonAction: ButtonActionType.CANCEL_LINK})
   linkButton: ButtonConfiguration;
 
+  @Button({label: 'Toast', buttonType: ButtonType.PRIMARY, buttonAction: ButtonActionType.ACTION})
+  toastButton: ButtonConfiguration;
+
   @InputConfig({label: 'Name', infoLabel: 'someone@example.com'})
   inputConfig: InputConfiguration;
 
@@ -56,7 +59,8 @@ export class AppComponent implements OnInit {
 
   formGroup: FormGroup;
 
-  constructor(private formBuilder: FormBuilder) {
+  constructor(private formBuilder: FormBuilder,
+              private toastService: ToastService) {
 
   }
 
@@ -77,5 +81,9 @@ export class AppComponent implements OnInit {
         this.form.formMode = FormMode.SUBMITTING;
         break;
     }
+  }
+
+  toast(template: TemplateRef<any>): void {
+    this.toastService.toast(true, template);
   }
 }
