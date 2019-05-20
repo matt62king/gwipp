@@ -10,8 +10,6 @@ export class ToastService {
 
   private state$ = new Subject<ToastState>();
 
-  constructor() { }
-
   public register(): Observable<ToastState> {
     return this.state$;
   }

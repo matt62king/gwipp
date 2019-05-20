@@ -1,14 +1,18 @@
-import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { OverlayViewComponent } from './overlay-view/overlay-view.component';
+import {NgModule} from '@angular/core';
+import {CommonModule} from '@angular/common';
+import {OverlayViewComponent} from './overlay-view/overlay-view.component';
+import {TemplatesModule} from '../../foundation/templates/templates.module';
 
 @NgModule({
-  declarations: [OverlayViewComponent],
+  declarations: [
+    OverlayViewComponent
+  ],
   exports: [
     OverlayViewComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    TemplatesModule
   ]
 })
 export class OverlayModule { }
