@@ -14,6 +14,7 @@ import {ButtonActionType} from '../../projects/gwipp/src/lib/button/foundation/t
 import {InputConfiguration} from '../../projects/gwipp/src/lib/input/foundation/configuration/input-configuration';
 import {ToastService} from '../../projects/gwipp/src/lib/views/toast/service/toast.service';
 import {ToastPosition} from '../../projects/gwipp/src/lib/views/toast/model/toast-position';
+import {OverlayService} from '../../projects/gwipp/src/lib/views/overlay/service/overlay.service';
 
 @Component({
   selector: 'app-root',
@@ -45,6 +46,9 @@ export class AppComponent implements OnInit {
   @Button({label: 'Toast', buttonType: ButtonType.PRIMARY, buttonAction: ButtonActionType.ACTION})
   toastButton: ButtonConfiguration;
 
+  @Button({label: 'Overlay', buttonType: ButtonType.PRIMARY, buttonAction: ButtonActionType.ACTION})
+  overlayButton: ButtonConfiguration;
+
   @InputConfig({label: 'Name', infoLabel: 'someone@example.com'})
   inputConfig: InputConfiguration;
 
@@ -60,7 +64,8 @@ export class AppComponent implements OnInit {
   formGroup: FormGroup;
 
   constructor(private formBuilder: FormBuilder,
-              private toastService: ToastService) {
+              private toastService: ToastService,
+              private overlayService: OverlayService) {
 
   }
 
@@ -85,5 +90,9 @@ export class AppComponent implements OnInit {
 
   toast(template: TemplateRef<any>): void {
     this.toastService.toast(true, template);
+  }
+
+  overlay(title: TemplateRef<any>, detail: TemplateRef<any>): void {
+    this.overlayService.toggle(true, title, detail);
   }
 }

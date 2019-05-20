@@ -28,6 +28,9 @@ export * from './lib/form/foundation/event/form-event-type';
 export * from './lib/foundation/event/gwipp-event';
 export * from './lib/foundation/style/colors/colors';
 export * from './lib/foundation/style/style.module';
+export * from './lib/foundation/templates/detail.directive';
+export * from './lib/foundation/templates/templates.module';
+export * from './lib/foundation/templates/title.directive';
 
 export * from './lib/icon/icon.module';
 export * from './lib/icon/icon/icon.component';
@@ -60,7 +63,9 @@ export * from './lib/output/output.module';
 export * from './lib/output/component/progress-bar/progress-bar.component';
 
 export * from './lib/views/overlay/overlay.module';
+export * from './lib/views/overlay/model/overlay-state';
 export * from './lib/views/overlay/overlay-view/overlay-view.component';
+export * from './lib/views/overlay/service/overlay.service';
 export * from './lib/views/toast/toast.module';
 export * from './lib/views/toast/model/toast-position';
 export * from './lib/views/toast/model/toast-state';

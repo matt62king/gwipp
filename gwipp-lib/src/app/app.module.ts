@@ -13,6 +13,7 @@ import {IconModule} from '../../projects/gwipp/src/lib/icon/icon.module';
 import {ButtonModule} from '../../projects/gwipp/src/lib/button/button.module';
 import {OutputModule} from '../../projects/gwipp/src/lib/output/output.module';
 import {ToastModule} from '../../projects/gwipp/src/lib/views/toast/toast.module';
+import {TemplatesModule} from '../../projects/gwipp/src/lib/foundation/templates/templates.module';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import {ToastModule} from '../../projects/gwipp/src/lib/views/toast/toast.module
     TabMenuModule,
     NavigationModule,
     OutputModule,
-    ToastModule
+    ToastModule,
+    TemplatesModule
   ],
   providers: [],
   bootstrap: [AppComponent]

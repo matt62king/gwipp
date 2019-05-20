@@ -1,12 +1,12 @@
-<div class="overlay d-flex justify-content-center align-items-center">
-  <div class="overlay-item p-4 w-50">
-    <div class="d-flex flex-column">
-      <div class="text-primary h4">
-        {{ title }}
+<ng-container *ngIf="(overlay$ | async) as overlay">
+  <ng-container *ngIf="overlay.visible">
+    <div class="overlay d-flex justify-content-center align-items-center">
+      <div class="overlay-item p-4 w-50">
+        <div class="d-flex flex-column">
+          <ng-container [ngTemplateOutlet]="overlay.title"></ng-container>
+          <ng-container [ngTemplateOutlet]="overlay.detail"></ng-container>
+        </div>
       </div>
-
-      <ng-content></ng-content>
-
     </div>
-  </div>
-</div>
+  </ng-container>
+</ng-container>
