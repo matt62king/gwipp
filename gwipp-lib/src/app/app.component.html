@@ -65,3 +65,47 @@
 </ng-template>
 
 <gwipp-toast></gwipp-toast>
+
+<div class="d-flex flex-row mt-5 mx-2">
+  <gwipp-button [buttonConfig]="overlayButton" (buttonClick)="overlay(overlayTitle, overlayDetail)"></gwipp-button>
+</div>
+
+<gwipp-overlay-view></gwipp-overlay-view>
+
+<ng-template title #overlayTitle>
+  <div class="text-primary h4">
+    Test Overlay
+  </div>
+</ng-template>
+
+<ng-template detail #overlayDetail>
+  <gwipp-tab-menu>
+
+    <gwipp-tab-item>
+      <ng-template title>
+        Tab 1
+      </ng-template>
+      <ng-template detail>
+        Tab 1 Detail
+      </ng-template>
+    </gwipp-tab-item>
+
+    <gwipp-tab-item>
+      <ng-template title>
+        Tab 2
+      </ng-template>
+      <ng-template detail>
+        Tab 2 Detail
+      </ng-template>
+    </gwipp-tab-item>
+
+    <gwipp-tab-item>
+      <ng-template title>
+        Tab 3
+      </ng-template>
+      <ng-template detail>
+        Tab 3 Detail
+      </ng-template>
+    </gwipp-tab-item>
+  </gwipp-tab-menu>
+</ng-template>
