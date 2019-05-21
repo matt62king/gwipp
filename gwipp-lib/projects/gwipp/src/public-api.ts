@@ -48,8 +48,7 @@ export * from './lib/input/foundation/configuration/input-configuration-options'
 
 export * from './lib/menus/tab-menu/tab-menu.component';
 export * from './lib/menus/tab-menu/tab-menu.module';
-export * from './lib/menus/tab-menu/foundation/model/tab-item';
-export * from './lib/menus/tab-menu/foundation/model/tabs';
+export * from './lib/menus/tab-menu/tabs/tab-item.directive';
 
 export * from './lib/navigation/navigation.module';
 export * from './lib/navigation/nav-attributes/nav-attributes.module';
