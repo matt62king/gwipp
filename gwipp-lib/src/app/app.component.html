@@ -77,6 +77,35 @@
     Test Overlay
   </div>
 </ng-template>
+
 <ng-template detail #overlayDetail>
-  <gwipp-tab-menu [tabItems]="tabItems"></gwipp-tab-menu>
+  <gwipp-tab-menu>
+
+    <gwipp-tab-item>
+      <ng-template title>
+        Tab 1
+      </ng-template>
+      <ng-template detail>
+        Tab 1 Detail
+      </ng-template>
+    </gwipp-tab-item>
+
+    <gwipp-tab-item>
+      <ng-template title>
+        Tab 2
+      </ng-template>
+      <ng-template detail>
+        Tab 2 Detail
+      </ng-template>
+    </gwipp-tab-item>
+
+    <gwipp-tab-item>
+      <ng-template title>
+        Tab 3
+      </ng-template>
+      <ng-template detail>
+        Tab 3 Detail
+      </ng-template>
+    </gwipp-tab-item>
+  </gwipp-tab-menu>
 </ng-template>

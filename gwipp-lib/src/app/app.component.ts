@@ -1,8 +1,6 @@
 import {Component, OnInit, TemplateRef, ViewChild} from '@angular/core';
 import {ButtonConfiguration} from '../../projects/gwipp/src/lib/button/foundation/configuation/button-configuration';
 import {FormBuilder, FormControl, FormGroup, Validators} from '@angular/forms';
-import {Tabs} from '../../projects/gwipp/src/lib/menus/tab-menu/foundation/model/tabs';
-import {TabItem} from '../../projects/gwipp/src/lib/menus/tab-menu/foundation/model/tab-item';
 import {FormEvent} from '../../projects/gwipp/src/lib/form/foundation/event/form-event';
 import {FormEventType} from '../../projects/gwipp/src/lib/form/foundation/event/form-event-type';
 import {FormMode} from '../../projects/gwipp/src/lib/form/foundation/consts/form-mode';
@@ -13,7 +11,6 @@ import {ButtonType} from '../../projects/gwipp/src/lib/button/foundation/type/bu
 import {ButtonActionType} from '../../projects/gwipp/src/lib/button/foundation/type/button-action.type';
 import {InputConfiguration} from '../../projects/gwipp/src/lib/input/foundation/configuration/input-configuration';
 import {ToastService} from '../../projects/gwipp/src/lib/views/toast/service/toast.service';
-import {ToastPosition} from '../../projects/gwipp/src/lib/views/toast/model/toast-position';
 import {OverlayService} from '../../projects/gwipp/src/lib/views/overlay/service/overlay.service';
 
 @Component({
@@ -57,9 +54,6 @@ export class AppComponent implements OnInit {
 
   @InputConfig({label: 'Agree to Terms'})
   switchConfig: InputConfiguration;
-
-  @Tabs(['Sign In', 'Create Account'])
-  tabItems: TabItem[];
 
   formGroup: FormGroup;
 

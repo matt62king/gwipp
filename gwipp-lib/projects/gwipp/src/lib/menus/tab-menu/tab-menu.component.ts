@@ -1,34 +1,36 @@
-import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
-import {TabItem} from './foundation/model/tab-item';
-
+import {Component, ContentChildren, EventEmitter, OnChanges, Output, SimpleChanges, TemplateRef} from '@angular/core';
+import {TabItemDirective} from './tabs/tab-item.directive';
+import {TemplateId} from '../../foundation/templates/model/templateId';
 
 @Component({
   selector: 'gwipp-tab-menu',
   templateUrl: './tab-menu.component.html'
 })
-export class TabMenuComponent implements OnInit {
-  @Output() tabSelect: EventEmitter<TabItem> = new EventEmitter();
+export class TabMenuComponent {
+  @Output() tabSelect: EventEmitter<TabItemDirective> = new EventEmitter();
 
-  internalTabItems: TabItem[] = [];
+  tabItemTemplates: TabItemDirective[];
+  titles: TemplateId[] = [];
+  details: TemplateId[] = [];
+  selectedItemId: string;
 
-  constructor() { }
+  @ContentChildren(TabItemDirective)
+  set tabItems(tabItems: TabItemDirective[]) {
+    this.tabItemTemplates = tabItems;
+    this.selectedItemId = '0';
 
-  ngOnInit() {
+    tabItems.forEach((item, index) => {
+      this.titles.push({id: `${index}`, template: item.title});
+      this.details.push({id: `${index}`, template: item.detail});
+    });
   }
 
-  @Input() set tabItems(tabItems: TabItem[]) {
-    this.internalTabItems = tabItems;
-
-    if (this.internalTabItems.length > 0) {
-      this.internalTabItems[0].selected = true;
-      this.tabSelect.emit(this.internalTabItems[0]);
-    }
+  onTabSelected(templateId: string): void {
+    this.selectedItemId = templateId;
   }
 
-  onTabSelected(tabItem: TabItem): void {
-    this.internalTabItems.forEach(item => item.selected = false);
-    tabItem.toggle();
-
-    this.tabSelect.emit(tabItem);
+  selectedDetail(): TemplateRef<any> | undefined {
+    const templateId =  this.details.filter((item) => item.id === this.selectedItemId)[0];
+    return templateId ? templateId.template : undefined;
   }
 }
