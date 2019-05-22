@@ -14,6 +14,7 @@ import {ButtonModule} from '../../projects/gwipp/src/lib/button/button.module';
 import {OutputModule} from '../../projects/gwipp/src/lib/output/output.module';
 import {ToastModule} from '../../projects/gwipp/src/lib/views/toast/toast.module';
 import {TemplatesModule} from '../../projects/gwipp/src/lib/foundation/templates/templates.module';
+import {MenuModule} from '../../projects/gwipp/src/lib/menus/menu/menu.module';
 
 @NgModule({
   declarations: [
@@ -33,7 +34,8 @@ import {TemplatesModule} from '../../projects/gwipp/src/lib/foundation/templates
     NavigationModule,
     OutputModule,
     ToastModule,
-    TemplatesModule
+    TemplatesModule,
+    MenuModule
   ],
   providers: [],
   bootstrap: [AppComponent]

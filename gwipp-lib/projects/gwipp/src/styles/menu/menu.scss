@@ -1,0 +1,19 @@
+@import "~node_modules/bootstrap/scss/functions";
+@import '~node_modules/bootstrap/scss/variables';
+@import '~node_modules/bootstrap/scss/mixins';
+
+@import '../constants/constants';
+@import '../mixins/mixins';
+@import '../typography/typography';
+
+.gwipp-menu {
+  min-width: 200px;
+
+  &-item {
+    @include medium;
+
+    &:hover {
+      background-color: gray('300');
+    }
+  }
+}
