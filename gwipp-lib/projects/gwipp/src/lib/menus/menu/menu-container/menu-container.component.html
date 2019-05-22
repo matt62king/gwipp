@@ -1,0 +1,9 @@
+<div class="d-flex flex-column text-dark gwipp-menu">
+  <ng-container *ngFor="let item of menuItems">
+
+    <div class="gwipp-menu-item px-3 py-2" gwippClickable>
+      <ng-container [ngTemplateOutlet]="item.detail"></ng-container>
+    </div>
+
+  </ng-container>
+</div>
