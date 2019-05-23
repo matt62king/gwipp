@@ -12,6 +12,7 @@ import {ButtonActionType} from '../../projects/gwipp/src/lib/button/foundation/t
 import {InputConfiguration} from '../../projects/gwipp/src/lib/input/foundation/configuration/input-configuration';
 import {ToastService} from '../../projects/gwipp/src/lib/views/toast/service/toast.service';
 import {OverlayService} from '../../projects/gwipp/src/lib/views/overlay/service/overlay.service';
+import {NavDropMenuService} from '../../projects/gwipp/src/lib/navigation/foundation/services/nav-drop-menu.service';
 
 @Component({
   selector: 'app-root',
@@ -59,7 +60,8 @@ export class AppComponent implements OnInit {
 
   constructor(private formBuilder: FormBuilder,
               private toastService: ToastService,
-              private overlayService: OverlayService) {
+              private overlayService: OverlayService,
+              private navMenuService: NavDropMenuService) {
 
   }
 
@@ -88,5 +90,9 @@ export class AppComponent implements OnInit {
 
   overlay(title: TemplateRef<any>, detail: TemplateRef<any>): void {
     this.overlayService.toggle(true, title, detail);
+  }
+
+  closeNavMenu(): void {
+    this.navMenuService.toggleMenu('cMenu', false);
   }
 }

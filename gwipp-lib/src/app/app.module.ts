@@ -31,7 +31,6 @@ import {MenuModule} from '../../projects/gwipp/src/lib/menus/menu/menu.module';
     InputModule,
     OverlayModule,
     TabMenuModule,
-    NavigationModule,
     OutputModule,
     ToastModule,
     TemplatesModule,
