@@ -7,6 +7,8 @@ import {NavBarItemDirective} from '../nav-attributes/nav-bar-item.directive';
   selector: 'nav-item-detail'
 })
 export class NavItemDetailDirective {
+  @Input() key: string;
+
   @Input()
   @ContentChild(NavBarTitleDirective, {read: TemplateRef})
   titleTemplate?: TemplateRef<any>;

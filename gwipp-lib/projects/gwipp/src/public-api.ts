@@ -54,6 +54,8 @@ export * from './lib/menus/tab-menu/tab-menu.module';
 export * from './lib/menus/tab-menu/tabs/tab-item.directive';
 
 export * from './lib/navigation/navigation.module';
+export * from './lib/navigation/foundation/model/navDropMenuState';
+export * from './lib/navigation/foundation/services/nav-drop-menu.service';
 export * from './lib/navigation/nav-attributes/nav-attributes.module';
 export * from './lib/navigation/nav-items/nav-item-detail.directive';
 export * from './lib/navigation/nav-items/nav-drop-menu/nav-menu-item.component';
