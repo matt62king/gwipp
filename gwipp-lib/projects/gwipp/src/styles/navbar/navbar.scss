@@ -31,7 +31,7 @@
     background-color: white;
     position: absolute;
     top: $gwipp-nav-bar-height;
+    z-index: $z-navDropDown;
     @include border(gray('300'));
-    @include drop-shadow;
   }
 }

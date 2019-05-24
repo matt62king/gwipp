@@ -47,8 +47,10 @@ export * from './lib/input/foundation/configuration/input-configuration';
 export * from './lib/input/foundation/configuration/input-configuration-options';
 
 export * from './lib/menus/menu/menu.module';
+export * from './lib/menus/menu/foundation/child-menu.directive';
 export * from './lib/menus/menu/menu-container/menu-container.component';
 export * from './lib/menus/menu/menu-items/menu-item.directive';
+export * from './lib/menus/menu/menu-items/tiered-parent-detail.directive';
 export * from './lib/menus/tab-menu/tab-menu.component';
 export * from './lib/menus/tab-menu/tab-menu.module';
 export * from './lib/menus/tab-menu/tabs/tab-item.directive';

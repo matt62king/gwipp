@@ -46,9 +46,34 @@
               <div>Overlays</div>
             </ng-template>
           </gwipp-menu-item>
+
+          <gwipp-menu-item>
+            <tiered-parent-detail>
+              <ng-template detail>
+                <div>Parent</div>
+              </ng-template>
+
+              <ng-template child-menu>
+                <gwipp-menu>
+                  <gwipp-menu-item>
+                    <ng-template detail>
+                      <div>Child Menu</div>
+                    </ng-template>
+                  </gwipp-menu-item>
+
+                  <gwipp-menu-item>
+                    <ng-template detail>
+                      <div>Menu Item</div>
+                    </ng-template>
+                  </gwipp-menu-item>
+
+                </gwipp-menu>
+              </ng-template>
+            </tiered-parent-detail>
+          </gwipp-menu-item>
+
         </gwipp-menu>
       </ng-template>
-
     </nav-item-detail>
   </gwipp-nav-menu-item>
 </gwipp-navigation-bar>
