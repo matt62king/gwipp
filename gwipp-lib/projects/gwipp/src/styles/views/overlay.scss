@@ -9,7 +9,7 @@
   position: fixed;
   background: rgba(0, 0, 0, 0.7);
   transition: opacity 500ms;
-  z-index: 1000;
+  z-index: $z-overlay;
 
   @include fill-space;
 

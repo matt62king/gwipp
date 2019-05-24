@@ -7,9 +7,12 @@ $theme-colors: (
 @import "~node_modules/bootstrap/scss/bootstrap";
 @import "~node_modules/@fortawesome/fontawesome-free/scss/fontawesome";
 
+@import "menu/menu";
 @import "menu/tab-menu";
 @import "metrics/metrics";
 @import "navbar/navbar";
+@import "input/button";
 @import "input/input";
 @import "input/switch";
 @import "views/overlay";
+@import "views/toast";

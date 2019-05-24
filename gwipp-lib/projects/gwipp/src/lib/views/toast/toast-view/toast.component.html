@@ -1,0 +1,14 @@
+<ng-container *ngIf="(show$ | async) as toastState">
+  <div *ngIf="toastState.visible">
+    <div [class]="getToasterClass(toastState.position)">
+      <div class="d-flex flex-row">
+        <div>
+          <ng-container [ngTemplateOutlet]="toastState.template"></ng-container>
+        </div>
+        <div class="ml-3">
+          <gwipp-icon [icon]="closeIcon" gwippClickable (click)="closeToaster()"></gwipp-icon>
+        </div>
+      </div>
+    </div>
+  </div>
+</ng-container>

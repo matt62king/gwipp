@@ -3,6 +3,7 @@
 @import "~node_modules/bootstrap/scss/mixins";
 
 @import "../constants/constants";
+@import '../mixins/mixins';
 
 .gwipp-nav-bar {
   position: relative;
@@ -10,7 +11,7 @@
   left: 0px;
   right: 0px;
   color: white;
-  height: $nav-bar-height;
+  height: $gwipp-nav-bar-height;
   background-color: $primary-color;
 
   &-title {
@@ -23,5 +24,14 @@
     height: 100%;
     font-weight: bold;
     font-size: x-large;
+  }
+
+  &-drop-menu {
+    color: black;
+    background-color: white;
+    position: absolute;
+    top: $gwipp-nav-bar-height;
+    z-index: $z-navDropDown;
+    @include border(gray('300'));
   }
 }

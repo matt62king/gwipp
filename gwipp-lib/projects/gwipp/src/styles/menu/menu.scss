@@ -1,0 +1,33 @@
+@import "~node_modules/bootstrap/scss/functions";
+@import '~node_modules/bootstrap/scss/variables';
+@import '~node_modules/bootstrap/scss/mixins';
+
+@import '../constants/constants';
+@import '../mixins/mixins';
+@import '../typography/typography';
+
+.gwipp-menu {
+  width: $gwipp-menu-width;
+  max-width: $gwipp-menu-width;
+  @include medium;
+
+  &-item {
+    &:hover {
+      background-color: gray('300');
+    }
+  }
+
+  &-tiered {
+    &-parent {
+      position: relative;
+    }
+
+    &-child {
+      position: absolute;
+      left: $gwipp-menu-width + 2;
+      top: 0;
+      background-color: white;
+      @include border(gray('300'));
+    }
+  }
+}

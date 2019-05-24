@@ -5,6 +5,11 @@
   bottom: 0;
 }
 
+@mixin center-vertical {
+  left: 50%;
+  transform: translateX(-50%);
+}
+
 @mixin visibility($visibility) {
   visibility: $visibility !important;
 }
@@ -19,4 +24,8 @@
 
 @mixin clickable {
   cursor: pointer !important;
+}
+
+@mixin drop-shadow {
+  box-shadow: 3px 8px 18px 2px gray('800');
 }

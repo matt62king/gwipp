@@ -12,6 +12,7 @@ export * from './lib/button/foundation/configuation/button-configuration';
 export * from './lib/button/foundation/configuation/button-configuration-options';
 export * from './lib/button/foundation/event/button-event';
 export * from './lib/button/foundation/mode/button-mode';
+export * from './lib/button/foundation/type/button-action.type';
 export * from './lib/button/foundation/type/button-type';
 
 export * from './lib/form/form.module';
@@ -27,6 +28,9 @@ export * from './lib/form/foundation/event/form-event-type';
 export * from './lib/foundation/event/gwipp-event';
 export * from './lib/foundation/style/colors/colors';
 export * from './lib/foundation/style/style.module';
+export * from './lib/foundation/templates/detail.directive';
+export * from './lib/foundation/templates/templates.module';
+export * from './lib/foundation/templates/title.directive';
 
 export * from './lib/icon/icon.module';
 export * from './lib/icon/icon/icon.component';
@@ -42,17 +46,35 @@ export * from './lib/input/decorators/input.decorators';
 export * from './lib/input/foundation/configuration/input-configuration';
 export * from './lib/input/foundation/configuration/input-configuration-options';
 
+export * from './lib/menus/menu/menu.module';
+export * from './lib/menus/menu/foundation/child-menu.directive';
+export * from './lib/menus/menu/menu-container/menu-container.component';
+export * from './lib/menus/menu/menu-items/menu-item.directive';
+export * from './lib/menus/menu/menu-items/tiered-parent-detail.directive';
 export * from './lib/menus/tab-menu/tab-menu.component';
 export * from './lib/menus/tab-menu/tab-menu.module';
-export * from './lib/menus/tab-menu/foundation/model/tab-item';
-export * from './lib/menus/tab-menu/foundation/model/tabs';
+export * from './lib/menus/tab-menu/tabs/tab-item.directive';
 
 export * from './lib/navigation/navigation.module';
+export * from './lib/navigation/foundation/model/navDropMenuState';
+export * from './lib/navigation/foundation/services/nav-drop-menu.service';
 export * from './lib/navigation/nav-attributes/nav-attributes.module';
+export * from './lib/navigation/nav-items/nav-item-detail.directive';
+export * from './lib/navigation/nav-items/nav-drop-menu/nav-menu-item.component';
+export * from './lib/navigation/nav-items/nav-drop-menu/nav-menu.directive';
+export * from './lib/navigation/nav-items/nav-item/nav-item.component';
 export * from './lib/navigation/navigation-bar/navigation-bar.component';
 
 export * from './lib/output/output.module';
 export * from './lib/output/component/progress-bar/progress-bar.component';
 
 export * from './lib/views/overlay/overlay.module';
+export * from './lib/views/overlay/model/overlay-state';
 export * from './lib/views/overlay/overlay-view/overlay-view.component';
+export * from './lib/views/overlay/service/overlay.service';
+export * from './lib/views/toast/toast.module';
+export * from './lib/views/toast/model/toast-position';
+export * from './lib/views/toast/model/toast-state';
+export * from './lib/views/toast/service/toast.service';
+export * from './lib/views/toast/toast-view/toast.component';
+export * from './lib/views/toast/toast-view/toast-detail.directive';
