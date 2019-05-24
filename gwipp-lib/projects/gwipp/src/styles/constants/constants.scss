@@ -5,7 +5,9 @@ $warning: #FFD658;
 $info: #5654BF;
 
 // z-index
-$z-overlary: 1000;
+$z-menu: 499;
+$z-navDropDown: 500;
+$z-overlay: 1000;
 $z-toast: 2000;
 
 $gwipp-border-thick: 2px;
@@ -17,3 +19,4 @@ $gwipp-input-border-radius: 8px;
 
 $gwipp-nav-bar-height: 60px;
 
+$gwipp-menu-width: 200px;
