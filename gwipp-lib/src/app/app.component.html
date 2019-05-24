@@ -12,62 +12,119 @@
   </gwipp-nav-item>
 
   <gwipp-nav-menu-item class="ml-2">
-    <nav-item-detail>
+    <nav-item-detail key="cMenu">
       <ng-template nav-item>Drop Menu</ng-template>
 
       <ng-template nav-menu>
-        <div class="text-dark">Drop Menu Content</div>
-      </ng-template>
+        <gwipp-menu>
+          <gwipp-menu-item>
+            <ng-template detail>
+              <div>Buttons</div>
+            </ng-template>
+          </gwipp-menu-item>
 
+          <gwipp-menu-item>
+            <ng-template detail>
+              <div>Forms</div>
+            </ng-template>
+          </gwipp-menu-item>
+
+          <gwipp-menu-item>
+            <ng-template detail>
+              <div>Inputs</div>
+            </ng-template>
+          </gwipp-menu-item>
+
+          <gwipp-menu-item>
+            <ng-template detail>
+              <div>Menus</div>
+            </ng-template>
+          </gwipp-menu-item>
+
+          <gwipp-menu-item>
+            <ng-template detail>
+              <div>Overlays</div>
+            </ng-template>
+          </gwipp-menu-item>
+
+          <gwipp-menu-item>
+            <tiered-parent-detail>
+              <ng-template detail>
+                <div>Parent</div>
+              </ng-template>
+
+              <ng-template child-menu>
+                <gwipp-menu>
+                  <gwipp-menu-item>
+                    <ng-template detail>
+                      <div>Child Menu</div>
+                    </ng-template>
+                  </gwipp-menu-item>
+
+                  <gwipp-menu-item>
+                    <ng-template detail>
+                      <div>Menu Item</div>
+                    </ng-template>
+                  </gwipp-menu-item>
+
+                </gwipp-menu>
+              </ng-template>
+            </tiered-parent-detail>
+          </gwipp-menu-item>
+
+        </gwipp-menu>
+      </ng-template>
     </nav-item-detail>
   </gwipp-nav-menu-item>
 </gwipp-navigation-bar>
 
-<div class="d-flex flex-row mt-5 mx-2">
-  <div>
-    <gwipp-button [buttonConfig]="buttonConfig"></gwipp-button>
+<div (click)="closeNavMenu()">
+  <div class="d-flex flex-row mt-5 mx-2">
+    <div>
+      <gwipp-button [buttonConfig]="buttonConfig"></gwipp-button>
+    </div>
+
+    <div class="ml-1">
+      <gwipp-button [buttonConfig]="actionButton"></gwipp-button>
+    </div>
+
+    <div class="ml-2">
+      <gwipp-confirm-button [buttonConfig]="confirmConfig"></gwipp-confirm-button>
+    </div>
+
+    <div class="ml-2">
+      <gwipp-button [buttonConfig]="outlineButton"></gwipp-button>
+    </div>
+
+    <div class="ml-2">
+      <gwipp-button [buttonConfig]="linkButton"></gwipp-button>
+    </div>
   </div>
 
-  <div class="ml-1">
-    <gwipp-button [buttonConfig]="actionButton"></gwipp-button>
+  <div class="mt-1 w-25">
+    <gwipp-form [formGroup]="formGroup" (formEvent)="onFormEvent($event)" #form>
+      <gwipp-text-field [config]="inputConfig" [formControl]="formGroup.controls['name']"></gwipp-text-field>
+      <gwipp-password-field class="mt-2" [config]="passwordConfig" [hasStrength]="true"
+                            [formControl]="formGroup.controls['password']"></gwipp-password-field>
+      <gwipp-switch class="mt-2" [config]="switchConfig" [formControl]="formGroup.controls['agree']"></gwipp-switch>
+    </gwipp-form>
   </div>
 
-  <div class="ml-2">
-    <gwipp-confirm-button [buttonConfig]="confirmConfig"></gwipp-confirm-button>
+  <div class="d-flex flex-row mt-5 mx-2">
+    <gwipp-button [buttonConfig]="toastButton" (buttonClick)="toast(toastDetail)"></gwipp-button>
   </div>
 
-  <div class="ml-2">
-    <gwipp-button [buttonConfig]="outlineButton"></gwipp-button>
+  <ng-template toast-detail #toastDetail>
+    <div class="text-dark">
+      Toaster detail
+    </div>
+  </ng-template>
+
+  <gwipp-toast></gwipp-toast>
+
+  <div class="d-flex flex-row mt-5 mx-2">
+    <gwipp-button [buttonConfig]="overlayButton" (buttonClick)="overlay(overlayTitle, overlayDetail)"></gwipp-button>
   </div>
-
-  <div class="ml-2">
-    <gwipp-button [buttonConfig]="linkButton"></gwipp-button>
-  </div>
-</div>
-
-<div class="mt-1 w-25">
-  <gwipp-form [formGroup]="formGroup" (formEvent)="onFormEvent($event)" #form>
-    <gwipp-text-field [config]="inputConfig" [formControl]="formGroup.controls['name']"></gwipp-text-field>
-    <gwipp-password-field class="mt-2" [config]="passwordConfig" [hasStrength]="true"
-                          [formControl]="formGroup.controls['password']"></gwipp-password-field>
-    <gwipp-switch class="mt-2" [config]="switchConfig" [formControl]="formGroup.controls['agree']"></gwipp-switch>
-  </gwipp-form>
-</div>
-
-<div class="d-flex flex-row mt-5 mx-2">
-  <gwipp-button [buttonConfig]="toastButton" (buttonClick)="toast(toastDetail)"></gwipp-button>
-</div>
-
-<ng-template toast-detail #toastDetail>
-  <div class="text-dark">
-    Toaster detail
-  </div>
-</ng-template>
-
-<gwipp-toast></gwipp-toast>
-
-<div class="d-flex flex-row mt-5 mx-2">
-  <gwipp-button [buttonConfig]="overlayButton" (buttonClick)="overlay(overlayTitle, overlayDetail)"></gwipp-button>
 </div>
 
 <gwipp-overlay-view></gwipp-overlay-view>

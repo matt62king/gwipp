@@ -46,11 +46,18 @@ export * from './lib/input/decorators/input.decorators';
 export * from './lib/input/foundation/configuration/input-configuration';
 export * from './lib/input/foundation/configuration/input-configuration-options';
 
+export * from './lib/menus/menu/menu.module';
+export * from './lib/menus/menu/foundation/child-menu.directive';
+export * from './lib/menus/menu/menu-container/menu-container.component';
+export * from './lib/menus/menu/menu-items/menu-item.directive';
+export * from './lib/menus/menu/menu-items/tiered-parent-detail.directive';
 export * from './lib/menus/tab-menu/tab-menu.component';
 export * from './lib/menus/tab-menu/tab-menu.module';
 export * from './lib/menus/tab-menu/tabs/tab-item.directive';
 
 export * from './lib/navigation/navigation.module';
+export * from './lib/navigation/foundation/model/navDropMenuState';
+export * from './lib/navigation/foundation/services/nav-drop-menu.service';
 export * from './lib/navigation/nav-attributes/nav-attributes.module';
 export * from './lib/navigation/nav-items/nav-item-detail.directive';
 export * from './lib/navigation/nav-items/nav-drop-menu/nav-menu-item.component';

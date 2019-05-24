@@ -1,0 +1,27 @@
+<div class="d-flex flex-column text-dark gwipp-menu" (mouseleave)="exitParent()">
+  <ng-container *ngFor="let item of menuItems">
+
+    <!-- Default Item -->
+    <ng-container *ngIf="item.detail && !item.tieredParent">
+      <div class="gwipp-menu-item px-3 py-2" gwippClickable (mouseenter)="exitParent()">
+        <ng-container [ngTemplateOutlet]="item.detail"></ng-container>
+      </div>
+    </ng-container>
+
+    <!-- Tiered Parent Item -->
+    <ng-container *ngIf="item.tieredParent">
+      <div class="gwipp-menu-tiered-parent px-3 py-2">
+        <div (mouseenter)="childVisible = true">
+          <ng-container [ngTemplateOutlet]="item.tieredParent.detail"></ng-container>
+        </div>
+
+        <ng-container *ngIf="childVisible">
+          <div class="gwipp-menu-tiered-child" (mouseenter)="enterChild()" (mouseleave)="leaveChild()">
+            <ng-template [ngTemplateOutlet]="item.tieredParent.childMenu"></ng-template>
+          </div>
+        </ng-container>
+      </div>
+    </ng-container>
+
+  </ng-container>
+</div>
