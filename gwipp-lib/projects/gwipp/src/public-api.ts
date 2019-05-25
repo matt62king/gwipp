@@ -72,6 +72,8 @@ export * from './lib/views/overlay/overlay.module';
 export * from './lib/views/overlay/model/overlay-state';
 export * from './lib/views/overlay/overlay-view/overlay-view.component';
 export * from './lib/views/overlay/service/overlay.service';
+export * from './lib/views/portlet/portlet.module';
+export * from './lib/views/portlet/portlet.component';
 export * from './lib/views/toast/toast.module';
 export * from './lib/views/toast/model/toast-position';
 export * from './lib/views/toast/model/toast-state';
