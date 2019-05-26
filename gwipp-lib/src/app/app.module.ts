@@ -15,6 +15,9 @@ import {OutputModule} from '../../projects/gwipp/src/lib/output/output.module';
 import {ToastModule} from '../../projects/gwipp/src/lib/views/toast/toast.module';
 import {TemplatesModule} from '../../projects/gwipp/src/lib/foundation/templates/templates.module';
 import {MenuModule} from '../../projects/gwipp/src/lib/menus/menu/menu.module';
+import {PortletModule} from '../../projects/gwipp/src/lib/views/portlet/portlet.module';
+import {WorkingBlockModule} from '../../projects/gwipp/src/lib/output/component/blocks/working-block/working-block.module';
+import {ErrorBlockModule} from '../../projects/gwipp/src/lib/output/component/blocks/error-block/error-block.module';
 
 @NgModule({
   declarations: [
@@ -34,7 +37,10 @@ import {MenuModule} from '../../projects/gwipp/src/lib/menus/menu/menu.module';
     OutputModule,
     ToastModule,
     TemplatesModule,
-    MenuModule
+    MenuModule,
+    PortletModule,
+    WorkingBlockModule,
+    ErrorBlockModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -66,12 +66,18 @@ export * from './lib/navigation/nav-items/nav-item/nav-item.component';
 export * from './lib/navigation/navigation-bar/navigation-bar.component';
 
 export * from './lib/output/output.module';
+export * from './lib/output/component/blocks/error-block/error-block.component';
+export * from './lib/output/component/blocks/error-block/error-block.module';
+export * from './lib/output/component/blocks/working-block/working-block.component';
+export * from './lib/output/component/blocks/working-block/working-block.module';
 export * from './lib/output/component/progress-bar/progress-bar.component';
 
 export * from './lib/views/overlay/overlay.module';
 export * from './lib/views/overlay/model/overlay-state';
 export * from './lib/views/overlay/overlay-view/overlay-view.component';
 export * from './lib/views/overlay/service/overlay.service';
+export * from './lib/views/portlet/portlet.module';
+export * from './lib/views/portlet/portlet.component';
 export * from './lib/views/toast/toast.module';
 export * from './lib/views/toast/model/toast-position';
 export * from './lib/views/toast/model/toast-state';
