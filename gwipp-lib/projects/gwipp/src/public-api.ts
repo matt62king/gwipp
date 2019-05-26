@@ -66,6 +66,10 @@ export * from './lib/navigation/nav-items/nav-item/nav-item.component';
 export * from './lib/navigation/navigation-bar/navigation-bar.component';
 
 export * from './lib/output/output.module';
+export * from './lib/output/component/blocks/error-block/error-block.component';
+export * from './lib/output/component/blocks/error-block/error-block.module';
+export * from './lib/output/component/blocks/working-block/working-block.component';
+export * from './lib/output/component/blocks/working-block/working-block.module';
 export * from './lib/output/component/progress-bar/progress-bar.component';
 
 export * from './lib/views/overlay/overlay.module';
