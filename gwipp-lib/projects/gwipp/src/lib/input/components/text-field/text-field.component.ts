@@ -1,6 +1,7 @@
 import {Component, forwardRef, OnInit} from '@angular/core';
 import {BaseInputComponent} from '../../foundation/base-input.component';
 import {ControlValueAccessor, NG_VALUE_ACCESSOR} from '@angular/forms';
+import {takeUntil} from 'rxjs/operators';
 
 export const INPUT_CONTROL_VALUE_ACCESSOR: any = {
   provide: NG_VALUE_ACCESSOR,
@@ -44,9 +45,10 @@ export class TextFieldComponent extends BaseInputComponent implements OnInit, Co
   }
 
   ngOnInit() {
-    this.formControl.valueChanges.subscribe(
-      () => {
-        if (this.formControl.value === '' || this.formControl.value === null || this.formControl.value === undefined) {
+    this.formControl.valueChanges
+      .pipe(takeUntil(this.destroy$))
+      .subscribe(() => {
+        if (this.formControl.value === '' || this.formControl.value == null) {
           this.innerValue = '';
           this.inputRef.nativeElement.value = '';
         }

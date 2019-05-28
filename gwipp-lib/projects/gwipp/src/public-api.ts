@@ -39,12 +39,20 @@ export * from './lib/icon/icon/constants/icon-names';
 export * from './lib/icon/icon/constants/icon-size';
 
 export * from './lib/input/input.module';
+export * from './lib/input/components/dropdown-selection/dropdown-selection.component';
+export * from './lib/input/components/dropdown-selection/dropdown-selection.module';
+export * from './lib/input/components/dropdown-selection/model/selectionOption';
+export * from './lib/input/components/dropdown-selection/templates/option-detail.directive';
+export * from './lib/input/components/dropdown-selection/templates/selection-detail.directive';
 export * from './lib/input/components/password-field/password-field.component';
+export * from './lib/input/components/password-field/password-field.module';
 export * from './lib/input/components/switch/switch.component';
+export * from './lib/input/components/switch/switch.module';
 export * from './lib/input/components/text-field/text-field.component';
+export * from './lib/input/components/text-field/text-field.module';
 export * from './lib/input/decorators/input.decorators';
 export * from './lib/input/foundation/configuration/input-configuration';
-export * from './lib/input/foundation/configuration/input-configuration-options';
+export * from './lib/input/foundation/configuration/input-configuration';
 
 export * from './lib/menus/menu/menu.module';
 export * from './lib/menus/menu/foundation/child-menu.directive';

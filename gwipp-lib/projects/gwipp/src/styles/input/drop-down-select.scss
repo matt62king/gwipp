@@ -1,0 +1,29 @@
+@import "~node_modules/bootstrap/scss/functions";
+@import '~node_modules/bootstrap/scss/variables';
+@import '~node_modules/bootstrap/scss/mixins';
+
+@import '../constants/constants';
+@import '../mixins/mixins';
+@import "input";
+
+.gwipp-select {
+  position: relative;
+
+  &-options {
+    top: 100%;
+    left: 0px;
+    right: 0px;
+    margin-top: -5px;
+    padding-top: 0.35em;
+    z-index: $z-select-options;
+    border-top: none !important;
+    @include drop-view;
+    @include border(gray('300'));
+  }
+
+  &-option {
+    &:hover {
+      background-color: gray('300');
+    }
+  }
+}

@@ -27,11 +27,9 @@
   }
 
   &-drop-menu {
-    color: black;
-    background-color: white;
-    position: absolute;
     top: $gwipp-nav-bar-height;
     z-index: $z-navDropDown;
+    @include drop-view;
     @include border(gray('300'));
   }
 }

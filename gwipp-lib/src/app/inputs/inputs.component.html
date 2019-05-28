@@ -1,0 +1,25 @@
+<gwipp-portlet>
+  <ng-template title>
+    <div class="p-2 font-weight-bold text-light">
+      Inputs
+    </div>
+  </ng-template>
+
+  <ng-template detail>
+    <div class="mt-2 mx-5 py-2">
+      <gwipp-dropdown-selection [configuration]="dropDownConfig" [options]="selectItems">
+        <ng-template selectionDetail let-value="value">
+          <div class="pr-2 text-primary">
+            {{ value }}
+          </div>
+        </ng-template>
+
+        <ng-template optionDetail let-value="value">
+          <div class="p-1">
+            {{ value }}
+          </div>
+        </ng-template>
+      </gwipp-dropdown-selection>
+    </div>
+  </ng-template>
+</gwipp-portlet>
