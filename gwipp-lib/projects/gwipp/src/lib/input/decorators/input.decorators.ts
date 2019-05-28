@@ -1,9 +1,8 @@
-import {InputConfigurationOptions} from '../foundation/configuration/input-configuration-options';
 import {InputConfiguration} from '../foundation/configuration/input-configuration';
 
-export const InputConfig = (options: InputConfigurationOptions) =>
+export const InputConfig = (options: InputConfiguration) =>
   (target: object, propertyKey: string) => {
-    let value = new InputConfiguration(options);
+    let value = options;
 
     const get = (): InputConfiguration => {
       return value;

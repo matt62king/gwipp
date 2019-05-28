@@ -7,7 +7,6 @@ import {FormModule} from '../../projects/gwipp/src/lib/form/form.module';
 import {ReactiveFormsModule} from '@angular/forms';
 import {OverlayModule} from '../../projects/gwipp/src/lib/views/overlay/overlay.module';
 import {TabMenuModule} from '../../projects/gwipp/src/lib/menus/tab-menu/tab-menu.module';
-import {InputModule} from '../../projects/gwipp/src/lib/input/input.module';
 import {NavigationModule} from '../../projects/gwipp/src/lib/navigation/navigation.module';
 import {IconModule} from '../../projects/gwipp/src/lib/icon/icon.module';
 import {ButtonModule} from '../../projects/gwipp/src/lib/button/button.module';
@@ -18,10 +17,16 @@ import {MenuModule} from '../../projects/gwipp/src/lib/menus/menu/menu.module';
 import {PortletModule} from '../../projects/gwipp/src/lib/views/portlet/portlet.module';
 import {WorkingBlockModule} from '../../projects/gwipp/src/lib/output/component/blocks/working-block/working-block.module';
 import {ErrorBlockModule} from '../../projects/gwipp/src/lib/output/component/blocks/error-block/error-block.module';
+import {TextFieldModule} from '../../projects/gwipp/src/lib/input/components/text-field/text-field.module';
+import {PasswordFieldModule} from '../../projects/gwipp/src/lib/input/components/password-field/password-field.module';
+import {SwitchModule} from '../../projects/gwipp/src/lib/input/components/switch/switch.module';
+import {DropdownSelectionModule} from '../../projects/gwipp/src/lib/input/components/dropdown-selection/dropdown-selection.module';
+import { InputsComponent } from './inputs/inputs.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    InputsComponent
   ],
   imports: [
     BrowserModule,
@@ -31,7 +36,10 @@ import {ErrorBlockModule} from '../../projects/gwipp/src/lib/output/component/bl
     ButtonModule,
     FormModule,
     ReactiveFormsModule,
-    InputModule,
+    TextFieldModule,
+    PasswordFieldModule,
+    SwitchModule,
+    DropdownSelectionModule,
     OverlayModule,
     TabMenuModule,
     OutputModule,
