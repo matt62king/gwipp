@@ -33,8 +33,9 @@ export class BaseInputComponent implements OnDestroy {
     noDataLabel: '',
   };
 
+  config: InputConfiguration = this.defaultConfig;
+
   protected destroy$ = new Subject();
-  protected config: InputConfiguration = this.defaultConfig;
   protected changeFunction: (event: Event, value: any) => any;
   protected propagateChange = (_: any) => { };
   protected onTouched = () => {};
