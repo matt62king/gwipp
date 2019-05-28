@@ -1,0 +1,32 @@
+<div class="w-100">
+  <div class="d-flex flex-column gwipp-select">
+
+    <div class="gwipp-input-label font-weight-bold">
+      {{ config.label }}
+    </div>
+    <div class="d-flex flex-row align-items-center gwipp-input" gwippClickable (click)="toggleFocus()">
+      <div class="flex-fill">
+
+        <ng-container *ngIf="selectedValue">
+          <ng-container *ngTemplateOutlet="selectionDetail; context: {value: selectedValue.value}"></ng-container>
+        </ng-container>
+
+      </div>
+      <gwipp-icon [icon]="caretIcon"></gwipp-icon>
+    </div>
+
+    <small class="form-text text-muted" *ngIf="config.infoLabel != null">{{ config.infoLabel }}</small>
+
+    <div *ngIf="hasFocus" class="gwipp-select-options">
+
+      <ng-container *ngIf="(options$ | async) as options">
+        <div *ngFor="let option of options">
+          <div class="gwipp-select-option" gwippClickable (click)="selectValue(option)">
+            <ng-container *ngTemplateOutlet="optionDetail; context: {value: option.value}"></ng-container>
+          </div>
+        </div>
+      </ng-container>
+
+    </div>
+  </div>
+</div>

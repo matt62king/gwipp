@@ -13,6 +13,7 @@ import {InputConfiguration} from '../../projects/gwipp/src/lib/input/foundation/
 import {ToastService} from '../../projects/gwipp/src/lib/views/toast/service/toast.service';
 import {OverlayService} from '../../projects/gwipp/src/lib/views/overlay/service/overlay.service';
 import {NavDropMenuService} from '../../projects/gwipp/src/lib/navigation/foundation/services/nav-drop-menu.service';
+import {SelectionOption} from '../../projects/gwipp/src/lib/input/components/dropdown-selection/model/selectionOption';
 
 @Component({
   selector: 'app-root',

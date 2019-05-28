@@ -29,3 +29,21 @@
 @mixin drop-shadow {
   box-shadow: 3px 8px 18px 2px gray('800');
 }
+
+@mixin selected($point: false) {
+  background-color: gray("200");
+
+  @if ($point) {
+    cursor: pointer;
+  }
+}
+
+@mixin disabled-cursor {
+  cursor: not-allowed;
+}
+
+@mixin drop-view {
+  color: black;
+  background-color: white;
+  position: absolute;
+}

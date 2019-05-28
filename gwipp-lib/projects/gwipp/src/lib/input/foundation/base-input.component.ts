@@ -1,19 +1,19 @@
-import {Component, ElementRef, EventEmitter, Input, OnInit, Output, ViewChild} from '@angular/core';
+import {Component, ElementRef, EventEmitter, Input, OnDestroy, Output, ViewChild} from '@angular/core';
 import {FormControl} from '@angular/forms';
 import {InputConfiguration} from './configuration/input-configuration';
 import {IconNames} from '../../icon/icon/constants/icon-names';
+import {Subject} from 'rxjs';
 
 @Component({
   selector: 'gwipp-base-input',
   template: '<div></div>'
 })
-export class BaseInputComponent implements OnInit {
+export class BaseInputComponent implements OnDestroy {
   @Output() valueChange: EventEmitter<any> = new EventEmitter();
 
   @ViewChild('input') inputRef: ElementRef;
 
   @Input() formControl: FormControl = new FormControl();
-  @Input() config: InputConfiguration = new InputConfiguration({});
 
   disabled: boolean;
   innerValue: any;
@@ -22,13 +22,32 @@ export class BaseInputComponent implements OnInit {
 
   errorIcon = IconNames.EXCLAMATION_TRIANGLE;
 
+  private readonly defaultConfig: InputConfiguration = {
+    fieldId: '',
+    errorLabel: '',
+    infoLabel: '',
+    label: 'Input Field',
+    optional: false,
+    inline: false,
+    maxLength: 99999,
+    noDataLabel: '',
+  };
+
+  config: InputConfiguration = this.defaultConfig;
+
+  protected destroy$ = new Subject();
   protected changeFunction: (event: Event, value: any) => any;
   protected propagateChange = (_: any) => { };
   protected onTouched = () => {};
 
-  constructor() { }
+  @Input()
+  set configuration(config: Partial<InputConfiguration>) {
+    this.config = {...this.defaultConfig, ...config};
+  }
 
-  ngOnInit() {
+  ngOnDestroy(): void {
+    this.destroy$.next(true);
+    this.destroy$.unsubscribe();
   }
 
   get value(): any {

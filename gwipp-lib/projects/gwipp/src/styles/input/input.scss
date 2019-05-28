@@ -3,13 +3,14 @@
 @import "~node_modules/bootstrap/scss/mixins";
 
 @import "../constants/constants";
+@import "../mixins/mixins";
 
 @mixin border-thick {
   border-width: $gwipp-border-thick !important;
 }
 
 @mixin input-border {
-  border-color: gray("300") !important;
+  @include border(gray("300"));
   border-radius: $gwipp-input-border-radius !important;
 }
 
@@ -29,7 +30,6 @@
 
 .gwipp-input {
   @include input-base;
-  @include input-border;
 
   &:focus {
     @include input-focus-border;
