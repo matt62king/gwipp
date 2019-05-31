@@ -22,11 +22,14 @@ import {PasswordFieldModule} from '../../projects/gwipp/src/lib/input/components
 import {SwitchModule} from '../../projects/gwipp/src/lib/input/components/switch/switch.module';
 import {DropdownSelectionModule} from '../../projects/gwipp/src/lib/input/components/dropdown-selection/dropdown-selection.module';
 import { InputsComponent } from './inputs/inputs.component';
+import { ExpandableListComponent } from './list/expandable-list/expandable-list.component';
+import {ExpandableListModule} from '../../projects/gwipp/src/lib/lists/expandable-list/expandable-list.module';
 
 @NgModule({
   declarations: [
     AppComponent,
-    InputsComponent
+    InputsComponent,
+    ExpandableListComponent
   ],
   imports: [
     BrowserModule,
@@ -48,7 +51,8 @@ import { InputsComponent } from './inputs/inputs.component';
     MenuModule,
     PortletModule,
     WorkingBlockModule,
-    ErrorBlockModule
+    ErrorBlockModule,
+    ExpandableListModule
   ],
   providers: [],
   bootstrap: [AppComponent]
