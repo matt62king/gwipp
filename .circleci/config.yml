@@ -61,42 +61,30 @@ jobs:
             cd gwipp-lib/
             ls
 
-#  build:
-#    <<: *defaults
-#    steps:
-#      - attach_workspace:
-#          at: ~/repo
-#
-#      - run:
-#          command: |
-#            cd gwipp-lib
-#            npm run build
-#
-#      - run:
-#          command: |
-#            cd gwipp-lib/
-#            ls
-#
-#  lint:
-#    <<: *defaults
-#    steps:
-#      - attach_workspace:
-#          at: ~/repo
-#
-#      - run:
-#          command: |
-#            cd gwipp-lib
-#            npm run lint
-#
-#      - persist_to_workspace:
-#          root: ~/repo
-#          paths:
-#            - gwipp-lib/*
-#
-#      - run:
-#          command: |
-#            cd gwipp-lib/
-#            ls
+  test-lib:
+    docker:
+      - image: circleci/node:8-browsers
+    working_directory: ~/repo
+
+    steps:
+      - attach_workspace:
+          at: ~/repo
+
+      - run:
+          command: |
+            cd gwipp-lib
+            npm run test_lib_ci
+
+  lint:
+    <<: *defaults
+    steps:
+      - attach_workspace:
+          at: ~/repo
+
+      - run:
+          command: |
+            cd gwipp-lib
+            npm run lint_lib
 
   package:
     <<: *defaults
@@ -155,25 +143,25 @@ workflows:
             tags:
               only: /.*/
 
-#      - build:
-#          requires:
-#            - install
-#          filters:
-#            tags:
-#              only: /.*/
-#
-#      - lint:
-#          requires:
-#            - install
-#          filters:
-#            tags:
-#              only: /.*/
+      - test-lib:
+          requires:
+            - install
+          filters:
+            tags:
+              only: /.*/
+
+      - lint:
+          requires:
+            - install
+          filters:
+            tags:
+              only: /.*/
 
       - package:
           requires:
-#            - build
             - build-lib
-#            - lint
+            - test-lib
+            - lint
           filters:
             tags:
               only: /.*/

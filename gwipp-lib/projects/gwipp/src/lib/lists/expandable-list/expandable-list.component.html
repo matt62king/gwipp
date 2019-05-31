@@ -1,0 +1,11 @@
+<div class="d-flex flex-column">
+  <div *ngFor="let item of context">
+    <div gwippClickable class="gwipp-click-block" (click)="toggleExpanded(item)">
+      <ng-container *ngTemplateOutlet="detail; context: item"></ng-container>
+    </div>
+
+    <div *ngIf="isExpanded(item)">
+      <ng-container *ngTemplateOutlet="expandedDetail; context: item"></ng-container>
+    </div>
+  </div>
+</div>
