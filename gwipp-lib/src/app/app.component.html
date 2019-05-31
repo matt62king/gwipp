@@ -143,6 +143,21 @@
     <app-inputs></app-inputs>
   </div>
 
+  <!-- Lists -->
+  <div class="m-5">
+    <gwipp-portlet>
+      <ng-template title>
+        <div class="p-2 font-weight-bold text-light">
+          Lists
+        </div>
+      </ng-template>
+
+      <ng-template detail>
+        <app-expandable-list></app-expandable-list>
+      </ng-template>
+    </gwipp-portlet>
+  </div>
+
   <div class="mt-1 w-25">
     <gwipp-form [formGroup]="formGroup" (formEvent)="onFormEvent($event)" #form>
       <gwipp-text-field [configuration]="inputConfig" [formControl]="formGroup.controls['name']"></gwipp-text-field>

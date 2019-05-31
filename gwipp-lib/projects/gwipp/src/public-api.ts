@@ -29,6 +29,7 @@ export * from './lib/foundation/event/gwipp-event';
 export * from './lib/foundation/style/colors/colors';
 export * from './lib/foundation/style/style.module';
 export * from './lib/foundation/templates/detail.directive';
+export * from './lib/foundation/templates/expanded-detail.directive';
 export * from './lib/foundation/templates/templates.module';
 export * from './lib/foundation/templates/title.directive';
 
@@ -53,6 +54,9 @@ export * from './lib/input/components/text-field/text-field.module';
 export * from './lib/input/decorators/input.decorators';
 export * from './lib/input/foundation/configuration/input-configuration';
 export * from './lib/input/foundation/configuration/input-configuration';
+
+export * from './lib/lists/expandable-list/expandable-list.component';
+export * from './lib/lists/expandable-list/expandable-list.module';
 
 export * from './lib/menus/menu/menu.module';
 export * from './lib/menus/menu/foundation/child-menu.directive';

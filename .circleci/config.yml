@@ -61,6 +61,27 @@ jobs:
             cd gwipp-lib/
             ls
 
+  test-lib:
+    <<: *defaults
+    steps:
+      - attach_workspace:
+          at: ~/repo
+
+      - run:
+          command: |
+            cd gwipp-lib
+            npm run test_lib
+
+      - persist_to_workspace:
+          root: ~/repo
+          paths:
+            - gwipp-lib/*
+
+      - run:
+          command: |
+            cd gwipp-lib/
+            ls
+
 #  build:
 #    <<: *defaults
 #    steps:
@@ -155,6 +176,13 @@ workflows:
             tags:
               only: /.*/
 
+      - test-lib:
+          requires:
+            - install
+          filters:
+            tags:
+              only: /.*/
+
 #      - build:
 #          requires:
 #            - install
@@ -173,6 +201,7 @@ workflows:
           requires:
 #            - build
             - build-lib
+            - test-lib
 #            - lint
           filters:
             tags:
