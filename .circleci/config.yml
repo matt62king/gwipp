@@ -70,7 +70,7 @@ jobs:
       - run:
           command: |
             cd gwipp-lib
-            npm run test_lib
+            npm run test_lib_ci
 
       - persist_to_workspace:
           root: ~/repo
