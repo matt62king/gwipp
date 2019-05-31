@@ -1,19 +1,13 @@
-import {Component, forwardRef, OnInit} from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {BaseInputComponent} from '../../foundation/base-input.component';
-import {ControlValueAccessor, NG_VALUE_ACCESSOR} from '@angular/forms';
+import {ControlValueAccessor} from '@angular/forms';
 import {takeUntil} from 'rxjs/operators';
-
-export const INPUT_CONTROL_VALUE_ACCESSOR: any = {
-  provide: NG_VALUE_ACCESSOR,
-  useExisting: forwardRef(() => TextFieldComponent),
-  multi: true
-};
-
+import {TEXT_FIELD_CONTROL_VALUE_ACCESSOR} from '../../foundation/accessors/controlValueAccessors';
 
 @Component({
   selector: 'gwipp-text-field',
   templateUrl: './text-field.component.html',
-  providers: [INPUT_CONTROL_VALUE_ACCESSOR]
+  providers: [TEXT_FIELD_CONTROL_VALUE_ACCESSOR]
 })
 export class TextFieldComponent extends BaseInputComponent implements OnInit, ControlValueAccessor {
 

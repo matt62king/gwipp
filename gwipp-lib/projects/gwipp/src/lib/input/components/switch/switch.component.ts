@@ -1,18 +1,15 @@
-import {Component, forwardRef, OnInit} from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {BaseInputComponent} from '../../foundation/base-input.component';
-import {ControlValueAccessor, NG_VALUE_ACCESSOR} from '@angular/forms';
+import {ControlValueAccessor} from '@angular/forms';
 import {takeUntil} from 'rxjs/operators';
+import {SWITCH_CONTROL_VALUE_ACCESSOR} from '../../foundation/accessors/controlValueAccessors';
 
-export const CUSTOM_CONTROL_VALUE_ACCESSOR: any = {
-  provide: NG_VALUE_ACCESSOR,
-  useExisting: forwardRef(() => SwitchComponent),
-  multi: true
-};
+
 
 @Component({
   selector: 'gwipp-switch',
   templateUrl: './switch.component.html',
-  providers: [CUSTOM_CONTROL_VALUE_ACCESSOR]
+  providers: [SWITCH_CONTROL_VALUE_ACCESSOR]
 })
 export class SwitchComponent extends BaseInputComponent implements OnInit, ControlValueAccessor {
 
