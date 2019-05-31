@@ -75,16 +75,6 @@ jobs:
             cd gwipp-lib
             npm run test_lib_ci
 
-      - persist_to_workspace:
-          root: ~/repo
-          paths:
-            - gwipp-lib/*
-
-      - run:
-          command: |
-            cd gwipp-lib/
-            ls
-
 #  build:
 #    <<: *defaults
 #    steps:
