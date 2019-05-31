@@ -9,7 +9,7 @@
     "lint": "ng lint",
     "e2e": "ng e2e",
     "test_lib": "ng test gwipp",
-    "test_lib_ci": "ng test gwipp --progress=false --browsers=ChromeNoSandbox",
+    "test_lib_ci": "ng test gwipp --no-progress --no-watch --browsers=ChromeNoSandbox",
     "build_lib": "ng build gwipp && cp -R projects/gwipp/src/styles/ dist/gwipp/lib/",
     "npm_pack": "cd dist/gwipp && npm pack",
     "package": "npm run build_lib && npm run npm_pack"
