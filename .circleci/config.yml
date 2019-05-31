@@ -62,7 +62,10 @@ jobs:
             ls
 
   test-lib:
-    <<: *defaults
+    docker:
+      - image: circleci/node:8-browsers
+    working_directory: ~/repo
+
     steps:
       - attach_workspace:
           at: ~/repo
