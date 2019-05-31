@@ -1,11 +1,11 @@
 import {
   Component,
-  ContentChild,
+  ContentChild, forwardRef,
   Input,
   OnInit,
   TemplateRef,
 } from '@angular/core';
-import {ControlValueAccessor} from '@angular/forms';
+import {ControlValueAccessor, NG_VALUE_ACCESSOR} from '@angular/forms';
 import {BaseInputComponent} from '../../foundation/base-input.component';
 import {takeUntil} from 'rxjs/operators';
 import {IconNames} from '../../../icon/icon/constants/icon-names';
@@ -14,12 +14,16 @@ import {Observable} from 'rxjs';
 import {of} from 'rxjs/internal/observable/of';
 import {OptionDetailDirective} from './templates/option-detail.directive';
 import {SelectionDetailDirective} from './templates/selection-detail.directive';
-import {DROPDOWN_CONTROL_VALUE_ACCESSOR} from '../../foundation/accessors/controlValueAccessors';
+// import {DROPDOWN_CONTROL_VALUE_ACCESSOR} from '../../foundation/accessors/controlValueAccessors';
 
 @Component({
   selector: 'gwipp-dropdown-selection',
   templateUrl: './dropdown-selection.component.html',
-  providers: [DROPDOWN_CONTROL_VALUE_ACCESSOR]
+  providers: [{
+    provide: NG_VALUE_ACCESSOR,
+    useExisting: forwardRef(() => DropdownSelectionComponent),
+    multi: true
+  }]
 })
 export class DropdownSelectionComponent extends BaseInputComponent implements OnInit, ControlValueAccessor {
 
