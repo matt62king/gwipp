@@ -1,16 +1,19 @@
-import {Component, Input, OnInit, ViewChild} from '@angular/core';
-import {ControlValueAccessor} from '@angular/forms';
+import {Component, forwardRef, Input, OnInit, ViewChild} from '@angular/core';
+import {ControlValueAccessor, NG_VALUE_ACCESSOR} from '@angular/forms';
 import {BaseInputComponent} from '../../foundation/base-input.component';
 import {Colors} from '../../../foundation/style/colors/colors';
 import {IconNames} from '../../../icon/icon/constants/icon-names';
 import {ProgressBarComponent} from '../../../output/component/progress-bar/progress-bar.component';
 import {takeUntil} from 'rxjs/operators';
-import {PASSWORD_CONTROL_VALUE_ACCESSOR} from '../../foundation/accessors/controlValueAccessors';
 
 @Component({
   selector: 'gwipp-password-field',
   templateUrl: './password-field.component.html',
-  providers: [PASSWORD_CONTROL_VALUE_ACCESSOR]
+  providers: [{
+    provide: NG_VALUE_ACCESSOR,
+    useExisting: forwardRef(() => PasswordFieldComponent),
+    multi: true
+  }]
 })
 export class PasswordFieldComponent extends BaseInputComponent implements OnInit, ControlValueAccessor {
   @ViewChild('strength') strengthRef: ProgressBarComponent;
