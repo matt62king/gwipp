@@ -1,4 +1,4 @@
-import {Component, OnInit, TemplateRef, ViewChild} from '@angular/core';
+import {AfterContentInit, Component, OnInit, TemplateRef, ViewChild} from '@angular/core';
 import {ButtonConfiguration} from '../../projects/gwipp/src/lib/button/foundation/configuation/button-configuration';
 import {FormBuilder, FormControl, FormGroup, Validators} from '@angular/forms';
 import {FormEvent} from '../../projects/gwipp/src/lib/form/foundation/event/form-event';

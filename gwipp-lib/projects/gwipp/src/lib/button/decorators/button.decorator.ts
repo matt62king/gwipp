@@ -1,9 +1,8 @@
-import {ButtonConfigurationOptions} from '../foundation/configuation/button-configuration-options';
 import {ButtonConfiguration} from '../foundation/configuation/button-configuration';
 
-export const Button = (options: ButtonConfigurationOptions) =>
+export const Button = (options: ButtonConfiguration) =>
   (target: object, propertyKey: string) => {
-    let value = new ButtonConfiguration(options);
+    let value = options;
 
     const get = (): ButtonConfiguration => {
       return value;

@@ -1,9 +1,8 @@
-import {FormConfigurationOptions} from '../foundation/configuration/form-configuration-options';
 import {FormConfiguration} from '../foundation/configuration/form-configuration';
 
-export const Form = (options: FormConfigurationOptions) =>
+export const Form = (options: FormConfiguration) =>
   (target: object, propertyKey: string) => {
-    let value = new FormConfiguration(options);
+    let value = options;
 
     const get = (): FormConfiguration => {
       return value;
