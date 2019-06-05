@@ -2,10 +2,10 @@
 
   <ng-content></ng-content>
 
-  <gwipp-submit-group [cancelConfig]="config.cancelConfiguration"
-                      [submitConfig]="config.submitConfiguration"
+  <gwipp-submit-group [cancelConfig]="configuration.cancelConfiguration"
+                      [submitConfig]="configuration.submitConfiguration"
                       [submitEnabled]="formGroup.valid"
-                      [cancelEnabled]="formGroup.dirty || config.cancelAlwaysEnabled"
+                      [cancelEnabled]="formGroup.dirty || configuration.cancelAlwaysEnabled"
                       (formEvent)="onCancelSubmit($event)" #submitGroup>
   </gwipp-submit-group>
 </div>
