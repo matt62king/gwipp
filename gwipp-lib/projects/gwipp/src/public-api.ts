@@ -31,6 +31,15 @@ export * from './lib/foundation/templates/expanded-detail.directive';
 export * from './lib/foundation/templates/templates.module';
 export * from './lib/foundation/templates/title.directive';
 
+export * from './lib/grid/grid.module';
+export * from './lib/grid/components/grid/grid.component';
+export * from './lib/grid/components/grid/grid-columns.directive';
+export * from './lib/grid/foundation/configuration/grid-configuration';
+export * from './lib/grid/foundation/configuration/grid.decorator';
+export * from './lib/grid/templates/grid-cell.directive';
+export * from './lib/grid/templates/grid-footer.directive';
+export * from './lib/grid/templates/grid-header-cell.directive';
+
 export * from './lib/icon/icon.module';
 export * from './lib/icon/decorators/icon.decorator';
 export * from './lib/icon/foundation/config/icon-configuration';

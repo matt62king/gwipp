@@ -1,0 +1,34 @@
+@import "~node_modules/bootstrap/scss/functions";
+@import '~node_modules/bootstrap/scss/variables';
+@import '~node_modules/bootstrap/scss/mixins';
+
+@import '../constants/constants';
+@import '../mixins/boarders';
+@import '../mixins/mixins';
+@import '../typography/typography';
+
+.gwipp-grid {
+
+  &-cell {
+    @include border-left(gray('300'));
+
+    &-base {
+      flex: 1 1 0;
+    }
+  }
+
+  &-footer {
+    font-style: italic;
+    @include text-muted;
+  }
+
+  &-header {
+    font-weight: 700;
+    @include border-bottom(gray('300'));
+  }
+
+  &-row {
+    @include border-bottom(gray('300'));
+    @include border-right(gray('300'));
+  }
+}
