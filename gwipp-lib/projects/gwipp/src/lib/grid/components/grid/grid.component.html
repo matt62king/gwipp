@@ -1,0 +1,25 @@
+<div class="d-flex flex-column">
+  <div [class]="resolvedHeaderRowStyle()">
+    <ng-container *ngFor="let header of columns.headers">
+      <div [class]="resolvedHeaderCellStyle(header.cellStyle)">
+        <ng-container *ngTemplateOutlet="header.template"></ng-container>
+      </div>
+    </ng-container>
+  </div>
+
+  <ng-container *ngFor="let row of rows">
+    <div [class]="resolvedRowStyle()">
+
+      <ng-container *ngFor="let cell of columns.cells">
+        <div [class]="resolvedCellStyle(cell.cellStyle)">
+          <ng-container *ngTemplateOutlet="cell.template; context: {row: row, value: row[cell.propertyKey]}"></ng-container>
+        </div>
+      </ng-container>
+
+    </div>
+  </ng-container>
+
+  <div [class]="resolvedFooterStyle()">
+    <ng-container [ngTemplateOutlet]="footer"></ng-container>
+  </div>
+</div>

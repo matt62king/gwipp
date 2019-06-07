@@ -1,0 +1,25 @@
+<gwipp-grid [rows]="rows">
+  <gwipp-grid-columns>
+    <ng-template gwippGridHeaderCell cellStyle="text-center">
+        Type
+    </ng-template>
+    <ng-template gwippGridCell propertyKey="name" let-name="value">
+      {{ name }}
+    </ng-template>
+
+    <ng-template gwippGridHeaderCell>
+      <div class="text-center">
+        Color
+      </div>
+    </ng-template>
+    <ng-template gwippGridCell propertyKey="color" let-color="value">
+      {{ color }}
+    </ng-template>
+  </gwipp-grid-columns>
+  ng
+  <ng-template gwippGridFooter>
+    <div class="font-italic">
+      Grid Footer
+    </div>
+  </ng-template>
+</gwipp-grid>

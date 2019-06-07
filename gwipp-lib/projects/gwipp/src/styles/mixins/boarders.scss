@@ -1,0 +1,23 @@
+@mixin border-bottom($color, $width: 1px) {
+  border-bottom: {
+    width: $width;
+    style: solid;
+    color: $color;
+  }
+}
+
+@mixin border-right($color, $width: 1px) {
+  border-right: {
+    width: $width;
+    style: solid;
+    color: $color;
+  }
+}
+
+@mixin border-left($color, $width: 1px) {
+  border-left: {
+    width: $width;
+    style: solid;
+    color: $color;
+  }
+}
