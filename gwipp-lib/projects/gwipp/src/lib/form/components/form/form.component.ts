@@ -5,22 +5,33 @@ import {FormMode} from '../../foundation/consts/form-mode';
 import {SubmitGroupComponent} from '../submit-group/submit-group.component';
 import {ButtonMode} from '../../../button/foundation/mode/button-mode';
 import {FormConfiguration} from '../../foundation/configuration/form-configuration';
+import {ButtonActionType} from '../../../button/foundation/type/button-action.type';
+import {ButtonType} from '../../../button/foundation/type/button-type';
 
 @Component({
   selector: 'gwipp-form',
   templateUrl: './form.component.html'
 })
-export class FormComponent implements OnInit {
+export class FormComponent {
+
+  private defaultConfig = {
+    canCancel: true,
+    cancelAlwaysEnabled: true,
+    cancelConfiguration: {label: 'Cancel', buttonAction: ButtonActionType.CANCEL_LINK, buttonType: ButtonType.SECONDARY},
+    submitConfiguration: {label: 'Submit'}
+  };
+
   @ViewChild('submitGroup') submitGroup: SubmitGroupComponent;
 
   @Output() formEvent: EventEmitter<FormEvent> = new EventEmitter();
 
-  @Input() config: FormConfiguration = new FormConfiguration();
   @Input() formGroup: FormGroup;
 
-  constructor() { }
+  configuration: FormConfiguration = this.defaultConfig;
 
-  ngOnInit() {
+  @Input()
+  set config(config: FormConfiguration) {
+    this.configuration = {...this.defaultConfig, ...config};
   }
 
   @Input()

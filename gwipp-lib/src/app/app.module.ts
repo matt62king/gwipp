@@ -24,12 +24,15 @@ import {DropdownSelectionModule} from '../../projects/gwipp/src/lib/input/compon
 import { InputsComponent } from './inputs/inputs.component';
 import { ExpandableListComponent } from './list/expandable-list/expandable-list.component';
 import {ExpandableListModule} from '../../projects/gwipp/src/lib/lists/expandable-list/expandable-list.module';
+import { BasicGridComponent } from './basic-grid/basic-grid.component';
+import {GridModule} from '../../projects/gwipp/src/lib/grid/grid.module';
 
 @NgModule({
   declarations: [
     AppComponent,
     InputsComponent,
-    ExpandableListComponent
+    ExpandableListComponent,
+    BasicGridComponent
   ],
   imports: [
     BrowserModule,
@@ -52,7 +55,8 @@ import {ExpandableListModule} from '../../projects/gwipp/src/lib/lists/expandabl
     PortletModule,
     WorkingBlockModule,
     ErrorBlockModule,
-    ExpandableListModule
+    ExpandableListModule,
+    GridModule
   ],
   providers: [],
   bootstrap: [AppComponent]
