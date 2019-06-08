@@ -8,14 +8,11 @@ import {BaseButtonComponent} from '../../foundation/base-button/base-button.comp
   selector: 'gwipp-confirm-button',
   templateUrl: './confirm-button.component.html'
 })
-export class ConfirmButtonComponent extends BaseButtonComponent implements OnInit {
+export class ConfirmButtonComponent extends BaseButtonComponent {
   @Output() confirmed: EventEmitter<ButtonEvent> = new EventEmitter();
 
   constructor(protected styleBuilder: ButtonStyleBuilder) {
     super(styleBuilder);
-  }
-
-  ngOnInit() {
   }
 
   onClick(): void {
