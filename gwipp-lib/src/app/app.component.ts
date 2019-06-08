@@ -59,7 +59,6 @@ export class AppComponent implements OnInit {
   switchConfig: InputConfiguration;
 
   formGroup: FormGroup;
-  buttonMode: ButtonMode.ACTIVE;
 
   constructor(private formBuilder: FormBuilder,
               private toastService: ToastService,
