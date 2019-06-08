@@ -14,6 +14,7 @@ import {ToastService} from '../../projects/gwipp/src/lib/views/toast/service/toa
 import {OverlayService} from '../../projects/gwipp/src/lib/views/overlay/service/overlay.service';
 import {NavDropMenuService} from '../../projects/gwipp/src/lib/navigation/foundation/services/nav-drop-menu.service';
 import {SelectionOption} from '../../projects/gwipp/src/lib/input/components/dropdown-selection/model/selectionOption';
+import {ButtonMode} from '../../projects/gwipp/src/lib/button/foundation/mode/button-mode';
 
 @Component({
   selector: 'app-root',
@@ -58,6 +59,7 @@ export class AppComponent implements OnInit {
   switchConfig: InputConfiguration;
 
   formGroup: FormGroup;
+  buttonMode: ButtonMode.ACTIVE;
 
   constructor(private formBuilder: FormBuilder,
               private toastService: ToastService,
