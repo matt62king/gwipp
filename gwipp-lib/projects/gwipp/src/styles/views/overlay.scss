@@ -17,7 +17,7 @@
     background: white;
     border-radius: 20px;
     max-height: 90%;
-    overflow-y: auto;
+    overflow-y: auto !important;
     @include border($primary-color, $gwipp-border-thick);
   }
 }
