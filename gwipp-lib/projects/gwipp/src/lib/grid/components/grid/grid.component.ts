@@ -1,4 +1,4 @@
-import {Component, ContentChild, Input, TemplateRef} from '@angular/core';
+import {Component, ContentChild, EventEmitter, Input, Output, TemplateRef} from '@angular/core';
 import {GridColumnsDirective} from './grid-columns.directive';
 import {GridFooterDirective} from '../../templates/grid-footer.directive';
 import {GridConfiguration} from '../../foundation/configuration/grid-configuration';
@@ -13,8 +13,11 @@ export class GridComponent {
     cellStyle: 'gwipp-grid-cell',
     rowStyle: 'gwipp-grid-row',
     headerStyle: 'gwipp-grid-header',
-    footerStyle: 'gwipp-grid-footer'
+    footerStyle: 'gwipp-grid-footer',
+    clickableRows: false
   };
+
+  @Output() rowClick: EventEmitter<any> = new EventEmitter();
 
   @Input() rows: any[];
 
@@ -40,7 +43,14 @@ export class GridComponent {
   }
 
   resolvedRowStyle(): string {
-    return `d-flex flex-row ${this.configuration.rowStyle || ''}`;
+    return `d-flex flex-row ${this.configuredRowStlye()}`;
+  }
+
+  private configuredRowStlye(): string {
+    const style = `${this.configuration.rowStyle || ''}`;
+    const clickStyle = `${this.configuration.clickableRows ? 'gwipp-click-block' : ''}`;
+
+    return `${style} ${clickStyle}`;
   }
 
   resolvedHeaderRowStyle(): string {
@@ -49,5 +59,11 @@ export class GridComponent {
 
   resolvedFooterStyle(): string {
     return `${this.configuration.footerStyle || ''}`;
+  }
+
+  onRowClick(row: any): void {
+    if (this.configuration.clickableRows) {
+      this.rowClick.emit(row);
+    }
   }
 }
