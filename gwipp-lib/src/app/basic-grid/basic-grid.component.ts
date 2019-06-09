@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import {Component} from '@angular/core';
+import {Grid} from '../../../projects/gwipp/src/lib/grid/foundation/configuration/grid.decorator';
+import {GridConfiguration} from '../../../projects/gwipp/src/lib/grid/foundation/configuration/grid-configuration';
 
 @Component({
   selector: 'app-basic-grid',
@@ -11,4 +13,10 @@ export class BasicGridComponent {
     {name: 'Death Trooper', color: 'Black'}
   ];
 
+  @Grid({clickableRows: true})
+  gridConfig: GridConfiguration;
+
+  rowClick(row: any): void {
+    console.log(row);
+  }
 }

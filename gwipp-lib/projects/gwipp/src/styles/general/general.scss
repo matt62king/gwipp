@@ -7,6 +7,7 @@
 
 .gwipp-click-block {
   &:hover {
+    cursor: pointer;
     background-color: gray('300');
   }
 }

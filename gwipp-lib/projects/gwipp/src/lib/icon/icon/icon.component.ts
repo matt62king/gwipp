@@ -11,7 +11,8 @@ export class IconComponent {
   @Input() animation: string;
 
 
-  @Input() config(config: IconConfiguration) {
+  @Input()
+  set config(config: IconConfiguration) {
     this.icon = config.name || '';
     this.size = config.size || '';
     this.animation = config.animation || '';

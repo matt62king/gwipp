@@ -1,6 +1,5 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-
-import { GridComponent } from './grid.component';
+import {async, ComponentFixture, TestBed} from '@angular/core/testing';
+import {GridComponent} from './grid.component';
 import {GridColumnsDirective} from './grid-columns.directive';
 import {GridCellDirective} from '../../templates/grid-cell.directive';
 import {GridHeaderCellDirective} from '../../templates/grid-header-cell.directive';
@@ -47,7 +46,14 @@ describe('GridComponent', () => {
   });
 
   it('should resolve row style', () => {
-    const style = 'd-flex flex-row gwipp-grid-row';
+    const style = 'd-flex flex-row gwipp-grid-row ';
+    expect(component.resolvedRowStyle()).toEqual(style);
+  });
+
+  it('should resolve clickable row style', () => {
+    const style = 'd-flex flex-row gwipp-grid-row gwipp-click-block';
+    component.config = {clickableRows: true};
+
     expect(component.resolvedRowStyle()).toEqual(style);
   });
 
@@ -66,10 +72,26 @@ describe('GridComponent', () => {
       cellStyle: 'gwipp-grid-cell',
       rowStyle: undefined,
       headerStyle: 'gwipp-grid-header',
-      footerStyle: 'gwipp-grid-footer'
+      footerStyle: 'gwipp-grid-footer',
+      clickableRows: false
     };
     component.config = {rowStyle: undefined};
 
     expect(config).toEqual(component.configuration);
+  });
+
+  it('should send row click event', () => {
+    const eventSpy = spyOn(component.rowClick, 'emit');
+    component.config = {clickableRows: true};
+    component.onRowClick({row: 'row'});
+
+    expect(eventSpy).toHaveBeenCalledWith({row: 'row'});
+  });
+
+  it('should not send row click event', () => {
+    const eventSpy = spyOn(component.rowClick, 'emit');
+    component.onRowClick({row: 'row'});
+
+    expect(eventSpy).toHaveBeenCalledTimes(0);
   });
 });

@@ -43,11 +43,12 @@ export class BaseButtonComponent implements HasButtonMode {
 
   @Input()
   public set mode(mode: ButtonMode) {
+    console.log(mode);
     this.setButtonMode(mode);
   }
 
   setButtonMode(mode: ButtonMode): void {
-    this.buttonMode = mode;
+    this.buttonMode = mode || ButtonMode.ACTIVE;
 
     if (mode === ButtonMode.ERROR) {
       this.buttonStyle = this.styleBuilder.buildForType(ButtonType.DANGER, this.config.buttonAction);

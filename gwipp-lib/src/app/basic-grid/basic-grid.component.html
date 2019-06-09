@@ -1,4 +1,4 @@
-<gwipp-grid [rows]="rows">
+<gwipp-grid [rows]="rows" [config]="gridConfig" (rowClick)="rowClick($event)">
   <gwipp-grid-columns>
     <ng-template gwippGridHeaderCell cellStyle="text-center">
         Type
@@ -16,7 +16,7 @@
       {{ color }}
     </ng-template>
   </gwipp-grid-columns>
-  ng
+
   <ng-template gwippGridFooter>
     <div class="font-italic">
       Grid Footer
