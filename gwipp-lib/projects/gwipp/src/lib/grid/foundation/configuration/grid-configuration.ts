@@ -3,4 +3,5 @@ export interface GridConfiguration {
   rowStyle?: string;
   headerStyle?: string;
   footerStyle?: string;
+  clickableRows?: boolean;
 }

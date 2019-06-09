@@ -8,7 +8,7 @@
   </div>
 
   <ng-container *ngFor="let row of rows">
-    <div [class]="resolvedRowStyle()">
+    <div [class]="resolvedRowStyle()" (click)="onRowClick(row)">
 
       <ng-container *ngFor="let cell of columns.cells">
         <div [class]="resolvedCellStyle(cell.cellStyle)">
