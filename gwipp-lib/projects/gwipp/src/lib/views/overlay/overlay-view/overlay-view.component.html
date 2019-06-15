@@ -3,8 +3,8 @@
     <div class="overlay d-flex justify-content-center align-items-center">
       <div class="overlay-item p-4 w-50">
         <div class="d-flex flex-column">
-          <ng-container [ngTemplateOutlet]="overlay.title"></ng-container>
-          <ng-container [ngTemplateOutlet]="overlay.detail"></ng-container>
+          <ng-container *ngIf="overlay.title" [ngTemplateOutlet]="overlay.title"></ng-container>
+          <ng-container *ngIf="overlay.detail" [ngTemplateOutlet]="overlay.detail"></ng-container>
         </div>
       </div>
     </div>

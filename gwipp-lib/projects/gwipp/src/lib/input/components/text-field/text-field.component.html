@@ -12,7 +12,7 @@
 
   <input #input type="text" class="form-control gwipp-input"
          [id]="config.fieldId" [disabled]="disabled"
-         (keyup)="onChange($event, input.value)"
+         (keyup)="onChange(input.value, $event)"
          (blur)="onBlur($event, input.value)">
 
   <div *ngIf="errors.length > 0">
