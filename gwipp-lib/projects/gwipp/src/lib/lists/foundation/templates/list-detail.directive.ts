@@ -1,9 +1,9 @@
 import { Directive } from '@angular/core';
 
 @Directive({
-  selector: '[expanded-detail]'
+  selector: '[list-detail]'
 })
-export class ExpandedDetailDirective {
+export class ListDetailDirective {
 
   constructor() { }
 

@@ -1,5 +1,5 @@
 <gwipp-portlet>
-  <ng-template title>
+  <ng-template portlet-title>
     <div class="p-2 font-weight-bold text-light">
       <div class="d-flex flex-row align-items-center">
         <div class="flex-fill">
@@ -33,7 +33,42 @@
     </div>
   </ng-template>
 
-  <ng-template detail>
+  <ng-template portlet-detail>
+    <div class="d-flex flex-column p-3">
+      <div class="font-weight-bold">
+        Tab Menu:
+      </div>
 
+      <div class="mt-2">
+        <gwipp-tab-menu>
+          <gwipp-tab-item>
+            <ng-template tab-item-title>
+              Tab 1
+            </ng-template>
+            <ng-template tab-item-detail>
+              Tab 1 Detail
+            </ng-template>
+          </gwipp-tab-item>
+
+          <gwipp-tab-item>
+            <ng-template tab-item-title>
+              Tab 2
+            </ng-template>
+            <ng-template tab-item-detail>
+              Tab 2 Detail
+            </ng-template>
+          </gwipp-tab-item>
+
+          <gwipp-tab-item>
+            <ng-template tab-item-title>
+              Tab 3
+            </ng-template>
+            <ng-template tab-item-detail>
+              Tab 3 Detail
+            </ng-template>
+          </gwipp-tab-item>
+        </gwipp-tab-menu>
+      </div>
+    </div>
   </ng-template>
 </gwipp-portlet>

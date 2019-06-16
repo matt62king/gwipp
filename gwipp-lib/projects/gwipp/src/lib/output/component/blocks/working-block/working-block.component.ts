@@ -1,8 +1,8 @@
 import {Component, ContentChild, TemplateRef} from '@angular/core';
 import {IconNames} from '../../../../icon/icon/constants/icon-names';
 import {IconAnimation} from '../../../../icon/icon/constants/icon-animation';
-import {DetailDirective} from '../../../../foundation/templates/detail.directive';
 import {IconSize} from '../../../../icon/icon/constants/icon-size';
+import {BlockDetailDirective} from '../foundation/templates/block-detail.directive';
 
 @Component({
   selector: 'gwipp-working-block',
@@ -13,6 +13,6 @@ export class WorkingBlockComponent {
   sinnerAnimation = IconAnimation.SPIN;
   spinnerSize = IconSize.LG;
 
-  @ContentChild(DetailDirective, {read: TemplateRef})
+  @ContentChild(BlockDetailDirective, {read: TemplateRef})
   detail: TemplateRef<any>;
 }
