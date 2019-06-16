@@ -1,7 +1,5 @@
 import {Component, ContentChild, OnDestroy, OnInit} from '@angular/core';
-import {Icon} from '../../icon/decorators/icon.decorator';
 import {IconNames} from '../../icon/icon/constants/icon-names';
-import {IconConfiguration} from '../../icon/foundation/config/icon-configuration';
 import {DropMenuService} from '../foundataion/service/drop-menu/drop-menu.service';
 import {Observable, Subject} from 'rxjs';
 import {DropMenuState} from '../foundataion/model/drop-menu.state';
@@ -15,8 +13,9 @@ import {DropMenuDirective} from '../foundataion/templates/drop-menu.directive';
 export class ActionMenuComponent implements OnInit, OnDestroy {
   private destroy$ = new Subject<any>();
 
-  @Icon({name: IconNames.ELLIPSIS_H})
-  actionIcon: IconConfiguration;
+  // @Icon({name: IconNames.ELLIPSIS_H})
+  // actionIcon: IconConfiguration;
+  ellipsisIcon = IconNames.ELLIPSIS_H;
 
   @ContentChild(DropMenuDirective)
   dropMenu: DropMenuDirective;
