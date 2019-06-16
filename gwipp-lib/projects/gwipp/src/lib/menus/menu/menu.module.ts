@@ -8,6 +8,7 @@ import {TieredParentDetailDirective} from './menu-items/tiered-parent-detail.dir
 import {IconModule} from '../../icon/icon.module';
 import {InternalMenuContainerComponent} from './foundation/internal-menu-container/internal-menu-container.component';
 import {ChildMenuDirective} from './foundation/child-menu.directive';
+import {MenuItemDetailDirective} from './menu-items/menu-item-detail.directive';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import {ChildMenuDirective} from './foundation/child-menu.directive';
     MenuItemDirective,
     TieredParentDetailDirective,
     InternalMenuContainerComponent,
-    ChildMenuDirective
+    ChildMenuDirective,
+    MenuItemDetailDirective
   ],
   imports: [
     CommonModule,
@@ -27,7 +29,8 @@ import {ChildMenuDirective} from './foundation/child-menu.directive';
     MenuContainerComponent,
     MenuItemDirective,
     TieredParentDetailDirective,
-    ChildMenuDirective
+    ChildMenuDirective,
+    MenuItemDetailDirective
   ]
 })
 export class MenuModule { }

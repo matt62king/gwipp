@@ -1,6 +1,7 @@
 export class IconNames {
   public static ANGLE_RIGHT = 'fas fa-angle-right';
   public static CARET_DOWN = 'fas fa-caret-down';
+  public static ELLIPSIS_H = 'fas fa-ellipsis-h';
   public static EXCLAMATION_TRIANGLE = 'fas fa-exclamation-triangle';
   public static EXTERNAL_LINK_ALT = 'fas fa-external-link-alt';
   public static EYE = 'fas fa-eye';
