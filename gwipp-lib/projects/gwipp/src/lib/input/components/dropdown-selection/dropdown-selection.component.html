@@ -8,7 +8,7 @@
       <div class="flex-fill">
 
         <ng-container *ngIf="selectedValue">
-          <ng-container *ngTemplateOutlet="selectionDetail; context: {value: selectedValue.value}"></ng-container>
+          <ng-container *ngTemplateOutlet="selectionDetail; context: {$implicit: selectedValue.value}"></ng-container>
         </ng-container>
 
       </div>
@@ -22,7 +22,7 @@
       <ng-container *ngIf="(options$ | async) as options">
         <div *ngFor="let option of options">
           <div class="gwipp-select-option" gwippClickable (click)="selectValue(option)">
-            <ng-container *ngTemplateOutlet="optionDetail; context: {value: option.value}"></ng-container>
+            <ng-container *ngTemplateOutlet="optionDetail; context: {$implicit: option.value}"></ng-container>
           </div>
         </div>
       </ng-container>

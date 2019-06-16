@@ -1,0 +1,79 @@
+<gwipp-navigation-bar>
+  <gwipp-nav-item>
+    <nav-item-detail>
+      <ng-template nav-title>Title</ng-template>
+    </nav-item-detail>
+  </gwipp-nav-item>
+
+  <gwipp-nav-item class="ml-2">
+    <nav-item-detail>
+      <ng-template nav-item>Item</ng-template>
+    </nav-item-detail>
+  </gwipp-nav-item>
+
+  <gwipp-nav-menu-item class="ml-2">
+    <nav-item-detail key="cMenu">
+      <ng-template nav-item>Drop Menu</ng-template>
+
+      <ng-template nav-menu>
+        <gwipp-menu>
+          <gwipp-menu-item>
+            <ng-template menu-item-detail>
+              <div class="w-200">Buttons</div>
+            </ng-template>
+          </gwipp-menu-item>
+
+          <gwipp-menu-item>
+            <ng-template menu-item-detail>
+              <div class="w-200">Forms</div>
+            </ng-template>
+          </gwipp-menu-item>
+
+          <gwipp-menu-item>
+            <ng-template menu-item-detail>
+              <div class="w-200">Inputs</div>
+            </ng-template>
+          </gwipp-menu-item>
+
+          <gwipp-menu-item>
+            <ng-template menu-item-detail>
+              <div class="w-200">Menus</div>
+            </ng-template>
+          </gwipp-menu-item>
+
+          <gwipp-menu-item>
+            <ng-template menu-item-detail>
+              <div class="w-200">Overlays</div>
+            </ng-template>
+          </gwipp-menu-item>
+
+          <gwipp-menu-item>
+            <tiered-parent-detail>
+              <ng-template menu-item-detail>
+                <div class="w-200">Parent</div>
+              </ng-template>
+
+              <ng-template child-menu>
+                <gwipp-menu>
+                  <gwipp-menu-item>
+                    <ng-template menu-item-detail>
+                      <div class="w-200">Child Menu</div>
+                    </ng-template>
+                  </gwipp-menu-item>
+
+                  <gwipp-menu-item>
+                    <ng-template menu-item-detail>
+                      <div class="w-200">Menu Item</div>
+                    </ng-template>
+                  </gwipp-menu-item>
+
+                </gwipp-menu>
+              </ng-template>
+            </tiered-parent-detail>
+          </gwipp-menu-item>
+
+        </gwipp-menu>
+      </ng-template>
+    </nav-item-detail>
+  </gwipp-nav-menu-item>
+</gwipp-navigation-bar>

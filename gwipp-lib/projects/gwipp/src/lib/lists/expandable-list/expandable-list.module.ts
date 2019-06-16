@@ -1,8 +1,8 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import {TemplatesModule} from '../../foundation/templates/templates.module';
 import {ExpandableListComponent} from './expandable-list.component';
 import {StyleModule} from '../../foundation/style/style.module';
+import {ListTemplatesModule} from '../foundation/templates/list-templates.module';
 
 @NgModule({
   declarations: [
@@ -10,11 +10,12 @@ import {StyleModule} from '../../foundation/style/style.module';
   ],
   imports: [
     CommonModule,
-    TemplatesModule,
-    StyleModule
+    StyleModule,
+    ListTemplatesModule
   ],
   exports: [
-    ExpandableListComponent
+    ExpandableListComponent,
+    ListTemplatesModule
   ]
 })
 export class ExpandableListModule { }

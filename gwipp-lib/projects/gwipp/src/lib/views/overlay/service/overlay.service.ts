@@ -11,7 +11,7 @@ export class OverlayService {
     return this.state$;
   }
 
-  public toggle(show: boolean, title: TemplateRef<any>, detail: TemplateRef<any>) {
+  public toggle(show: boolean, detail?: TemplateRef<any>, title?: TemplateRef<any>) {
     this.state$.next({visible: show, title, detail});
   }
 }

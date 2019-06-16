@@ -1,7 +1,14 @@
-import {Component, ContentChild, EventEmitter, Input, Output, TemplateRef} from '@angular/core';
-import {DetailDirective} from '../../foundation/templates/detail.directive';
-import {ExpandedDetailDirective} from '../../foundation/templates/expanded-detail.directive';
+import {
+  Component,
+  ContentChild,
+  EventEmitter,
+  Input,
+  Output,
+  TemplateRef
+} from '@angular/core';
 import {TemplateContext} from '../../foundation/templates/model/template-context';
+import {ListDetailDirective} from '../foundation/templates/list-detail.directive';
+import {ListExpandedDetailDirective} from '../foundation/templates/list-expanded-detail.directive';
 
 @Component({
   selector: 'gwipp-expandable-list',
@@ -14,10 +21,10 @@ export class ExpandableListComponent {
   @Output() expand: EventEmitter<any> = new EventEmitter<any>();
   @Output() collapse: EventEmitter<any> = new EventEmitter<any>();
 
-  @ContentChild(DetailDirective, {read: TemplateRef})
+  @ContentChild(ListDetailDirective, {read: TemplateRef})
   detail: TemplateRef<any>;
 
-  @ContentChild(ExpandedDetailDirective, {read: TemplateRef})
+  @ContentChild(ListExpandedDetailDirective, {read: TemplateRef})
   expandedDetail: TemplateRef<any>;
 
   @Input()

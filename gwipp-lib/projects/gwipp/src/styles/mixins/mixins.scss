@@ -43,6 +43,7 @@
 }
 
 @mixin drop-view {
+  top: 100%;
   color: black;
   background-color: white;
   position: absolute;

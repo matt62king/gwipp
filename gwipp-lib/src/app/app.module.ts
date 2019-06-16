@@ -12,7 +12,6 @@ import {IconModule} from '../../projects/gwipp/src/lib/icon/icon.module';
 import {ButtonModule} from '../../projects/gwipp/src/lib/button/button.module';
 import {OutputModule} from '../../projects/gwipp/src/lib/output/output.module';
 import {ToastModule} from '../../projects/gwipp/src/lib/views/toast/toast.module';
-import {TemplatesModule} from '../../projects/gwipp/src/lib/foundation/templates/templates.module';
 import {MenuModule} from '../../projects/gwipp/src/lib/menus/menu/menu.module';
 import {PortletModule} from '../../projects/gwipp/src/lib/views/portlet/portlet.module';
 import {WorkingBlockModule} from '../../projects/gwipp/src/lib/output/component/blocks/working-block/working-block.module';
@@ -26,13 +25,21 @@ import { ExpandableListComponent } from './list/expandable-list/expandable-list.
 import {ExpandableListModule} from '../../projects/gwipp/src/lib/lists/expandable-list/expandable-list.module';
 import { BasicGridComponent } from './basic-grid/basic-grid.component';
 import {GridModule} from '../../projects/gwipp/src/lib/grid/grid.module';
+import { MenusComponent } from './menus/menus.component';
+import {ActionMenuModule} from '../../projects/gwipp/src/lib/menus/action-menu/action-menu.module';
+import {MenuTemplatesModule} from '../../projects/gwipp/src/lib/menus/foundataion/templates/menu-templates.module';
+import { NavBarComponent } from './nav-bar/nav-bar.component';
+import { BlocksComponent } from './blocks/blocks.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     InputsComponent,
     ExpandableListComponent,
-    BasicGridComponent
+    BasicGridComponent,
+    MenusComponent,
+    NavBarComponent,
+    BlocksComponent
   ],
   imports: [
     BrowserModule,
@@ -50,13 +57,14 @@ import {GridModule} from '../../projects/gwipp/src/lib/grid/grid.module';
     TabMenuModule,
     OutputModule,
     ToastModule,
-    TemplatesModule,
     MenuModule,
     PortletModule,
     WorkingBlockModule,
     ErrorBlockModule,
     ExpandableListModule,
-    GridModule
+    GridModule,
+    ActionMenuModule,
+    MenuTemplatesModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

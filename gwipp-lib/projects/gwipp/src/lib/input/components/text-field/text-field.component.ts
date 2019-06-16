@@ -54,7 +54,7 @@ export class TextFieldComponent extends BaseInputComponent implements OnInit, Co
   }
 
   onBlur(event: Event, value: any) {
-    this.onChange(event, value);
+    this.onChange(value, event);
     this.valueChange.emit(value);
   }
 

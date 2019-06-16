@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import {WorkingBlockComponent} from './working-block.component';
 import {IconModule} from '../../../../icon/icon.module';
+import {BlockTemplatesModule} from '../foundation/templates/block-templates.module';
 
 @NgModule({
   declarations: [
@@ -9,10 +10,12 @@ import {IconModule} from '../../../../icon/icon.module';
   ],
   imports: [
     CommonModule,
-    IconModule
+    IconModule,
+    BlockTemplatesModule
   ],
   exports: [
-    WorkingBlockComponent
+    WorkingBlockComponent,
+    BlockTemplatesModule
   ]
 })
 export class WorkingBlockModule { }

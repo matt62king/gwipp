@@ -1,7 +1,7 @@
 import {async, ComponentFixture, TestBed} from '@angular/core/testing';
 import {ExpandableListComponent} from './expandable-list.component';
 import {CommonModule} from '@angular/common';
-import {TemplatesModule} from '../../foundation/templates/templates.module';
+import {ListTemplatesModule} from '../foundation/templates/list-templates.module';
 
 describe('ExpandableListComponent', () => {
   let component: ExpandableListComponent;
@@ -10,7 +10,7 @@ describe('ExpandableListComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       declarations: [ ExpandableListComponent ],
-      imports: [CommonModule, TemplatesModule]
+      imports: [CommonModule, ListTemplatesModule]
     })
     .compileComponents();
   }));

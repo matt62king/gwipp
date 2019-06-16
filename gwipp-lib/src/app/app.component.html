@@ -1,118 +1,20 @@
-<gwipp-navigation-bar>
-  <gwipp-nav-item>
-    <nav-item-detail>
-      <ng-template nav-title>Title</ng-template>
-    </nav-item-detail>
-  </gwipp-nav-item>
-
-  <gwipp-nav-item class="ml-2">
-    <nav-item-detail>
-      <ng-template nav-item>Item</ng-template>
-    </nav-item-detail>
-  </gwipp-nav-item>
-
-  <gwipp-nav-menu-item class="ml-2">
-    <nav-item-detail key="cMenu">
-      <ng-template nav-item>Drop Menu</ng-template>
-
-      <ng-template nav-menu>
-        <gwipp-menu>
-          <gwipp-menu-item>
-            <ng-template detail>
-              <div>Buttons</div>
-            </ng-template>
-          </gwipp-menu-item>
-
-          <gwipp-menu-item>
-            <ng-template detail>
-              <div>Forms</div>
-            </ng-template>
-          </gwipp-menu-item>
-
-          <gwipp-menu-item>
-            <ng-template detail>
-              <div>Inputs</div>
-            </ng-template>
-          </gwipp-menu-item>
-
-          <gwipp-menu-item>
-            <ng-template detail>
-              <div>Menus</div>
-            </ng-template>
-          </gwipp-menu-item>
-
-          <gwipp-menu-item>
-            <ng-template detail>
-              <div>Overlays</div>
-            </ng-template>
-          </gwipp-menu-item>
-
-          <gwipp-menu-item>
-            <tiered-parent-detail>
-              <ng-template detail>
-                <div>Parent</div>
-              </ng-template>
-
-              <ng-template child-menu>
-                <gwipp-menu>
-                  <gwipp-menu-item>
-                    <ng-template detail>
-                      <div>Child Menu</div>
-                    </ng-template>
-                  </gwipp-menu-item>
-
-                  <gwipp-menu-item>
-                    <ng-template detail>
-                      <div>Menu Item</div>
-                    </ng-template>
-                  </gwipp-menu-item>
-
-                </gwipp-menu>
-              </ng-template>
-            </tiered-parent-detail>
-          </gwipp-menu-item>
-
-        </gwipp-menu>
-      </ng-template>
-    </nav-item-detail>
-  </gwipp-nav-menu-item>
-</gwipp-navigation-bar>
+<app-nav-bar></app-nav-bar>
 
 <div (click)="closeNavMenu()">
 
   <div class="m-5">
-    <gwipp-portlet>
-      <ng-template title>
-        <div class="p-2 font-weight-bold text-light">
-          Blocks
-        </div>
-      </ng-template>
-
-      <ng-template detail>
-        <gwipp-working-block>
-          <ng-template detail>
-            Working Block
-          </ng-template>
-        </gwipp-working-block>
-
-        <gwipp-error-block>
-          <ng-template detail>
-            Error Block
-          </ng-template>
-        </gwipp-error-block>
-      </ng-template>
-    </gwipp-portlet>
+    <app-blocks></app-blocks>
   </div>
 
   <div class="m-5">
     <gwipp-portlet>
-      <ng-template title>
+      <ng-template portlet-title>
         <div class="p-2 font-weight-bold text-light">
           Buttons
         </div>
       </ng-template>
 
-      <ng-template detail>
+      <ng-template portlet-detail>
         <div class="d-flex flex-row p-3">
           <div>
             <gwipp-button [buttonConfig]="buttonConfig"></gwipp-button>
@@ -140,13 +42,13 @@
 
   <div class="m-5">
     <gwipp-portlet>
-      <ng-template title>
+      <ng-template portlet-title>
         <div class="p-2 font-weight-bold text-light">
           Grids
         </div>
       </ng-template>
 
-      <ng-template detail>
+      <ng-template portlet-detail>
         <div class="p-3">
           <app-basic-grid></app-basic-grid>
         </div>
@@ -162,16 +64,21 @@
   <!-- Lists -->
   <div class="m-5">
     <gwipp-portlet>
-      <ng-template title>
+      <ng-template portlet-title>
         <div class="p-2 font-weight-bold text-light">
           Lists
         </div>
       </ng-template>
 
-      <ng-template detail>
+      <ng-template portlet-detail>
         <app-expandable-list></app-expandable-list>
       </ng-template>
     </gwipp-portlet>
+  </div>
+
+  <!-- Menus -->
+  <div class="m-5">
+    <app-menus></app-menus>
   </div>
 
   <div class="mt-1 w-25">
@@ -202,38 +109,37 @@
 
 <gwipp-overlay-view></gwipp-overlay-view>
 
-<ng-template title #overlayTitle>
+<ng-template overlay-title #overlayTitle>
   <div class="text-primary h4">
     Test Overlay
   </div>
 </ng-template>
 
-<ng-template detail #overlayDetail>
+<ng-template overlay-detail #overlayDetail>
   <gwipp-tab-menu>
-
     <gwipp-tab-item>
-      <ng-template title>
+      <ng-template tab-item-title>
         Tab 1
       </ng-template>
-      <ng-template detail>
+      <ng-template tab-item-detail>
         Tab 1 Detail
       </ng-template>
     </gwipp-tab-item>
 
     <gwipp-tab-item>
-      <ng-template title>
+      <ng-template tab-item-title>
         Tab 2
       </ng-template>
-      <ng-template detail>
+      <ng-template tab-item-detail>
         Tab 2 Detail
       </ng-template>
     </gwipp-tab-item>
 
     <gwipp-tab-item>
-      <ng-template title>
+      <ng-template tab-item-title>
         Tab 3
       </ng-template>
-      <ng-template detail>
+      <ng-template tab-item-detaildetail>
         Tab 3 Detail
       </ng-template>
     </gwipp-tab-item>
