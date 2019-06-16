@@ -67,10 +67,18 @@ export * from './lib/input/foundation/configuration/input-configuration';
 export * from './lib/lists/expandable-list/expandable-list.component';
 export * from './lib/lists/expandable-list/expandable-list.module';
 
+export * from './lib/menus/action-menu/action-menu.component';
+export * from './lib/menus/action-menu/action-menu.module';
+export * from './lib/menus/foundataion/model/drop-menu.state';
+export * from './lib/menus/foundataion/service/drop-menu/drop-menu.service';
+export * from './lib/menus/foundataion/templates/drop-menu.directive';
+export * from './lib/menus/foundataion/templates/drop-menu-detail.directive';
+export * from './lib/menus/foundataion/templates/menu-templates.module';
 export * from './lib/menus/menu/menu.module';
 export * from './lib/menus/menu/foundation/child-menu.directive';
 export * from './lib/menus/menu/menu-container/menu-container.component';
 export * from './lib/menus/menu/menu-items/menu-item.directive';
+export * from './lib/menus/menu/menu-items/menu-item-detail.directive';
 export * from './lib/menus/menu/menu-items/tiered-parent-detail.directive';
 export * from './lib/menus/tab-menu/tab-menu.component';
 export * from './lib/menus/tab-menu/tab-menu.module';

@@ -26,13 +26,20 @@ import { ExpandableListComponent } from './list/expandable-list/expandable-list.
 import {ExpandableListModule} from '../../projects/gwipp/src/lib/lists/expandable-list/expandable-list.module';
 import { BasicGridComponent } from './basic-grid/basic-grid.component';
 import {GridModule} from '../../projects/gwipp/src/lib/grid/grid.module';
+import { MenusComponent } from './menus/menus.component';
+import {ActionMenuModule} from '../../projects/gwipp/src/lib/menus/action-menu/action-menu.module';
+import {GwippModule} from '../../projects/gwipp/src/lib/gwipp.module';
+import {MenuTemplatesModule} from '../../projects/gwipp/src/lib/menus/foundataion/templates/menu-templates.module';
+import { NavBarComponent } from './nav-bar/nav-bar.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     InputsComponent,
     ExpandableListComponent,
-    BasicGridComponent
+    BasicGridComponent,
+    MenusComponent,
+    NavBarComponent
   ],
   imports: [
     BrowserModule,
@@ -56,7 +63,9 @@ import {GridModule} from '../../projects/gwipp/src/lib/grid/grid.module';
     WorkingBlockModule,
     ErrorBlockModule,
     ExpandableListModule,
-    GridModule
+    GridModule,
+    ActionMenuModule,
+    MenuTemplatesModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -7,8 +7,6 @@
 @import '../typography/typography';
 
 .gwipp-menu {
-  width: $gwipp-menu-width;
-  max-width: $gwipp-menu-width;
   @include medium;
 
   &-item {
@@ -24,10 +22,24 @@
 
     &-child {
       position: absolute;
-      left: $gwipp-menu-width + 2;
+      margin-left: 2px;
+      left: 100%;
       top: 0;
       background-color: white;
       @include border(gray('300'));
     }
+  }
+}
+
+.gwipp-drop-menu {
+
+  &-container {
+    position: relative;
+  }
+
+  &-menu {
+    z-index: $z-menu-drop-down;
+    @include drop-view;
+    @include border(gray('300'));
   }
 }

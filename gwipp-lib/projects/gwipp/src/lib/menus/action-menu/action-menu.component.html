@@ -1,0 +1,9 @@
+<div class="gwipp-drop-menu-container">
+  <div gwippClickable (click)="toggleMenu()">
+    <gwipp-icon [config]="actionIcon"></gwipp-icon>
+  </div>
+
+  <div *ngIf="showMenu" class="gwipp-drop-menu-menu gwipp-action-menu">
+    <ng-container [ngTemplateOutlet]="dropMenu.detail"></ng-container>
+  </div>
+</div>
