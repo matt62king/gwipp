@@ -26,10 +26,6 @@ export * from './lib/form/foundation/event/form-event-type';
 export * from './lib/foundation/event/gwipp-event';
 export * from './lib/foundation/style/colors/colors';
 export * from './lib/foundation/style/style.module';
-export * from './lib/foundation/templates/detail.directive';
-export * from './lib/foundation/templates/expanded-detail.directive';
-export * from './lib/foundation/templates/templates.module';
-export * from './lib/foundation/templates/title.directive';
 
 export * from './lib/grid/grid.module';
 export * from './lib/grid/components/grid/grid.component';
