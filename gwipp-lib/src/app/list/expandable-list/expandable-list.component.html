@@ -1,10 +1,10 @@
 <div class="mt-2 mx-5 py-2">
   <gwipp-expandable-list [data]="listItems">
-    <ng-template detail let-item>
+    <ng-template list-detail let-item>
       {{ item }}
     </ng-template>
 
-    <ng-template expanded-detail let-item>
+    <ng-template list-expanded-detail let-item>
       Expanded Item: {{ item }}
     </ng-template>
   </gwipp-expandable-list>

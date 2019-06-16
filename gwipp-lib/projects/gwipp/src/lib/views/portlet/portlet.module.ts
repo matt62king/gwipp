@@ -1,16 +1,19 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import {PortletComponent} from './portlet.component';
+import {PortletTemplatesModule} from './foundation/templates/portlet-templates.module';
 
 @NgModule({
   declarations: [
     PortletComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    PortletTemplatesModule
   ],
   exports: [
-    PortletComponent
+    PortletComponent,
+    PortletTemplatesModule
   ]
 })
 export class PortletModule { }

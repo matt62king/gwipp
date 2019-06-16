@@ -26,10 +26,6 @@ export * from './lib/form/foundation/event/form-event-type';
 export * from './lib/foundation/event/gwipp-event';
 export * from './lib/foundation/style/colors/colors';
 export * from './lib/foundation/style/style.module';
-export * from './lib/foundation/templates/detail.directive';
-export * from './lib/foundation/templates/expanded-detail.directive';
-export * from './lib/foundation/templates/templates.module';
-export * from './lib/foundation/templates/title.directive';
 
 export * from './lib/grid/grid.module';
 export * from './lib/grid/components/grid/grid.component';
@@ -66,6 +62,9 @@ export * from './lib/input/foundation/configuration/input-configuration';
 
 export * from './lib/lists/expandable-list/expandable-list.component';
 export * from './lib/lists/expandable-list/expandable-list.module';
+export * from './lib/lists/foundation/templates/list-detail.directive';
+export * from './lib/lists/foundation/templates/list-expanded-detail.directive';
+export * from './lib/lists/foundation/templates/list-templates.module';
 
 export * from './lib/menus/action-menu/action-menu.component';
 export * from './lib/menus/action-menu/action-menu.module';
@@ -83,6 +82,8 @@ export * from './lib/menus/menu/menu-items/tiered-parent-detail.directive';
 export * from './lib/menus/tab-menu/tab-menu.component';
 export * from './lib/menus/tab-menu/tab-menu.module';
 export * from './lib/menus/tab-menu/tabs/tab-item.directive';
+export * from './lib/menus/tab-menu/tabs/tab-item-detail.directive';
+export * from './lib/menus/tab-menu/tabs/tab-item-title.directive';
 
 export * from './lib/navigation/navigation.module';
 export * from './lib/navigation/foundation/model/navDropMenuState';
@@ -97,14 +98,21 @@ export * from './lib/navigation/navigation-bar/navigation-bar.component';
 export * from './lib/output/output.module';
 export * from './lib/output/component/blocks/error-block/error-block.component';
 export * from './lib/output/component/blocks/error-block/error-block.module';
+export * from './lib/output/component/blocks/foundation/templates/block-detail.directive';
+export * from './lib/output/component/blocks/foundation/templates/block-templates.module';
 export * from './lib/output/component/blocks/working-block/working-block.component';
 export * from './lib/output/component/blocks/working-block/working-block.module';
 export * from './lib/output/component/progress-bar/progress-bar.component';
 
 export * from './lib/views/overlay/overlay.module';
+export * from './lib/views/overlay/foundation/overlay-detail.directive';
+export * from './lib/views/overlay/foundation/overlay-title.directive';
 export * from './lib/views/overlay/model/overlay-state';
 export * from './lib/views/overlay/overlay-view/overlay-view.component';
 export * from './lib/views/overlay/service/overlay.service';
+export * from './lib/views/portlet/foundation/templates/portlet-detail.directive';
+export * from './lib/views/portlet/foundation/templates/portlet-templates.module';
+export * from './lib/views/portlet/foundation/templates/portlet-title.directive';
 export * from './lib/views/portlet/portlet.module';
 export * from './lib/views/portlet/portlet.component';
 export * from './lib/views/toast/toast.module';
