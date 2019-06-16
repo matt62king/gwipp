@@ -1,4 +1,13 @@
-import {Component, ContentChild, EventEmitter, Input, Output, TemplateRef} from '@angular/core';
+import {
+  Component,
+  ContentChild,
+  EventEmitter,
+  Input,
+  OnChanges,
+  Output,
+  SimpleChanges,
+  TemplateRef
+} from '@angular/core';
 import {DetailDirective} from '../../foundation/templates/detail.directive';
 import {ExpandedDetailDirective} from '../../foundation/templates/expanded-detail.directive';
 import {TemplateContext} from '../../foundation/templates/model/template-context';

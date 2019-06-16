@@ -43,7 +43,6 @@ export class BaseButtonComponent implements HasButtonMode {
 
   @Input()
   public set mode(mode: ButtonMode) {
-    console.log(mode);
     this.setButtonMode(mode);
   }
 

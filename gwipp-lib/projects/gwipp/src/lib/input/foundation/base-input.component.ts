@@ -57,11 +57,11 @@ export class BaseInputComponent implements OnDestroy {
   set value(value: any) {
     if (value !== this.innerValue) {
       this.innerValue = value || this.defaultValue;
-      this.onChange(undefined, value);
+      this.onChange(value);
     }
   }
 
-  onChange(event: Event, value: any) {
+  onChange(value: any, event?: Event) {
     this.innerValue = value || this.defaultValue;
     this.propagateChange(this.innerValue);
     this.changeFunction(event, value);

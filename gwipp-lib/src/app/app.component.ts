@@ -91,7 +91,7 @@ export class AppComponent implements OnInit {
   }
 
   overlay(title: TemplateRef<any>, detail: TemplateRef<any>): void {
-    this.overlayService.toggle(true, title, detail);
+    this.overlayService.toggle(true, detail, title);
   }
 
   closeNavMenu(): void {
