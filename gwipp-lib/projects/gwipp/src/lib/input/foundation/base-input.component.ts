@@ -37,7 +37,7 @@ export class BaseInputComponent implements OnDestroy {
 
   protected destroy$ = new Subject();
   protected changeFunction: (event: Event, value: any) => any;
-  protected propagateChange = (_: any) => { };
+  protected propagateChange = (value: any) => {};
   protected onTouched = () => {};
 
   @Input()
@@ -56,19 +56,27 @@ export class BaseInputComponent implements OnDestroy {
 
   set value(value: any) {
     if (value !== this.innerValue) {
-      this.innerValue = value || this.defaultValue;
+      this.innerValue = this.valueOrDefault(value);
       this.onChange(value);
     }
   }
 
+  private valueOrDefault(value: any): any {
+    if (value == null) {
+      return this.defaultValue;
+    }
+
+    return value;
+  }
+
   onChange(value: any, event?: Event) {
-    this.innerValue = value || this.defaultValue;
+    this.innerValue = this.valueOrDefault(value);
     this.propagateChange(this.innerValue);
     this.changeFunction(event, value);
   }
 
   protected updateValue(value: any) {
-    this.inputRef.nativeElement.value = value || this.defaultValue;
-    this.innerValue = value || this.defaultValue;
+    this.inputRef.nativeElement.value = this.valueOrDefault(value);
+    this.innerValue = this.valueOrDefault(value);
   }
 }
