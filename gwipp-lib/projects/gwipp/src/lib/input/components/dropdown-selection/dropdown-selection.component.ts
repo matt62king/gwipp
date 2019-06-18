@@ -59,6 +59,10 @@ export class DropdownSelectionComponent extends BaseInputComponent implements Co
   selectValue(value: SelectionOption<any>): void {
     this.selectedValue = value;
     this.toggleFocus();
+    this.forwardChange(value);
+  }
+
+  forwardChange(value: SelectionOption<any>): void {
     this.onChange(this.valueKey ? value.value[this.valueKey] : value.value);
   }
 
@@ -77,8 +81,10 @@ export class DropdownSelectionComponent extends BaseInputComponent implements Co
   writeValue(obj: any): void {
     if (obj == null) {
       this.selectedValue = undefined;
+      this.onChange(obj);
     } else {
       this.selectedValue = {value: obj};
+      this.forwardChange(this.selectedValue);
     }
   }
 }
