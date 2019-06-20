@@ -5,7 +5,7 @@ import {OverlayState} from '../model/overlay-state';
 @Injectable({ providedIn: 'root'})
 export class OverlayService {
 
-  private state$ = new Subject<OverlayState>();
+  private readonly state$ = new Subject<OverlayState>();
 
   public register(): Observable<OverlayState> {
     return this.state$;

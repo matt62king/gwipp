@@ -4,7 +4,4 @@ import { Directive } from '@angular/core';
   selector: '[drop-menu-detail]'
 })
 export class DropMenuDetailDirective {
-
-  constructor() { }
-
 }

@@ -4,7 +4,4 @@ import { Directive } from '@angular/core';
   selector: '[list-expanded-detail]'
 })
 export class ListExpandedDetailDirective {
-
-  constructor() { }
-
 }

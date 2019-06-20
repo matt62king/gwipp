@@ -7,7 +7,7 @@ import {Observable, Subject} from 'rxjs';
 })
 export class NavDropMenuService {
 
-  private state$ = new Subject<NavDropMenuState>();
+  private readonly state$ = new Subject<NavDropMenuState>();
 
   public register(): Observable<NavDropMenuState> {
     return this.state$;
