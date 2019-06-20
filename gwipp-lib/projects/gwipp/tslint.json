@@ -14,6 +14,11 @@
       "lib",
       "gwipp",
       "kebab-case"
-    ]
+    ],
+    "only-arrow-functions": true,
+    "prefer-readonly": true,
+    "prefer-const": true,
+    "newline-before-return": true,
+    "no-empty": [true, "allow-empty-functions"]
   }
 }

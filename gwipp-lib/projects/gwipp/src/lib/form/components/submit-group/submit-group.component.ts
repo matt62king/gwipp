@@ -1,4 +1,4 @@
-import {Component, EventEmitter, Input, OnInit, Output, ViewChild} from '@angular/core';
+import {Component, EventEmitter, Input, Output, ViewChild} from '@angular/core';
 import {FormEvent} from '../../foundation/event/form-event';
 import {ButtonConfiguration} from '../../../button/foundation/configuation/button-configuration';
 import {ButtonEvent} from '../../../button/foundation/event/button-event';
@@ -10,7 +10,7 @@ import {ButtonComponent} from '../../../button/components/button/button.componen
   selector: 'gwipp-submit-group',
   templateUrl: './submit-group.component.html'
 })
-export class SubmitGroupComponent implements OnInit {
+export class SubmitGroupComponent {
   @ViewChild('submitButton') submitButton: ButtonComponent;
 
   @Output() formEvent: EventEmitter<FormEvent> = new EventEmitter();
@@ -20,11 +20,6 @@ export class SubmitGroupComponent implements OnInit {
   @Input() submitEnabled = true;
   @Input() cancelEnabled = true;
   @Input() canCancel = true;
-
-  constructor() { }
-
-  ngOnInit() {
-  }
 
   public setMode(buttonMode: ButtonMode): void {
     this.submitButton.setButtonMode(buttonMode);

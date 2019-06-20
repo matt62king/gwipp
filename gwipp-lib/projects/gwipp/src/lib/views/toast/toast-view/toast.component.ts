@@ -17,7 +17,7 @@ export class ToastComponent implements OnInit {
   show$: Observable<ToastState>;
   closeIcon = IconNames.TIMES;
 
-  constructor(private toastService: ToastService) { }
+  constructor(private readonly toastService: ToastService) { }
 
   ngOnInit() {
     this.show$ = this.toastService.register();

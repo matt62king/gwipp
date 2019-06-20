@@ -1,4 +1,4 @@
-import {Component, EventEmitter, Input, OnInit, Output, ViewChild} from '@angular/core';
+import {Component, EventEmitter, Input, Output, ViewChild} from '@angular/core';
 import {FormEvent} from '../../foundation/event/form-event';
 import {FormGroup} from '@angular/forms';
 import {FormMode} from '../../foundation/consts/form-mode';
@@ -14,7 +14,7 @@ import {ButtonType} from '../../../button/foundation/type/button-type';
 })
 export class FormComponent {
 
-  private defaultConfig = {
+  private readonly defaultConfig = {
     canCancel: true,
     cancelAlwaysEnabled: true,
     cancelConfiguration: {label: 'Cancel', buttonAction: ButtonActionType.CANCEL_LINK, buttonType: ButtonType.SECONDARY},

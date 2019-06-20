@@ -4,7 +4,4 @@ import { Directive } from '@angular/core';
   selector: '[menu-item-detail]'
 })
 export class MenuItemDetailDirective {
-
-  constructor() { }
-
 }

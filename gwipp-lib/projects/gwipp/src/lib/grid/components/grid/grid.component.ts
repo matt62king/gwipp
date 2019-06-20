@@ -9,7 +9,7 @@ import {GridConfiguration} from '../../foundation/configuration/grid-configurati
 })
 export class GridComponent {
 
-  private defaultConfig = {
+  private readonly defaultConfig = {
     cellStyle: 'gwipp-grid-cell',
     rowStyle: 'gwipp-grid-row',
     headerStyle: 'gwipp-grid-header',

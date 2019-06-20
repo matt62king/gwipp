@@ -1,4 +1,4 @@
-import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
+import {Component, EventEmitter, Output} from '@angular/core';
 import {ButtonEvent} from '../../foundation/event/button-event';
 import {ButtonStyleBuilder} from '../../foundation/util/button-style-builder.service';
 import {ButtonMode} from '../../foundation/mode/button-mode';

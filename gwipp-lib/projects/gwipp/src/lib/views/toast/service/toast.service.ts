@@ -8,7 +8,7 @@ import {ToastPosition} from '../model/toast-position';
 })
 export class ToastService {
 
-  private state$ = new Subject<ToastState>();
+  private readonly state$ = new Subject<ToastState>();
 
   public register(): Observable<ToastState> {
     return this.state$;

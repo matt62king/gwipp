@@ -4,7 +4,4 @@ import { Directive } from '@angular/core';
   selector: '[block-detail]'
 })
 export class BlockDetailDirective {
-
-  constructor() { }
-
 }

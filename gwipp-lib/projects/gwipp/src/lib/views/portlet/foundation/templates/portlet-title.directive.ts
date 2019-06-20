@@ -4,7 +4,4 @@ import { Directive } from '@angular/core';
   selector: '[portlet-title]'
 })
 export class PortletTitleDirective {
-
-  constructor() { }
-
 }

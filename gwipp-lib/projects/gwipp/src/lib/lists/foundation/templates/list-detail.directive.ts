@@ -4,7 +4,4 @@ import { Directive } from '@angular/core';
   selector: '[list-detail]'
 })
 export class ListDetailDirective {
-
-  constructor() { }
-
 }

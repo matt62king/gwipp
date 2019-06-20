@@ -11,20 +11,17 @@ import {DropMenuDirective} from '../foundataion/templates/drop-menu.directive';
   templateUrl: './action-menu.component.html'
 })
 export class ActionMenuComponent implements OnInit, OnDestroy {
-  private destroy$ = new Subject<any>();
-
-  // @Icon({name: IconNames.ELLIPSIS_H})
-  // actionIcon: IconConfiguration;
-  ellipsisIcon = IconNames.ELLIPSIS_H;
+  private readonly destroy$ = new Subject<any>();
 
   @ContentChild(DropMenuDirective)
   dropMenu: DropMenuDirective;
 
   showMenu: boolean;
   menuState$: Observable<DropMenuState>;
+  ellipsisIcon = IconNames.ELLIPSIS_H;
 
   constructor(private readonly menuService: DropMenuService) {
-    this.menuState$ = menuService.register();
+    this.menuState$ = this.menuService.register();
   }
 
   ngOnInit() {

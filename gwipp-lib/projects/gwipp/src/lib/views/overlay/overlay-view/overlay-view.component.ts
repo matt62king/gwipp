@@ -18,7 +18,7 @@ export class OverlayViewComponent implements OnInit {
 
   overlay$: Observable<OverlayState>;
 
-  constructor(private overlayService: OverlayService) { }
+  constructor(private readonly overlayService: OverlayService) { }
 
   ngOnInit() {
     this.overlay$ = this.overlayService.register();
