@@ -4,6 +4,8 @@
 
 @import '../constants/constants';
 @import '../mixins/mixins';
+@import '../effects/effects';
+@import '../effects/colors';
 
 .tab-menu {
   border-bottom: 1px gray("300") solid;
@@ -18,6 +20,6 @@
 
   &-item-selected {
     border-bottom: $gwipp-border-thick $primary-color solid;
-    color: $primary-color;
+    color: theme("primary");
   }
 }

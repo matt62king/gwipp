@@ -30,6 +30,7 @@ import {ActionMenuModule} from '../../projects/gwipp/src/lib/menus/action-menu/a
 import {MenuTemplatesModule} from '../../projects/gwipp/src/lib/menus/foundataion/templates/menu-templates.module';
 import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { BlocksComponent } from './blocks/blocks.component';
+import { ButtonsComponent } from './buttons/buttons.component';
 
 @NgModule({
   declarations: [
@@ -39,7 +40,8 @@ import { BlocksComponent } from './blocks/blocks.component';
     BasicGridComponent,
     MenusComponent,
     NavBarComponent,
-    BlocksComponent
+    BlocksComponent,
+    ButtonsComponent
   ],
   imports: [
     BrowserModule,

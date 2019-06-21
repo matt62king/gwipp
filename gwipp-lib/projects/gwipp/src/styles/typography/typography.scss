@@ -2,10 +2,32 @@
 @import '~node_modules/bootstrap/scss/variables';
 @import '~node_modules/bootstrap/scss/mixins';
 
+@import "../constants/constants";
+@import "../effects/colors";
+@import "../effects/effects";
+
 @mixin medium {
   font-size: medium;
 }
 
 @mixin text-muted {
   color: gray('600');
+}
+
+@mixin text-primary {
+  color: $primary-color;
+}
+
+.link {
+  color: theme("primary");
+  @include clickable;
+
+  &:hover {
+    text-decoration: underline;
+  }
+
+  &:active {
+    @include text-muted;
+    text-decoration: none;
+  }
 }

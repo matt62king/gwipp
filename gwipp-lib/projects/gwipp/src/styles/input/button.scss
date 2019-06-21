@@ -1,5 +1,20 @@
 @import "../constants/constants";
+@import "../effects/effects";
 
-.gwipp-btn-action {
-  border-radius: $gwipp-btn-action-radius !important;
+.gwipp-btn {
+  @include transition-all;
+
+  &:hover {
+    transform: scale(1.05);
+    @include drop-shadow;
+  }
+
+  &:active {
+    transform: scale(1);
+    box-shadow: none;
+  }
+
+  &-action {
+    border-radius: $gwipp-btn-action-radius !important;
+  }
 }

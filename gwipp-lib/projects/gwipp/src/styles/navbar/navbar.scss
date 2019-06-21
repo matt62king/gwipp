@@ -2,8 +2,9 @@
 @import "~node_modules/bootstrap/scss/variables";
 @import "~node_modules/bootstrap/scss/mixins";
 
+@import "../effects/colors";
 @import "../constants/constants";
-@import '../mixins/mixins';
+@import "../mixins/mixins";
 
 .gwipp-nav-bar {
   position: relative;
@@ -12,7 +13,7 @@
   right: 0px;
   color: white;
   height: $gwipp-nav-bar-height;
-  background-color: $primary-color;
+  background-color: theme("primary");
 
   &-title {
     height: 100%;

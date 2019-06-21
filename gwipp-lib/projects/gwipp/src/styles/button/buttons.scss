@@ -3,13 +3,19 @@
 @import '~node_modules/bootstrap/scss/mixins';
 
 @import '../constants/constants';
-@import '../effects/colors';
 @import '../mixins/mixins';
+@import '../effects/effects';
 
-.gwipp-portlet {
-  @include border(theme("primary"));
+.gwipp-button {
+  @include transition-all;
 
-  &-title {
-    background-color: theme("primary");
+  &:hover {
+    transform: scale(1.05);
+    @include drop-shadow;
+  }
+
+  &:active {
+    transform: scale(1);
+    box-shadow: none;
   }
 }

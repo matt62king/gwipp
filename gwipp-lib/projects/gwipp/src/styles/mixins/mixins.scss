@@ -22,14 +22,6 @@
   }
 }
 
-@mixin clickable {
-  cursor: pointer !important;
-}
-
-@mixin drop-shadow {
-  box-shadow: 3px 8px 18px 2px gray('800');
-}
-
 @mixin selected($point: false) {
   background-color: gray("200");
 
