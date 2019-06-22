@@ -25,4 +25,9 @@ $gwipp-input-border-radius: 8px;
 
 $gwipp-nav-bar-height: 60px;
 
-$gwipp-menu-width: 200px;
+// defaults
+$nav-bar-default: (
+  "height": 60px,
+  "shaddow": false,
+  "fixed": false,
+);
