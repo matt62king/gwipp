@@ -13,7 +13,8 @@
     "test_lib_ci": "ng test gwipp --no-progress --no-watch --browsers=ChromeNoSandbox",
     "build_lib": "ng build gwipp && cp -R projects/gwipp/src/styles/ dist/gwipp/lib/",
     "npm_pack": "cd dist/gwipp && npm pack",
-    "package": "npm run build_lib && npm run npm_pack"
+    "package": "npm run build_lib && npm run npm_pack",
+    "verify": "npm run lint_lib && npm run build_lib && npm run test_lib"
   },
   "private": true,
   "dependencies": {

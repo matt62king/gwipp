@@ -1,0 +1,11 @@
+<div *ngIf="isWorking(); then working else active"></div>
+
+<ng-template #active>
+  <div gwippClickable (click)="onClick()" class="gwipp-hover-grow">
+    <gwipp-icon [config]="iconConfig"></gwipp-icon>
+  </div>
+</ng-template>
+
+<ng-template #working>
+  <gwipp-icon [icon]="iconSpinner" [size]="iconConfig.size" [animation]="iconAnimation"></gwipp-icon>
+</ng-template>

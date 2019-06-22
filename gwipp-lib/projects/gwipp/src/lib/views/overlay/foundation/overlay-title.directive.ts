@@ -4,7 +4,4 @@ import { Directive } from '@angular/core';
   selector: '[overlay-title]'
 })
 export class OverlayTitleDirective {
-
-  constructor() { }
-
 }

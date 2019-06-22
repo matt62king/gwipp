@@ -4,10 +4,17 @@
 
 @import '../constants/constants';
 @import '../mixins/mixins';
+@import '../navbar/navbar';
 
 .gwipp-click-block {
   &:hover {
     cursor: pointer;
     background-color: gray('300');
+  }
+}
+
+body {
+  @if nav-prop("fixed") {
+    margin-top: nav-prop("height");
   }
 }

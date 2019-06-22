@@ -1,4 +1,4 @@
-import {Component, ContentChildren, EventEmitter, OnChanges, Output, SimpleChanges, TemplateRef} from '@angular/core';
+import {Component, ContentChildren, EventEmitter, Output, TemplateRef} from '@angular/core';
 import {TabItemDirective} from './tabs/tab-item.directive';
 import {TemplateId} from '../../foundation/templates/model/templateId';
 
@@ -31,6 +31,7 @@ export class TabMenuComponent {
 
   selectedDetail(): TemplateRef<any> | undefined {
     const templateId =  this.details.filter((item) => item.id === this.selectedItemId)[0];
+
     return templateId ? templateId.template : undefined;
   }
 }

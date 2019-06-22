@@ -4,7 +4,4 @@ import { Directive } from '@angular/core';
   selector: '[tab-item-detail]'
 })
 export class TabItemDetailDirective {
-
-  constructor() { }
-
 }

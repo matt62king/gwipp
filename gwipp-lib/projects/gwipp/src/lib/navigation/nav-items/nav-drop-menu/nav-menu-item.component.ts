@@ -10,7 +10,7 @@ import {takeUntil} from 'rxjs/operators';
   templateUrl: './nav-menu-item.component.html'
 })
 export class NavMenuItemComponent implements OnInit, OnDestroy {
-  private destroy$ = new Subject<any>();
+  private readonly destroy$ = new Subject<any>();
 
   @Input() title: string;
 
@@ -20,8 +20,8 @@ export class NavMenuItemComponent implements OnInit, OnDestroy {
   showMenu: boolean;
   state$: Observable<NavDropMenuState>;
 
-  constructor(private menuService: NavDropMenuService) {
-    this.state$ = menuService.register();
+  constructor(private readonly menuService: NavDropMenuService) {
+    this.state$ = this.menuService.register();
   }
 
   ngOnInit(): void {

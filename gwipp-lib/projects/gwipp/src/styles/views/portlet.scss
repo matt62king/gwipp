@@ -3,12 +3,13 @@
 @import '~node_modules/bootstrap/scss/mixins';
 
 @import '../constants/constants';
+@import '../effects/colors';
 @import '../mixins/mixins';
 
 .gwipp-portlet {
-  @include border($primary-color);
+  @include border(theme("primary"));
 
   &-title {
-    background-color: $primary-color;
+    background-color: theme("primary");
   }
 }

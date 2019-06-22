@@ -5,7 +5,7 @@ import {IconModule} from '../../icon/icon.module';
 import {StyleModule} from '../../foundation/style/style.module';
 import {DropMenuService} from '../foundataion/service/drop-menu/drop-menu.service';
 import {GwippModule} from '../../gwipp.module';
-import {of, Subject} from 'rxjs';
+import {Subject} from 'rxjs';
 import {DropMenuDirective} from '../foundataion/templates/drop-menu.directive';
 import {DropMenuState} from '../foundataion/model/drop-menu.state';
 

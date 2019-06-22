@@ -4,7 +4,4 @@ import { Directive } from '@angular/core';
   selector: '[portlet-detail]'
 })
 export class PortletDetailDirective {
-
-  constructor() { }
-
 }

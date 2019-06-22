@@ -1,12 +1,8 @@
-$theme-colors: (
-  "primary": #4682B4,
-  "warning": #FFD658,
-  "info": #5654BF
-);
 
 @import "~node_modules/bootstrap/scss/bootstrap";
 @import "~node_modules/@fortawesome/fontawesome-free/scss/fontawesome";
 
+@import "effects/effects";
 @import "input/button";
 @import "input/drop-down-select";
 @import "input/input";

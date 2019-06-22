@@ -29,7 +29,6 @@
             "styles": [
               "node_modules/bootstrap/dist/css/bootstrap.min.css",
               "node_modules/@fortawesome/fontawesome-free/css/all.css",
-              "projects/gwipp/src/styles/gwipp-style.scss",
               "src/styles.scss"
             ],
             "scripts": [],

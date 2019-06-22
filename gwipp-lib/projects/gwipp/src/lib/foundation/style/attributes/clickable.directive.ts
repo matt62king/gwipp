@@ -5,7 +5,8 @@ import {Directive, ElementRef, HostListener, Renderer2} from '@angular/core';
 })
 export class ClickableDirective {
 
-  constructor(private ref: ElementRef, private render: Renderer2) {}
+  constructor(private readonly ref: ElementRef,
+              private readonly render: Renderer2) {}
 
   @HostListener('mouseenter') onMouseEnter() {
     this.toggle('pointer');

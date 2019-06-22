@@ -4,16 +4,35 @@
         Type
     </ng-template>
     <ng-template gwippGridCell propertyKey="name" let-name="value">
-      {{ name }}
+      <div class="p-2">
+        {{ name }}
+      </div>
     </ng-template>
+  </gwipp-grid-columns>
 
+  <gwipp-grid-columns>
     <ng-template gwippGridHeaderCell>
       <div class="text-center">
         Color
       </div>
     </ng-template>
     <ng-template gwippGridCell propertyKey="color" let-color="value">
-      {{ color }}
+      <div class="p-2">
+        {{ color }}
+      </div>
+    </ng-template>
+  </gwipp-grid-columns>
+
+  <gwipp-grid-columns columnStyle="column-shrink">
+    <ng-template gwippGridHeaderCell>
+      <div class="text-center px-2">
+        Small
+      </div>
+    </ng-template>
+    <ng-template gwippGridCell>
+      <div class="p-2">
+        small
+      </div>
     </ng-template>
   </gwipp-grid-columns>
 

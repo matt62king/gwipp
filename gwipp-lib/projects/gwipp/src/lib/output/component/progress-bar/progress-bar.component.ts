@@ -1,11 +1,11 @@
-import {Component, ElementRef, Input, OnInit, Renderer2, ViewChild} from '@angular/core';
+import {Component, ElementRef, Input, Renderer2, ViewChild} from '@angular/core';
 import {Colors} from '../../../foundation/style/colors/colors';
 
 @Component({
   selector: 'gwipp-progress-bar',
   templateUrl: './progress-bar.component.html'
 })
-export class ProgressBarComponent implements OnInit {
+export class ProgressBarComponent {
   @ViewChild('progressBar') progressBar: ElementRef;
 
   @Input() label: string;
@@ -13,10 +13,7 @@ export class ProgressBarComponent implements OnInit {
   lastValue = 'w-25';
   lastColor = 'bg-danger';
 
-  constructor(private render: Renderer2) {
-  }
-
-  ngOnInit() {
+  constructor(private readonly render: Renderer2) {
   }
 
   public setStatusColor(color: Colors): void {

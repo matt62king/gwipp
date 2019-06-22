@@ -1,7 +1,21 @@
 /* You can add global styles to this file, and also import other style files */
 
+$theme-colors: (
+  "primary": #4682B4,
+  "warning": #FFD658,
+  "info": #5654BF
+);
+
+$nav-bar: (
+  "height": 60px,
+);
+
 @import "~projects/gwipp/src/styles/gwipp-style";
 
 .w-200 {
   width: 200px;
+}
+
+.column-shrink {
+  flex: 0 2;
 }

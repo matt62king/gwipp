@@ -4,6 +4,7 @@
 
 @import '../constants/constants';
 @import '../mixins/mixins';
+@import '../effects/colors';
 
 .overlay {
   position: fixed;
@@ -18,6 +19,6 @@
     border-radius: 20px;
     max-height: 90%;
     overflow-y: auto !important;
-    @include border($primary-color, $gwipp-border-thick);
+    @include border(theme("primary"), $gwipp-border-thick);
   }
 }
