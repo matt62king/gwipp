@@ -6,6 +6,10 @@ $theme-colors: (
   "info": #5654BF
 );
 
+$nav-bar: (
+  "height": 60px,
+);
+
 @import "~projects/gwipp/src/styles/gwipp-style";
 
 .w-200 {

@@ -3,17 +3,39 @@
 @import "~node_modules/bootstrap/scss/mixins";
 
 @import "../effects/colors";
+@import "../effects/effects";
 @import "../constants/constants";
 @import "../mixins/mixins";
 
+@function nav-prop($key) {
+  @if $nav-bar {
+    $merged: map_merge($nav-bar-default, $nav-bar);
+    @return map_get($merged, $key);
+  }
+
+  @return map_get($nav-bar-default, $key);
+}
+
+@function nav-position() {
+  @if nav-prop("fixed") {
+    @return fixed;
+  }
+
+  @return relative;
+}
+
 .gwipp-nav-bar {
-  position: relative;
+  position: nav-position();
   top: 0px;
   left: 0px;
   right: 0px;
   color: white;
-  height: $gwipp-nav-bar-height;
+  height: nav-prop("height");
   background-color: theme("primary");
+
+  @if nav-prop("shadow") {
+    @include drop-shadow;
+  }
 
   &-title {
     height: 100%;
@@ -28,7 +50,7 @@
   }
 
   &-drop-menu {
-    top: $gwipp-nav-bar-height;
+    top: nav-prop("height");
     z-index: $z-navDropDown;
     @include drop-view;
     @include border(gray('300'));
