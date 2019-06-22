@@ -1,0 +1,30 @@
+@import "~node_modules/bootstrap/scss/functions";
+@import '~node_modules/bootstrap/scss/variables';
+@import '~node_modules/bootstrap/scss/mixins';
+
+@import '../constants/constants';
+@import '../mixins/mixins';
+
+@mixin clickable {
+  cursor: pointer !important;
+}
+
+@mixin drop-shadow {
+  box-shadow: 3px 8px 18px 2px gray('800');
+}
+
+@mixin transition-all {
+  transition: all .2s ease-in-out;
+}
+
+.gwipp-hover-grow {
+  @include transition-all;
+
+  &:hover {
+    transform: scale(1.35);
+  }
+
+  &:active {
+    transform: scale(1);
+  }
+}

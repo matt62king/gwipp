@@ -1,5 +1,11 @@
 /* You can add global styles to this file, and also import other style files */
 
+$theme-colors: (
+  "primary": #4682B4,
+  "warning": #FFD658,
+  "info": #5654BF
+);
+
 @import "~projects/gwipp/src/styles/gwipp-style";
 
 .w-200 {

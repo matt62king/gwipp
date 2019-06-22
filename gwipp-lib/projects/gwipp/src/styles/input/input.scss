@@ -4,6 +4,7 @@
 
 @import "../constants/constants";
 @import "../mixins/mixins";
+@import "../effects/colors";
 
 @mixin border-thick {
   border-width: $gwipp-border-thick !important;
@@ -15,7 +16,7 @@
 }
 
 @mixin input-focus-border {
-  border-color: $primary-color !important;
+  border-color: theme("primary") !important;
   border-radius: $gwipp-input-border-radius !important;
 
   @include border-thick;

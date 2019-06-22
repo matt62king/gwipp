@@ -44,7 +44,7 @@ export class ButtonStyleBuilder {
       return `btn-link text${color}`;
     }
 
-    return `btn${outline}${color}`;
+    return `gwipp-btn btn${outline}${color}`;
   }
 
   private styleForAction(buttonAction: ButtonActionType): string {

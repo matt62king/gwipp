@@ -1,4 +1,4 @@
-import {AfterContentInit, Component, OnInit, TemplateRef, ViewChild} from '@angular/core';
+import {Component, OnInit, TemplateRef, ViewChild} from '@angular/core';
 import {ButtonConfiguration} from '../../projects/gwipp/src/lib/button/foundation/configuation/button-configuration';
 import {FormBuilder, FormControl, FormGroup, Validators} from '@angular/forms';
 import {FormEvent} from '../../projects/gwipp/src/lib/form/foundation/event/form-event';
@@ -13,8 +13,6 @@ import {InputConfiguration} from '../../projects/gwipp/src/lib/input/foundation/
 import {ToastService} from '../../projects/gwipp/src/lib/views/toast/service/toast.service';
 import {OverlayService} from '../../projects/gwipp/src/lib/views/overlay/service/overlay.service';
 import {NavDropMenuService} from '../../projects/gwipp/src/lib/navigation/foundation/services/nav-drop-menu.service';
-import {SelectionOption} from '../../projects/gwipp/src/lib/input/components/dropdown-selection/model/selectionOption';
-import {ButtonMode} from '../../projects/gwipp/src/lib/button/foundation/mode/button-mode';
 
 @Component({
   selector: 'app-root',
@@ -23,25 +21,8 @@ import {ButtonMode} from '../../projects/gwipp/src/lib/button/foundation/mode/bu
 })
 export class AppComponent implements OnInit {
   title = 'gwipp-lib';
-  // iconSize = IconSize.TEN_X;
-  // animation = IconAnimation.SPIN;
 
   @ViewChild('form') form: FormComponent;
-
-  @Button({label: 'Button', buttonType: ButtonType.PRIMARY})
-  buttonConfig: ButtonConfiguration;
-
-  @Button({label: 'Confirm Button', buttonType: ButtonType.DANGER })
-  confirmConfig: ButtonConfiguration;
-
-  @Button({label: 'Action', buttonType: ButtonType.PRIMARY, buttonAction: ButtonActionType.ACTION})
-  actionButton: ButtonConfiguration;
-
-  @Button({label: 'Outline', buttonType: ButtonType.PRIMARY, buttonAction: ButtonActionType.CANCEL_OUTLINE})
-  outlineButton: ButtonConfiguration;
-
-  @Button({label: 'Link', buttonType: ButtonType.PRIMARY, buttonAction: ButtonActionType.CANCEL_LINK})
-  linkButton: ButtonConfiguration;
 
   @Button({label: 'Toast', buttonType: ButtonType.PRIMARY, buttonAction: ButtonActionType.ACTION})
   toastButton: ButtonConfiguration;

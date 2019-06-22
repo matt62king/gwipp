@@ -1,0 +1,35 @@
+<gwipp-portlet>
+  <ng-template portlet-title>
+    <div class="p-2 font-weight-bold text-light">
+      Buttons
+    </div>
+  </ng-template>
+
+  <ng-template portlet-detail>
+    <div class="d-flex flex-row align-items-center p-3">
+      <div>
+        <gwipp-button [buttonConfig]="buttonConfig"></gwipp-button>
+      </div>
+
+      <div class="ml-1">
+        <gwipp-button [buttonConfig]="actionButton"></gwipp-button>
+      </div>
+
+      <div class="ml-2">
+        <gwipp-confirm-button [buttonConfig]="confirmConfig"></gwipp-confirm-button>
+      </div>
+
+      <div class="ml-2">
+        <gwipp-button [buttonConfig]="outlineButton"></gwipp-button>
+      </div>
+
+      <div class="ml-2">
+        <gwipp-button [buttonConfig]="linkButton"></gwipp-button>
+      </div>
+
+      <div class="ml-2 text-primary">
+        <gwipp-icon-button [iconConfig]="trashIcon"></gwipp-icon-button>
+      </div>
+    </div>
+  </ng-template>
+</gwipp-portlet>

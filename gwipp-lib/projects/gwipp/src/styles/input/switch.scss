@@ -4,6 +4,7 @@
 
 @import '../constants/constants';
 @import '../mixins/mixins';
+@import '../effects/colors';
 
 $slider-size: 17px;
 $transition-speed: .2s;
@@ -42,11 +43,11 @@ $transition-speed: .2s;
   }
 
   & input:checked + .switch-slider {
-    background-color: $primary-color;
+    background-color: theme("primary");
   }
 
   & input:focus + .switch-slider {
-    box-shadow: 0 0 1px $primary-color;
+    box-shadow: 0 0 1px theme("primary");
   }
 
   & input:checked + .switch-slider:before {
