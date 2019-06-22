@@ -14,6 +14,10 @@
     box-shadow: none;
   }
 
+  &-icon {
+    @extend .gwipp-hover-grow;
+  }
+
   &-action {
     border-radius: $gwipp-btn-action-radius !important;
   }
