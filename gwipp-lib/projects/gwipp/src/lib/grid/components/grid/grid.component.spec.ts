@@ -26,7 +26,7 @@ describe('GridComponent', () => {
   beforeEach(() => {
     fixture = TestBed.createComponent(GridComponent);
     component = fixture.componentInstance;
-    component.columns = new GridColumnsDirective();
+    component.columns = [];
 
     fixture.detectChanges();
   });
@@ -36,13 +36,13 @@ describe('GridComponent', () => {
   });
 
   it('should resolve cell style', () => {
-    const style = 'gwipp-grid-cell-base input-style gwipp-grid-cell';
-    expect(component.resolvedCellStyle('input-style')).toEqual(style);
+    const style = 'gwipp-grid-cell-base input-style gwipp-grid-cell ';
+    expect(component.resolvedCellStyle('input-style', undefined)).toEqual(style);
   });
 
   it('should resolve header cell style', () => {
-    const style = 'gwipp-grid-cell-base input-style';
-    expect(component.resolvedHeaderCellStyle('input-style')).toEqual(style);
+    const style = 'gwipp-grid-cell-base input-style ';
+    expect(component.resolvedHeaderCellStyle('input-style', undefined)).toEqual(style);
   });
 
   it('should resolve row style', () => {

@@ -1,8 +1,8 @@
 <div class="d-flex flex-column">
   <div [class]="resolvedHeaderRowStyle()">
-    <ng-container *ngFor="let header of columns.headers">
-      <div [class]="resolvedHeaderCellStyle(header.cellStyle)">
-        <ng-container *ngTemplateOutlet="header.template"></ng-container>
+    <ng-container *ngFor="let column of columns">
+      <div [class]="resolvedHeaderCellStyle(column.header.cellStyle, column.columnStyle)">
+        <ng-container *ngTemplateOutlet="column.header.template"></ng-container>
       </div>
     </ng-container>
   </div>
@@ -10,9 +10,9 @@
   <ng-container *ngFor="let row of rows">
     <div [class]="resolvedRowStyle()" (click)="onRowClick(row)">
 
-      <ng-container *ngFor="let cell of columns.cells">
-        <div [class]="resolvedCellStyle(cell.cellStyle)">
-          <ng-container *ngTemplateOutlet="cell.template; context: {row: row, value: row[cell.propertyKey]}"></ng-container>
+      <ng-container *ngFor="let column of columns">
+        <div [class]="resolvedCellStyle(column.cell.cellStyle, column.columnStyle)">
+          <ng-container *ngTemplateOutlet="column.cell.template; context: {row: row, value: row[column.cell.propertyKey]}"></ng-container>
         </div>
       </ng-container>
 

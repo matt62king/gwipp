@@ -1,4 +1,4 @@
-import {ContentChildren, Directive} from '@angular/core';
+import {ContentChild, Directive, Input} from '@angular/core';
 import {GridCellDirective} from '../../templates/grid-cell.directive';
 import {GridHeaderCellDirective} from '../../templates/grid-header-cell.directive';
 
@@ -7,10 +7,12 @@ import {GridHeaderCellDirective} from '../../templates/grid-header-cell.directiv
 })
 export class GridColumnsDirective {
 
-  @ContentChildren(GridHeaderCellDirective)
-  headers: GridHeaderCellDirective[];
+  @ContentChild(GridHeaderCellDirective)
+  header: GridHeaderCellDirective;
 
-  @ContentChildren(GridCellDirective)
-  cells: GridCellDirective[];
+  @ContentChild(GridCellDirective)
+  cell: GridCellDirective;
+
+  @Input() columnStyle: string;
 }
 

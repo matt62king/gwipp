@@ -1,4 +1,4 @@
-import {Component, ContentChild, EventEmitter, Input, Output, TemplateRef} from '@angular/core';
+import {Component, ContentChild, ContentChildren, EventEmitter, Input, Output, TemplateRef} from '@angular/core';
 import {GridColumnsDirective} from './grid-columns.directive';
 import {GridFooterDirective} from '../../templates/grid-footer.directive';
 import {GridConfiguration} from '../../foundation/configuration/grid-configuration';
@@ -21,8 +21,8 @@ export class GridComponent {
 
   @Input() rows: any[];
 
-  @ContentChild(GridColumnsDirective)
-  columns: GridColumnsDirective;
+  @ContentChildren(GridColumnsDirective)
+  columns: GridColumnsDirective[];
 
   @ContentChild(GridFooterDirective, {read: TemplateRef})
   footer: TemplateRef<any>;
@@ -34,12 +34,12 @@ export class GridComponent {
     this.configuration = {...this.defaultConfig, ...config};
   }
 
-  resolvedCellStyle(inputStyle: string): string {
-    return `gwipp-grid-cell-base ${inputStyle || ''} ${this.configuration.cellStyle || ''}`;
+  resolvedCellStyle(inputStyle: string, columnStyle: string): string {
+    return `gwipp-grid-cell-base ${inputStyle || ''} ${this.configuration.cellStyle || ''} ${columnStyle || ''}`;
   }
 
-  resolvedHeaderCellStyle(inputStyle: string): string {
-    return `gwipp-grid-cell-base ${inputStyle || ''}`;
+  resolvedHeaderCellStyle(inputStyle: string, columnStyle: string): string {
+    return `gwipp-grid-cell-base ${inputStyle || ''} ${columnStyle || ''}`;
   }
 
   resolvedRowStyle(): string {
