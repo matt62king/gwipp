@@ -9,6 +9,10 @@
   cursor: pointer !important;
 }
 
+@mixin disabled-cursor {
+  cursor: not-allowed !important;
+}
+
 @mixin drop-shadow {
   box-shadow: 3px 8px 18px 2px gray('800');
 }

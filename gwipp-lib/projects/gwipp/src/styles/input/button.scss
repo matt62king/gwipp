@@ -6,12 +6,10 @@
 
   &:hover {
     transform: scale(1.05);
-    @include drop-shadow;
   }
 
   &:active {
     transform: scale(1);
-    box-shadow: none;
   }
 
   &-icon {

@@ -6,20 +6,27 @@
   </ng-template>
 
   <ng-template portlet-detail>
-    <div class="mt-2 mx-5 py-2">
-      <gwipp-dropdown-selection [configuration]="dropDownConfig" [options]="selectItems">
-        <ng-template selectionDetail let-value>
-          <div class="pr-2 text-primary">
-            {{ value }}
-          </div>
-        </ng-template>
+    <div class="d-flex flex-column mt-3" [formGroup]="formGroup">
+      <div class="d-flex flex-row justify-content-center">
+        <gwipp-button [buttonConfig]="disableButton" (buttonClick)="toggleDisable()"></gwipp-button>
+      </div>
 
-        <ng-template optionDetail let-value>
-          <div class="p-1">
-            {{ value }}
-          </div>
-        </ng-template>
-      </gwipp-dropdown-selection>
+      <!-- Drop down -->
+      <div class="mt-2 mx-5 py-2">
+        <gwipp-dropdown-selection [configuration]="dropDownConfig" [options]="selectItems" formControlName="dropdown">
+          <ng-template selectionDetail let-value let-disabled="disabled">
+            <div class="pr-2 text-primary" [class.disabled-text]="disabled">
+              {{ value }}
+            </div>
+          </ng-template>
+
+          <ng-template optionDetail let-value>
+            <div class="p-1">
+              {{ value }}
+            </div>
+          </ng-template>
+        </gwipp-dropdown-selection>
+      </div>
     </div>
   </ng-template>
 </gwipp-portlet>

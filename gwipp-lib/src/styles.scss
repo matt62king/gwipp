@@ -19,3 +19,7 @@ $nav-bar: (
 .column-shrink {
   flex: 0 2;
 }
+
+.disabled-text {
+  color: gray('700') !important;
+}
