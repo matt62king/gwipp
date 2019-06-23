@@ -67,6 +67,7 @@ import { ButtonsComponent } from './buttons/buttons.component';
     GridModule,
     ActionMenuModule,
     MenuTemplatesModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

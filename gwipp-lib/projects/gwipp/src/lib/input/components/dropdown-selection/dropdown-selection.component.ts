@@ -53,7 +53,9 @@ export class DropdownSelectionComponent extends BaseInputComponent implements Co
   }
 
   toggleFocus(): void {
-    this.hasFocus = !this.hasFocus;
+    if (!this.disabled) {
+      this.hasFocus = !this.hasFocus;
+    }
   }
 
   selectValue(value: SelectionOption<any>): void {

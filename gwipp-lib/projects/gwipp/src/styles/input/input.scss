@@ -5,13 +5,14 @@
 @import "../constants/constants";
 @import "../mixins/mixins";
 @import "../effects/colors";
+@import "../effects/effects";
 
 @mixin border-thick {
   border-width: $gwipp-border-thick !important;
 }
 
 @mixin input-border {
-  @include border(gray("300"));
+  @include border(gray("400"));
   border-radius: $gwipp-input-border-radius !important;
 }
 
@@ -42,5 +43,10 @@
 
   &-label {
     margin-bottom: 0px !important;
+  }
+
+  &-disabled {
+    background-color: gray('300');
+    @include disabled-cursor
   }
 }
