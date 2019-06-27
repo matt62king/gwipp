@@ -30,10 +30,6 @@
   }
 }
 
-@mixin disabled-cursor {
-  cursor: not-allowed;
-}
-
 @mixin drop-view {
   top: 100%;
   color: black;

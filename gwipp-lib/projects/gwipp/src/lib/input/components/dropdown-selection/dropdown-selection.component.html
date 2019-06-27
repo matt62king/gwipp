@@ -4,11 +4,15 @@
     <div class="gwipp-input-label font-weight-bold">
       {{ config.label }}
     </div>
-    <div class="d-flex flex-row align-items-center gwipp-input" gwippClickable (click)="toggleFocus()">
+    <div class="d-flex flex-row align-items-center gwipp-input" [class.gwipp-input-disabled]="disabled" (click)="toggleFocus()">
       <div class="flex-fill">
 
         <ng-container *ngIf="selectedValue">
-          <ng-container *ngTemplateOutlet="selectionDetail; context: {$implicit: selectedValue.value}"></ng-container>
+          <ng-container *ngTemplateOutlet="selectionDetail; context: {$implicit: selectedValue.value, disabled: disabled}"></ng-container>
+        </ng-container>
+
+        <ng-container *ngIf="allOptions.length === 0">
+          <div>{{ config.noDataLabel }}</div>
         </ng-container>
 
       </div>

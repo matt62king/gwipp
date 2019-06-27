@@ -50,10 +50,16 @@ export class DropdownSelectionComponent extends BaseInputComponent implements Co
   set options(options: SelectionOption<any>[]) {
     this.options$ = of(options);
     this.allOptions = options;
+
+    if (options.length === 0) {
+      this.setDisabledState(true);
+    }
   }
 
   toggleFocus(): void {
-    this.hasFocus = !this.hasFocus;
+    if (!this.disabled) {
+      this.hasFocus = !this.hasFocus;
+    }
   }
 
   selectValue(value: SelectionOption<any>): void {
