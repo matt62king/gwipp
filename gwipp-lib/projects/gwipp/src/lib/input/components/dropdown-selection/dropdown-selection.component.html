@@ -11,6 +11,10 @@
           <ng-container *ngTemplateOutlet="selectionDetail; context: {$implicit: selectedValue.value, disabled: disabled}"></ng-container>
         </ng-container>
 
+        <ng-container *ngIf="allOptions.length === 0">
+          <div>{{ config.noDataLabel }}</div>
+        </ng-container>
+
       </div>
       <gwipp-icon [icon]="caretIcon"></gwipp-icon>
     </div>
