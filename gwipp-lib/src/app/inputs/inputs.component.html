@@ -27,6 +27,23 @@
           </ng-template>
         </gwipp-dropdown-selection>
       </div>
+
+      <!-- Type Ahead -->
+      <div class="mt-2 mx-5 py-2">
+        <gwipp-type-ahead [configuration]="typeAheadConfig" [options]="typeAheadItems" formControlName="typeAhead">
+          <ng-template typeAheadDetail let-value let-disabled="disabled">
+            <div class="pr-2 text-primary" [class.disabled-text]="disabled">
+              {{ value }}
+            </div>
+          </ng-template>
+
+          <ng-template typeAheadSelection let-value>
+            <div class="p-1">
+              {{ value }}
+            </div>
+          </ng-template>
+        </gwipp-type-ahead>
+      </div>
     </div>
   </ng-template>
 </gwipp-portlet>

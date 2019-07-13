@@ -18,3 +18,7 @@
 @import "views/overlay";
 @import "views/portlet";
 @import "views/toast";
+
+*:focus {
+  outline: none;
+}

@@ -7,7 +7,7 @@ import {
 import {ControlValueAccessor, NG_VALUE_ACCESSOR} from '@angular/forms';
 import {BaseInputComponent} from '../../foundation/base-input.component';
 import {IconNames} from '../../../icon/icon/constants/icon-names';
-import {SelectionOption} from './model/selectionOption';
+import {SelectionOption} from '../../foundation/shared/model/selectionOption';
 import {Observable} from 'rxjs';
 import {of} from 'rxjs/internal/observable/of';
 import {OptionDetailDirective} from './templates/option-detail.directive';

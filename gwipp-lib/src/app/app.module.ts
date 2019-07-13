@@ -31,6 +31,7 @@ import {MenuTemplatesModule} from '../../projects/gwipp/src/lib/menus/foundataio
 import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { BlocksComponent } from './blocks/blocks.component';
 import { ButtonsComponent } from './buttons/buttons.component';
+import {TypeAheadModule} from '../../projects/gwipp/src/lib/input/components/type-ahead/type-ahead.module';
 
 @NgModule({
   declarations: [
@@ -67,7 +68,8 @@ import { ButtonsComponent } from './buttons/buttons.component';
     GridModule,
     ActionMenuModule,
     MenuTemplatesModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    TypeAheadModule
   ],
   providers: [],
   bootstrap: [AppComponent]
