@@ -9,7 +9,7 @@ describe('TypeAheadService', () => {
 
   beforeEach(() => {
     service = TestBed.get(TypeAheadService);
-  })
+  });
 
   it('should be created', () => {
     expect(service).toBeTruthy();
