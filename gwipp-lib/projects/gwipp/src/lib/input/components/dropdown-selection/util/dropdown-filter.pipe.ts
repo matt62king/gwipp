@@ -1,5 +1,5 @@
 import { Pipe, PipeTransform } from '@angular/core';
-import {SelectionOption} from '../model/selectionOption';
+import {SelectionOption} from '../../../foundation/shared/model/selectionOption';
 
 @Pipe({
   name: 'dropdownFilter'

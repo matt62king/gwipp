@@ -4,7 +4,7 @@ import {BaseInputComponent} from './foundation/base-input.component';
 
 @NgModule({
   declarations: [
-    BaseInputComponent
+    BaseInputComponent,
   ],
   imports: [
     CommonModule

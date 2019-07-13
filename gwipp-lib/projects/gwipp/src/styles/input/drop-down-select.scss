@@ -3,6 +3,7 @@
 @import '~node_modules/bootstrap/scss/mixins';
 
 @import '../constants/constants';
+@import '../effects/colors';
 @import '../mixins/mixins';
 @import "input";
 
@@ -19,6 +20,18 @@
     border-top: none !important;
     @include drop-view;
     @include border(gray('300'));
+  }
+
+  &-type-ahead-options {
+    top: 100%;
+    left: 0px;
+    right: 0px;
+    margin-top: -10px;
+    padding-top: 0.35em;
+    z-index: $z-select-options;
+    border-top: none !important;
+    @include drop-view;
+    @include border(theme('primary'), 2px);
   }
 
   &-option {

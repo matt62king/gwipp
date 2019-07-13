@@ -37,12 +37,15 @@ export class BaseInputComponent implements OnDestroy {
 
   protected destroy$ = new Subject();
   protected changeFunction: (event: Event, value: any) => any;
+
+  protected configFunction = (config: InputConfiguration) => {};
   protected propagateChange = (value: any) => {};
   protected onTouched = () => {};
 
   @Input()
   set configuration(config: Partial<InputConfiguration>) {
     this.config = {...this.defaultConfig, ...config};
+    this.configFunction(config);
   }
 
   ngOnDestroy(): void {
