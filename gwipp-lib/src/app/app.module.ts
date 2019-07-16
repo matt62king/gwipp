@@ -32,6 +32,7 @@ import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { BlocksComponent } from './blocks/blocks.component';
 import { ButtonsComponent } from './buttons/buttons.component';
 import {TypeAheadModule} from '../../projects/gwipp/src/lib/input/components/type-ahead/type-ahead.module';
+import {InputTemplateModule} from '../../projects/gwipp/src/lib/input/foundation/templates/input-template.module';
 
 @NgModule({
   declarations: [
@@ -69,7 +70,8 @@ import {TypeAheadModule} from '../../projects/gwipp/src/lib/input/components/typ
     ActionMenuModule,
     MenuTemplatesModule,
     ReactiveFormsModule,
-    TypeAheadModule
+    TypeAheadModule,
+    InputTemplateModule
   ],
   providers: [],
   bootstrap: [AppComponent]

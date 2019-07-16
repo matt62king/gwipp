@@ -8,6 +8,8 @@ import {TypeAheadState} from './model/type-ahead-state';
 import {InputConfiguration} from '../../foundation/configuration/input-configuration';
 import {Observable, of} from 'rxjs';
 import {SelectionOption} from '../../foundation/shared/model/selectionOption';
+import {TypeAheadPlaceholderDirective} from './templates/type-ahead-placeholder.directive';
+import {TypeAheadNoDataDirective} from './templates/type-ahead-no-data.directive';
 
 @Component({
   selector: 'gwipp-type-ahead',
@@ -20,16 +22,22 @@ import {SelectionOption} from '../../foundation/shared/model/selectionOption';
   }]
 })
 export class TypeAheadComponent extends BaseInputComponent implements ControlValueAccessor {
-  private state: TypeAheadState;
 
   @ContentChild(TypeAheadDetailDirective, {read: TemplateRef})
   detail: TemplateRef<any>;
 
+  @ContentChild(TypeAheadPlaceholderDirective, {read: TemplateRef})
+  placeholder: TemplateRef<any>;
+
   @ContentChild(TypeAheadSelectionDirective, {read: TemplateRef})
   selection: TemplateRef<any>;
 
+  @ContentChild(TypeAheadNoDataDirective, {read: TemplateRef})
+  noData: TemplateRef<any>;
+
   @Input() valueKey: string;
 
+  state: TypeAheadState = {fieldId: '', input: ''};
   options$: Observable<SelectionOption<any>[]>;
   allOptions: SelectionOption<any>[] = [];
   selectedValue: SelectionOption<any>;
@@ -44,7 +52,7 @@ export class TypeAheadComponent extends BaseInputComponent implements ControlVal
     this.changeFunction = this.localChangeFunction;
   }
 
-  private readonly setConfig = (config: InputConfiguration) => this.state = {fieldId: config.fieldId};
+  private readonly setConfig = (config: InputConfiguration) => this.state = {...this.state, ...{fieldId: config.fieldId}};
 
   @Input()
   set options(options: SelectionOption<any>[]) {

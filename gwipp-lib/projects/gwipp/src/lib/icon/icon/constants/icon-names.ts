@@ -9,6 +9,7 @@ export class IconNames {
   public static EYE = 'fas fa-eye';
   public static EYE_SLASH = 'fas fa-eye-slash';
   public static LOCK = 'fas fa-lock';
+  public static SEARCH = 'fas fa-search';
   public static SPINNER = 'fas fa-spinner';
   public static TERMINAL = 'fas fa-terminal';
   public static TIMES = 'fas fa-times';

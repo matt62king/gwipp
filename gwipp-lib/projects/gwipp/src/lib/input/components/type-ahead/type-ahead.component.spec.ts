@@ -74,7 +74,7 @@ describe('TypeAheadComponent', () => {
     const spy = spyOn(component.service, 'dispatch');
     component.forwardTextInput('input');
 
-    expect(spy).toHaveBeenCalledWith({input: 'input'});
+    expect(spy).toHaveBeenCalledWith({fieldId: '', input: 'input'});
   });
 
   it('should forward changes', () => {
