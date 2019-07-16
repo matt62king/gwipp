@@ -1,8 +1,20 @@
-import {Component, ElementRef, EventEmitter, Input, OnDestroy, Output, ViewChild} from '@angular/core';
+import {
+  Component,
+  ContentChild,
+  ElementRef,
+  EventEmitter,
+  Input,
+  OnDestroy,
+  Output,
+  TemplateRef,
+  ViewChild
+} from '@angular/core';
 import {FormControl} from '@angular/forms';
 import {InputConfiguration} from './configuration/input-configuration';
 import {IconNames} from '../../icon/icon/constants/icon-names';
 import {Subject} from 'rxjs';
+import {GroupAddOnRightDirective} from './templates/group-add-on-right.directive';
+import {GroupAddOnLeftDirective} from './templates/group-add-on-left.directive';
 
 @Component({
   selector: 'gwipp-base-input',
@@ -10,6 +22,12 @@ import {Subject} from 'rxjs';
 })
 export class BaseInputComponent implements OnDestroy {
   @Output() valueChange: EventEmitter<any> = new EventEmitter();
+
+  @ContentChild(GroupAddOnRightDirective, {read: TemplateRef})
+  rightAddOn: TemplateRef<any>;
+
+  @ContentChild(GroupAddOnLeftDirective, {read: TemplateRef})
+  leftAddOn: TemplateRef<any>;
 
   @ViewChild('input') inputRef: ElementRef;
 

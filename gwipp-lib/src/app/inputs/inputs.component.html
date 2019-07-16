@@ -31,6 +31,18 @@
       <!-- Type Ahead -->
       <div class="mt-2 mx-5 py-2">
         <gwipp-type-ahead [configuration]="typeAheadConfig" [options]="typeAheadItems" formControlName="typeAhead">
+          <ng-template groupAddOnLeft>
+            <div class="text-muted mr-2">
+              <gwipp-icon [config]="searchIcon"></gwipp-icon>
+            </div>
+          </ng-template>
+
+          <ng-template typeAheadPlaceholder>
+            <div class="text-muted d-flex flex-row align-items-center">
+              <span class="ml-1">Start Typing to Search</span>
+            </div>
+          </ng-template>
+
           <ng-template typeAheadDetail let-value let-disabled="disabled">
             <div class="pr-2 text-primary" [class.disabled-text]="disabled">
               {{ value }}
@@ -41,6 +53,10 @@
             <div class="p-1">
               {{ value }}
             </div>
+          </ng-template>
+
+          <ng-template typeAheadNoData>
+            No Options at this time
           </ng-template>
         </gwipp-type-ahead>
       </div>

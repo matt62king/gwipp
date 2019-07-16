@@ -8,6 +8,9 @@ import {FormBuilder, FormGroup} from '@angular/forms';
 import {TypeAheadService} from '../../../projects/gwipp/src/lib/input/components/type-ahead/service/type-ahead.service';
 import {Subject} from 'rxjs';
 import {takeUntil} from 'rxjs/operators';
+import {Icon} from '../../../projects/gwipp/src/lib/icon/decorators/icon.decorator';
+import {IconNames} from '../../../projects/gwipp/src/lib/icon/icon/constants/icon-names';
+import {IconConfiguration} from '../../../projects/gwipp/src/lib/icon/foundation/config/icon-configuration';
 
 @Component({
   selector: 'app-inputs',
@@ -24,6 +27,9 @@ export class InputsComponent implements OnInit, OnDestroy {
 
   @InputConfig({fieldId: 'demo', label: 'Type Ahead'})
   typeAheadConfig: InputConfiguration;
+
+  @Icon({name: IconNames.SEARCH})
+  searchIcon: IconConfiguration;
 
   selectItems: SelectionOption<string>[] = [{value: 'One'}, {value: 'Two'}, {value: 'Three'}];
   typeAheadItems: SelectionOption<string>[] = [];
