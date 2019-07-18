@@ -10,6 +10,11 @@ import {Observable, of} from 'rxjs';
 import {SelectionOption} from '../../foundation/shared/model/selectionOption';
 import {TypeAheadPlaceholderDirective} from './templates/type-ahead-placeholder.directive';
 import {TypeAheadNoDataDirective} from './templates/type-ahead-no-data.directive';
+import {Consumer, Patch, Set} from 'grippio-gstate';
+import {StateKey} from '@angular/platform-browser';
+import {GwippStateKey} from '../../../foundation/state/state-keys';
+import {TypeAheadOptions} from './model/type-ahead-options';
+import {takeUntil} from 'rxjs/operators';
 
 @Component({
   selector: 'gwipp-type-ahead',
@@ -35,10 +40,12 @@ export class TypeAheadComponent extends BaseInputComponent implements ControlVal
   @ContentChild(TypeAheadNoDataDirective, {read: TemplateRef})
   noData: TemplateRef<any>;
 
+  @Consumer(GwippStateKey.TYPE_AHEAD_OPTIONS)
+  options$: Observable<TypeAheadOptions>;
+
   @Input() valueKey: string;
 
   state: TypeAheadState = {fieldId: '', input: ''};
-  options$: Observable<SelectionOption<any>[]>;
   allOptions: SelectionOption<any>[] = [];
   selectedValue: SelectionOption<any>;
   hasFocus: boolean;
@@ -57,11 +64,11 @@ export class TypeAheadComponent extends BaseInputComponent implements ControlVal
   @Input()
   set options(options: SelectionOption<any>[]) {
     this.allOptions = options;
-    this.options$ = of(options);
+    this.options$ = of({options});
   }
 
   shouldDropDown(): boolean {
-    return this.hasFocus && this.allOptions.length > 0;
+    return this.hasFocus;
   }
 
   toggleFocus(): void {

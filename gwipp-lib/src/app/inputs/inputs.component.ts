@@ -11,6 +11,9 @@ import {takeUntil} from 'rxjs/operators';
 import {Icon} from '../../../projects/gwipp/src/lib/icon/decorators/icon.decorator';
 import {IconNames} from '../../../projects/gwipp/src/lib/icon/icon/constants/icon-names';
 import {IconConfiguration} from '../../../projects/gwipp/src/lib/icon/foundation/config/icon-configuration';
+import {Patch} from 'grippio-gstate';
+import {GwippStateKey} from '../../../projects/gwipp/src/lib/foundation/state/state-keys';
+import {TypeAheadOptions} from '../../../projects/gwipp/src/lib/input/components/type-ahead/model/type-ahead-options';
 
 @Component({
   selector: 'app-inputs',
@@ -32,7 +35,6 @@ export class InputsComponent implements OnInit, OnDestroy {
   searchIcon: IconConfiguration;
 
   selectItems: SelectionOption<string>[] = [{value: 'One'}, {value: 'Two'}, {value: 'Three'}];
-  typeAheadItems: SelectionOption<string>[] = [];
   formGroup: FormGroup;
 
   constructor(private readonly formBuilder: FormBuilder,
@@ -52,9 +54,14 @@ export class InputsComponent implements OnInit, OnDestroy {
       .pipe(takeUntil(this.destroy$))
       .subscribe((input) => {
         const regex = new RegExp(input.input, 'i');
-        this.typeAheadItems = this.selectItems.filter((item) => regex.test(item.value));
+        const items = this.selectItems.filter((item) => regex.test(item.value));
+
+        this.patchOptions(items);
       });
   }
+
+  @Patch(GwippStateKey.TYPE_AHEAD_OPTIONS) patchOptions = (options: SelectionOption<string>[]): TypeAheadOptions =>
+    ({fieldId: 'demo', options})
 
   ngOnDestroy(): void {
     this.destroy$.next(true);

@@ -33,6 +33,7 @@ import { BlocksComponent } from './blocks/blocks.component';
 import { ButtonsComponent } from './buttons/buttons.component';
 import {TypeAheadModule} from '../../projects/gwipp/src/lib/input/components/type-ahead/type-ahead.module';
 import {InputTemplateModule} from '../../projects/gwipp/src/lib/input/foundation/templates/input-template.module';
+import {GstateModule} from 'grippio-gstate';
 
 @NgModule({
   declarations: [
@@ -71,7 +72,8 @@ import {InputTemplateModule} from '../../projects/gwipp/src/lib/input/foundation
     MenuTemplatesModule,
     ReactiveFormsModule,
     TypeAheadModule,
-    InputTemplateModule
+    InputTemplateModule,
+    GstateModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -40,19 +40,22 @@
 
     <small class="form-text text-muted" *ngIf="config.infoLabel != null">{{ config.infoLabel }}</small>
 
-    <div *ngIf="shouldDropDown()" class="gwipp-select-type-ahead-options" (mouseenter)="toggleMouseOver()" (mouseleave)="toggleMouseOver()">
-
-      <ng-container *ngIf="(options$ | async) as options">
-        <div *ngFor="let option of options">
-          <div class="gwipp-select-option" gwippClickable (click)="selectValue(option); input.innerText = ''">
-            <ng-container *ngTemplateOutlet="selection; context: {$implicit: option.value}"></ng-container>
+    <ng-container *ngIf="shouldDropDown()">
+      <ng-container *ngIf="(options$ | async) as state">
+        <div class="gwipp-select-type-ahead-options" (mouseenter)="toggleMouseOver()" (mouseleave)="toggleMouseOver()">
+          <div *ngIf="state.fieldId === config.fieldId">
+            <div *ngFor="let option of state.options">
+              <div class="gwipp-select-option"
+                   [class.gwipp-select-option-selected]="option.selected"
+                   (click)="selectValue(option); input.innerText = ''">
+                <ng-container *ngTemplateOutlet="selection; context: {$implicit: option.value, selected: option.selected}"></ng-container>
+              </div>
+            </div>
+            <ng-container *ngIf="state.options.length === 0">
+              <ng-container *ngTemplateOutlet="noData"></ng-container>
+            </ng-container>
           </div>
         </div>
-
-        <ng-container *ngIf="options.length === 0">
-          <ng-container *ngTemplateOutlet="noData"></ng-container>
-        </ng-container>
       </ng-container>
-
-  </div>
+    </ng-container>
 </div>
