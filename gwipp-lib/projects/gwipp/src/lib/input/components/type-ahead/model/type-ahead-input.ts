@@ -1,4 +1,4 @@
-export interface TypeAheadState {
+export interface TypeAheadInput {
   fieldId?: string;
   input?: string;
 }

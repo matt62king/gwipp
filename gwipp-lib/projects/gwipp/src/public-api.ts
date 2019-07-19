@@ -58,7 +58,7 @@ export * from './lib/input/components/switch/switch.module';
 export * from './lib/input/components/text-field/text-field.component';
 export * from './lib/input/components/text-field/text-field.module';
 export * from './lib/input/components/type-ahead/model/type-ahead-options';
-export * from './lib/input/components/type-ahead/model/type-ahead-state';
+export * from './lib/input/components/type-ahead/model/type-ahead-input';
 export * from './lib/input/components/type-ahead/service/type-ahead.service';
 export * from './lib/input/components/type-ahead/templates/type-ahead-detail.directive';
 export * from './lib/input/components/type-ahead/templates/type-ahead-no-data.directive';

@@ -1,11 +1,14 @@
 import { TestBed } from '@angular/core/testing';
 
 import { TypeAheadService } from './type-ahead.service';
+import {TypeAheadServiceModule} from './type-ahead-service.module';
 
 describe('TypeAheadService', () => {
   let service: TypeAheadService;
 
-  beforeEach(() => TestBed.configureTestingModule({}));
+  beforeEach(() => TestBed.configureTestingModule({
+    imports: [TypeAheadServiceModule]
+  }));
 
   beforeEach(() => {
     service = TestBed.get(TypeAheadService);

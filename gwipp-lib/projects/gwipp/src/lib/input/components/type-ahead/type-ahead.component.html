@@ -19,11 +19,11 @@
               </ng-container>
             </div>
 
-            <div [class.flex-fill]="selectedValue && state.input.length > 0" [attr.contenteditable]="!disabled"
+            <div [class.flex-fill]="selectedValue && typeAheadInput.input.length > 0" [attr.contenteditable]="!disabled"
                  (keyup)="forwardTextInput(input.innerText)" (blur)="onBlur()" #input></div>
 
             <div>
-              <ng-container *ngIf="!selectedValue && state.input.length === 0">
+              <ng-container *ngIf="!selectedValue && typeAheadInput.input.length === 0">
                 <div class="flex-fill">
                   <ng-container *ngTemplateOutlet="placeholder; context: {disabled: disabled}"></ng-container>
                 </div>

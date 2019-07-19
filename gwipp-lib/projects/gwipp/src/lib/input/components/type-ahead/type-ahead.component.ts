@@ -1,10 +1,20 @@
-import {Component, ContentChild, ElementRef, forwardRef, Input, OnInit, TemplateRef, ViewChild} from '@angular/core';
+import {
+  Component,
+  ContentChild,
+  ElementRef,
+  forwardRef,
+  Inject,
+  Input,
+  OnInit,
+  TemplateRef,
+  ViewChild
+} from '@angular/core';
 import {BaseInputComponent} from '../../foundation/base-input.component';
 import {ControlValueAccessor, NG_VALUE_ACCESSOR} from '@angular/forms';
 import {TypeAheadDetailDirective} from './templates/type-ahead-detail.directive';
 import {TypeAheadSelectionDirective} from './templates/type-ahead-selection.directive';
 import {TypeAheadService} from './service/type-ahead.service';
-import {TypeAheadState} from './model/type-ahead-state';
+import {TypeAheadInput} from './model/type-ahead-input';
 import {InputConfiguration} from '../../foundation/configuration/input-configuration';
 import {Observable, of} from 'rxjs';
 import {SelectionOption} from '../../foundation/shared/model/selectionOption';
@@ -45,7 +55,7 @@ export class TypeAheadComponent extends BaseInputComponent implements ControlVal
 
   @Input() valueKey: string;
 
-  state: TypeAheadState = {fieldId: '', input: ''};
+  typeAheadInput: TypeAheadInput = {fieldId: '', input: ''};
   allOptions: SelectionOption<any>[] = [];
   selectedValue: SelectionOption<any>;
   hasFocus: boolean;
@@ -59,7 +69,7 @@ export class TypeAheadComponent extends BaseInputComponent implements ControlVal
     this.changeFunction = this.localChangeFunction;
   }
 
-  private readonly setConfig = (config: InputConfiguration) => this.state = {...this.state, ...{fieldId: config.fieldId}};
+  private readonly setConfig = (config: InputConfiguration) => this.typeAheadInput = {...this.typeAheadInput, ...{fieldId: config.fieldId}};
 
   @Input()
   set options(options: SelectionOption<any>[]) {
@@ -88,9 +98,12 @@ export class TypeAheadComponent extends BaseInputComponent implements ControlVal
   }
 
   forwardTextInput(input: string): void {
-    this.state = {...this.state, ...{input}};
-    this.service.dispatch(this.state);
+    this.typeAheadInput = {...this.typeAheadInput, ...{input}};
+    this.service.dispatch(this.typeAheadInput);
+    this.patchInput(this.typeAheadInput);
   }
+
+  @Patch(GwippStateKey.TYPE_AHEAD_INPUT) patchInput = (input: TypeAheadInput): TypeAheadInput => input;
 
   selectValue(value: SelectionOption<any>): void {
     this.selectedValue = value;

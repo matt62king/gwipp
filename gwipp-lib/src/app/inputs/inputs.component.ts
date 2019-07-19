@@ -6,14 +6,15 @@ import {Button} from '../../../projects/gwipp/src/lib/button/decorators/button.d
 import {ButtonConfiguration} from '../../../projects/gwipp/src/lib/button/foundation/configuation/button-configuration';
 import {FormBuilder, FormGroup} from '@angular/forms';
 import {TypeAheadService} from '../../../projects/gwipp/src/lib/input/components/type-ahead/service/type-ahead.service';
-import {Subject} from 'rxjs';
+import {Observable, Observer, Subject} from 'rxjs';
 import {takeUntil} from 'rxjs/operators';
 import {Icon} from '../../../projects/gwipp/src/lib/icon/decorators/icon.decorator';
 import {IconNames} from '../../../projects/gwipp/src/lib/icon/icon/constants/icon-names';
 import {IconConfiguration} from '../../../projects/gwipp/src/lib/icon/foundation/config/icon-configuration';
-import {Patch} from 'grippio-gstate';
+import {Consumer, Patch} from 'grippio-gstate';
 import {GwippStateKey} from '../../../projects/gwipp/src/lib/foundation/state/state-keys';
 import {TypeAheadOptions} from '../../../projects/gwipp/src/lib/input/components/type-ahead/model/type-ahead-options';
+import {TypeAheadInput} from '../../../projects/gwipp/src/lib/input/components/type-ahead/model/type-ahead-input';
 
 @Component({
   selector: 'app-inputs',
@@ -21,6 +22,9 @@ import {TypeAheadOptions} from '../../../projects/gwipp/src/lib/input/components
 })
 export class InputsComponent implements OnInit, OnDestroy {
   private destroy$ = new Subject();
+
+  @Consumer(GwippStateKey.TYPE_AHEAD_INPUT)
+  typeAhead$: Observable<TypeAheadInput>;
 
   @Button({label: 'Toggle Disabled'})
   disableButton: ButtonConfiguration;
@@ -37,8 +41,7 @@ export class InputsComponent implements OnInit, OnDestroy {
   selectItems: SelectionOption<string>[] = [{value: 'One'}, {value: 'Two'}, {value: 'Three'}];
   formGroup: FormGroup;
 
-  constructor(private readonly formBuilder: FormBuilder,
-              private readonly typeAhead: TypeAheadService) {
+  constructor(private readonly formBuilder: FormBuilder) {
     this.buildForm();
   }
 
@@ -50,7 +53,7 @@ export class InputsComponent implements OnInit, OnDestroy {
   }
 
   ngOnInit(): void {
-    this.typeAhead.state()
+    this.typeAhead$
       .pipe(takeUntil(this.destroy$))
       .subscribe((input) => {
         const regex = new RegExp(input.input, 'i');
