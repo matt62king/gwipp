@@ -9,6 +9,7 @@ import {TypeAheadPlaceholderDirective} from './templates/type-ahead-placeholder.
 import {TypeAheadNoDataDirective} from './templates/type-ahead-no-data.directive';
 import {InputTemplateModule} from '../../foundation/templates/input-template.module';
 import {TypeAheadServiceModule} from './service/type-ahead-service.module';
+import {GstateModule} from 'grippio-gstate';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import {TypeAheadServiceModule} from './service/type-ahead-service.module';
     InputServicesModule,
     InputTemplateModule,
     TypeAheadServiceModule,
-    StyleModule
+    StyleModule,
+    GstateModule.forRoot()
   ],
   exports: [
     TypeAheadComponent,
