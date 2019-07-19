@@ -19,6 +19,7 @@
     "prefer-readonly": true,
     "prefer-const": true,
     "newline-before-return": true,
-    "no-empty": [true, "allow-empty-functions"]
+    "no-empty": [true, "allow-empty-functions"],
+    "no-namespace": false
   }
 }
