@@ -135,5 +135,12 @@ export class TypeAheadComponent extends BaseInputComponent implements ControlVal
   }
 
   writeValue(obj: any): void {
+    if (obj == null) {
+      this.selectedValue = undefined;
+      this.onChange(obj);
+    } else {
+      this.selectedValue = {value: obj};
+      this.forwardChange(this.selectedValue);
+    }
   }
 }
