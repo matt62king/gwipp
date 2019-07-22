@@ -5,4 +5,5 @@ export interface PortletsState {
   inputs?: boolean;
   lists?: boolean;
   menus?: boolean;
+  overlays?: boolean;
 }
