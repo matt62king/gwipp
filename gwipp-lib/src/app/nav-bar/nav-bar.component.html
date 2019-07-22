@@ -1,75 +1,80 @@
 <gwipp-navigation-bar>
   <gwipp-nav-item>
     <nav-item-detail>
-      <ng-template nav-title>Title</ng-template>
+      <ng-template nav-title>GWIPP</ng-template>
     </nav-item-detail>
   </gwipp-nav-item>
 
-  <gwipp-nav-item class="ml-2">
-    <nav-item-detail>
-      <ng-template nav-item>Item</ng-template>
-    </nav-item-detail>
-  </gwipp-nav-item>
-
-  <gwipp-nav-menu-item class="ml-2">
+  <gwipp-nav-menu-item class="ml-2" (click)="getPortlets()">
     <nav-item-detail key="cMenu">
-      <ng-template nav-item>Drop Menu</ng-template>
+      <ng-template nav-item>Components</ng-template>
 
       <ng-template nav-menu>
-        <gwipp-menu>
+        <gwipp-menu *ngIf="(portlets$ | async) as portlets">
           <gwipp-menu-item>
             <ng-template menu-item-detail>
-              <div class="w-200">Buttons</div>
+              <div class="d-flex flex-row w-200" (click)="toggle($event, 'blocks')">
+                <div class="flex-fill">Blocks</div>
+                <div *ngIf="portlets.blocks" class="text-muted">
+                  <gwipp-icon [config]="checkIcon"></gwipp-icon>
+                </div>
+              </div>
             </ng-template>
           </gwipp-menu-item>
 
           <gwipp-menu-item>
             <ng-template menu-item-detail>
-              <div class="w-200">Forms</div>
+              <div class="d-flex flex-row" (click)="toggle($event, 'buttons')">
+                <div class="flex-fill">Buttons</div>
+                <div *ngIf="portlets.buttons" class="text-muted">
+                  <gwipp-icon [config]="checkIcon"></gwipp-icon>
+                </div>
+              </div>
             </ng-template>
           </gwipp-menu-item>
 
           <gwipp-menu-item>
             <ng-template menu-item-detail>
-              <div class="w-200">Inputs</div>
+              <div class="d-flex flex-row" (click)="toggle($event, 'grids')">
+                <div class="flex-fill">Grids</div>
+                <div *ngIf="portlets.grids" class="text-muted">
+                  <gwipp-icon [config]="checkIcon"></gwipp-icon>
+                </div>
+              </div>
             </ng-template>
           </gwipp-menu-item>
 
           <gwipp-menu-item>
             <ng-template menu-item-detail>
-              <div class="w-200">Menus</div>
+              <div class="d-flex flex-row" (click)="toggle($event, 'inputs')">
+                <div class="flex-fill">Inputs</div>
+                <div *ngIf="portlets.inputs" class="text-muted">
+                  <gwipp-icon [config]="checkIcon"></gwipp-icon>
+                </div>
+              </div>
             </ng-template>
           </gwipp-menu-item>
 
           <gwipp-menu-item>
             <ng-template menu-item-detail>
-              <div class="w-200">Overlays</div>
+              <div class="d-flex flex-row" (click)="toggle($event, 'lists')">
+                <div class="flex-fill">Lists</div>
+                <div *ngIf="portlets.lists" class="text-muted">
+                  <gwipp-icon [config]="checkIcon"></gwipp-icon>
+                </div>
+              </div>
             </ng-template>
           </gwipp-menu-item>
 
           <gwipp-menu-item>
-            <tiered-parent-detail>
-              <ng-template menu-item-detail>
-                <div class="w-200">Parent</div>
-              </ng-template>
-
-              <ng-template child-menu>
-                <gwipp-menu>
-                  <gwipp-menu-item>
-                    <ng-template menu-item-detail>
-                      <div class="w-200">Child Menu</div>
-                    </ng-template>
-                  </gwipp-menu-item>
-
-                  <gwipp-menu-item>
-                    <ng-template menu-item-detail>
-                      <div class="w-200">Menu Item</div>
-                    </ng-template>
-                  </gwipp-menu-item>
-
-                </gwipp-menu>
-              </ng-template>
-            </tiered-parent-detail>
+            <ng-template menu-item-detail>
+              <div class="d-flex flex-row" (click)="toggle($event, 'menus')">
+                <div class="flex-fill">Menus</div>
+                <div *ngIf="portlets.menus" class="text-muted">
+                  <gwipp-icon [config]="checkIcon"></gwipp-icon>
+                </div>
+              </div>
+            </ng-template>
           </gwipp-menu-item>
 
         </gwipp-menu>

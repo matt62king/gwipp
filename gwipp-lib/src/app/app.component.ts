@@ -13,6 +13,10 @@ import {InputConfiguration} from '../../projects/gwipp/src/lib/input/foundation/
 import {ToastService} from '../../projects/gwipp/src/lib/views/toast/service/toast.service';
 import {OverlayService} from '../../projects/gwipp/src/lib/views/overlay/service/overlay.service';
 import {NavDropMenuService} from '../../projects/gwipp/src/lib/navigation/foundation/services/nav-drop-menu.service';
+import {Consumer} from 'grippio-gstate';
+import {StateKeys} from './state/state-keys';
+import {Observable} from 'rxjs';
+import {PortletsState} from './state/portlets.state';
 
 @Component({
   selector: 'app-root',
@@ -22,22 +26,25 @@ import {NavDropMenuService} from '../../projects/gwipp/src/lib/navigation/founda
 export class AppComponent implements OnInit {
   title = 'gwipp-lib';
 
+  @Consumer(StateKeys.PORTLET_STATE)
+  portlets$: Observable<PortletsState>;
+
   @ViewChild('form') form: FormComponent;
 
-  @Button({label: 'Toast', buttonType: ButtonType.PRIMARY, buttonAction: ButtonActionType.ACTION})
-  toastButton: ButtonConfiguration;
+  // @Button({label: 'Toast', buttonType: ButtonType.PRIMARY, buttonAction: ButtonActionType.ACTION})
+  // toastButton: ButtonConfiguration;
 
-  @Button({label: 'Overlay', buttonType: ButtonType.PRIMARY, buttonAction: ButtonActionType.ACTION})
-  overlayButton: ButtonConfiguration;
+  // @Button({label: 'Overlay', buttonType: ButtonType.PRIMARY, buttonAction: ButtonActionType.ACTION})
+  // overlayButton: ButtonConfiguration;
 
-  @InputConfig({label: 'Name', infoLabel: 'someone@example.com'})
-  inputConfig: InputConfiguration;
+  // @InputConfig({label: 'Name', infoLabel: 'someone@example.com'})
+  // inputConfig: InputConfiguration;
 
-  @InputConfig({label: 'Password', infoLabel: 'Min length of 8'})
-  passwordConfig: InputConfiguration;
+  // @InputConfig({label: 'Password', infoLabel: 'Min length of 8'})
+  // passwordConfig: InputConfiguration;
 
-  @InputConfig({label: 'Agree to Terms'})
-  switchConfig: InputConfiguration;
+  // @InputConfig({label: 'Agree to Terms'})
+  // switchConfig: InputConfiguration;
 
   formGroup: FormGroup;
 

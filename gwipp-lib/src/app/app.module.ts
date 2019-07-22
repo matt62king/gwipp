@@ -23,7 +23,7 @@ import {DropdownSelectionModule} from '../../projects/gwipp/src/lib/input/compon
 import { InputsComponent } from './inputs/inputs.component';
 import { ExpandableListComponent } from './list/expandable-list/expandable-list.component';
 import {ExpandableListModule} from '../../projects/gwipp/src/lib/lists/expandable-list/expandable-list.module';
-import { BasicGridComponent } from './basic-grid/basic-grid.component';
+import { BasicGridComponent } from './grid/basic-grid.component';
 import {GridModule} from '../../projects/gwipp/src/lib/grid/grid.module';
 import { MenusComponent } from './menus/menus.component';
 import {ActionMenuModule} from '../../projects/gwipp/src/lib/menus/action-menu/action-menu.module';
@@ -33,50 +33,42 @@ import { BlocksComponent } from './blocks/blocks.component';
 import { ButtonsComponent } from './buttons/buttons.component';
 import {TypeAheadModule} from '../../projects/gwipp/src/lib/input/components/type-ahead/type-ahead.module';
 import {InputTemplateModule} from '../../projects/gwipp/src/lib/input/foundation/templates/input-template.module';
-import {GstateModule} from 'grippio-gstate';
 import {GwippModule} from '../../projects/gwipp/src/lib/gwipp.module';
+import {InputsModule} from './inputs/inputs.module';
+import {NavBarModule} from './nav-bar/nav-bar.module';
+import {BlocksModule} from './blocks/blocks.module';
+import {ButtonsModule} from './buttons/buttons.module';
+import {AppGridModule} from './grid/grid.module';
+import {ListModule} from './list/list.module';
+import {MenusModule} from './menus/menus.module';
 
 @NgModule({
   declarations: [
     AppComponent,
-    InputsComponent,
-    ExpandableListComponent,
-    BasicGridComponent,
-    MenusComponent,
-    NavBarComponent,
-    BlocksComponent,
-    ButtonsComponent
   ],
   imports: [
+    AppGridModule,
+    BlocksModule,
+    ButtonsModule,
+    InputsModule,
+    ListModule,
+    MenusModule,
+    NavBarModule,
     BrowserModule,
-    NavigationModule,
-    NavAttributesModule,
-    IconModule,
-    ButtonModule,
     FormModule,
     ReactiveFormsModule,
     TextFieldModule,
     PasswordFieldModule,
     SwitchModule,
-    DropdownSelectionModule,
     OverlayModule,
     TabMenuModule,
     OutputModule,
     ToastModule,
-    MenuModule,
-    PortletModule,
-    WorkingBlockModule,
-    ErrorBlockModule,
-    ExpandableListModule,
-    GridModule,
-    ActionMenuModule,
-    MenuTemplatesModule,
     ReactiveFormsModule,
-    TypeAheadModule,
-    InputTemplateModule,
-    GwippModule
+    GwippModule,
   ],
   providers: [],
+  exports: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

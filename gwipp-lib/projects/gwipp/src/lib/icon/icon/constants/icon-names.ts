@@ -1,6 +1,7 @@
 export class IconNames {
   public static ANGLE_RIGHT = 'fas fa-angle-right';
   public static CARET_DOWN = 'fas fa-caret-down';
+  public static CHECK = 'fas fa-check';
   public static CHECK_CIRCLE_FAR = 'far fa-check-circle';
   public static CLOSE_WINDOW_FAR = 'far fa-window-close';
   public static ELLIPSIS_H = 'fas fa-ellipsis-h';
@@ -17,4 +18,5 @@ export class IconNames {
   public static TRASH = 'fas fa-trash';
   public static USER = 'fas fa-user';
   public static USER_CIRCLE = 'fas fa-user-circle';
+  public static WINDOW_CLOSE = 'far fa-window-close';
 }
