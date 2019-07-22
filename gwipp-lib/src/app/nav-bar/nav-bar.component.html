@@ -77,6 +77,17 @@
             </ng-template>
           </gwipp-menu-item>
 
+          <gwipp-menu-item>
+            <ng-template menu-item-detail>
+              <div class="d-flex flex-row" (click)="toggle($event, 'overlays')">
+                <div class="flex-fill">Overlays</div>
+                <div *ngIf="portlets.overlays" class="text-muted">
+                  <gwipp-icon [config]="checkIcon"></gwipp-icon>
+                </div>
+              </div>
+            </ng-template>
+          </gwipp-menu-item>
+
         </gwipp-menu>
       </ng-template>
     </nav-item-detail>
