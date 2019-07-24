@@ -8,6 +8,9 @@ import {DropdownSelectionModule} from '../../../projects/gwipp/src/lib/input/com
 import {TypeAheadModule} from '../../../projects/gwipp/src/lib/input/components/type-ahead/type-ahead.module';
 import {IconModule} from '../../../projects/gwipp/src/lib/icon/icon.module';
 import {PortletActionMenuModule} from '../shared/portlet-action-menu/portlet-action-menu.module';
+import {TextFieldModule} from '../../../projects/gwipp/src/lib/input/components/text-field/text-field.module';
+import {PasswordFieldModule} from '../../../projects/gwipp/src/lib/input/components/password-field/password-field.module';
+import {SwitchModule} from '../../../projects/gwipp/src/lib/input/components/switch/switch.module';
 
 @NgModule({
   declarations: [
@@ -21,7 +24,10 @@ import {PortletActionMenuModule} from '../shared/portlet-action-menu/portlet-act
     DropdownSelectionModule,
     TypeAheadModule,
     IconModule,
-    PortletActionMenuModule
+    PortletActionMenuModule,
+    TextFieldModule,
+    PasswordFieldModule,
+    SwitchModule
   ],
   exports: [
     InputsComponent

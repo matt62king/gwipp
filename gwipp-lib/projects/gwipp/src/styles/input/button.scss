@@ -12,6 +12,10 @@
     transform: scale(1);
   }
 
+  &:disabled {
+    @include disabled-cursor;
+  }
+
   &-icon {
     @extend .gwipp-hover-grow;
   }

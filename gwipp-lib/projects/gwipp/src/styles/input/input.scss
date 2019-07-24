@@ -3,6 +3,7 @@
 @import "~node_modules/bootstrap/scss/mixins";
 
 @import "../constants/constants";
+@import "../constants/functions";
 @import "../mixins/mixins";
 @import "../effects/colors";
 @import "../effects/effects";
@@ -13,18 +14,18 @@
 
 @mixin input-border {
   @include border(gray("400"));
-  border-radius: $gwipp-input-border-radius !important;
+  border-radius: input-prop("border-radius")!important;
 }
 
 @mixin input-focus-border {
   border-color: theme("primary") !important;
-  border-radius: $gwipp-input-border-radius !important;
+  border-radius: input-prop("border-radius") !important;
 
   @include border-thick;
 }
 
 @mixin input-base {
-  height: $gwipp-input-height !important;
+  height: input-prop("height") !important;
   padding: 5px 10px 5px 10px !important;
   outline: none !important;
   @include input-border;
@@ -45,8 +46,18 @@
     margin-bottom: 0px !important;
   }
 
+  &-appended {
+    border-top-right-radius: 0px !important;
+    border-bottom-right-radius: 0px !important;
+  }
+
   &-disabled {
     background-color: gray('300');
     @include disabled-cursor
+  }
+
+  &:disabled {
+    background-color: gray('300');
+    @include disabled-cursor;
   }
 }

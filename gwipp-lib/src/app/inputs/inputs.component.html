@@ -15,6 +15,14 @@
         <gwipp-button [buttonConfig]="disableButton" (buttonClick)="toggleDisable()"></gwipp-button>
       </div>
 
+      <div class="mt-2 mx-5 py-2">
+        <gwipp-text-field [configuration]="textConfig" formControlName="textField"></gwipp-text-field>
+      </div>
+
+      <div class="mt-2 mx-5 py-2">
+        <gwipp-password-field [configuration]="passwordConfig" formControlName="password"></gwipp-password-field>
+      </div>
+
       <!-- Drop down -->
       <div class="mt-2 mx-5 py-2">
         <gwipp-dropdown-selection [configuration]="dropDownConfig" [options]="selectItems" formControlName="dropdown">
@@ -64,6 +72,11 @@
           </ng-template>
         </gwipp-type-ahead>
       </div>
+
+      <div class="mt-2 mx-5 py-2">
+        <gwipp-switch [configuration]="switchConfig" formControlName="switch"></gwipp-switch>
+      </div>
+
     </div>
   </ng-template>
 </gwipp-portlet>
