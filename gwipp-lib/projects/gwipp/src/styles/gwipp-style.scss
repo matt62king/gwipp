@@ -2,6 +2,8 @@
 @import "~node_modules/bootstrap/scss/bootstrap";
 @import "~node_modules/@fortawesome/fontawesome-free/scss/fontawesome";
 
+@import "constants/constants";
+@import "constants/functions";
 @import "effects/effects";
 @import "input/button";
 @import "input/drop-down-select";

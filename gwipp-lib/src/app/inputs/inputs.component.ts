@@ -5,7 +5,6 @@ import {InputConfiguration} from '../../../projects/gwipp/src/lib/input/foundati
 import {Button} from '../../../projects/gwipp/src/lib/button/decorators/button.decorator';
 import {ButtonConfiguration} from '../../../projects/gwipp/src/lib/button/foundation/configuation/button-configuration';
 import {FormBuilder, FormGroup} from '@angular/forms';
-import {TypeAheadService} from '../../../projects/gwipp/src/lib/input/components/type-ahead/service/type-ahead.service';
 import {Observable, Observer, Subject} from 'rxjs';
 import {takeUntil} from 'rxjs/operators';
 import {Icon} from '../../../projects/gwipp/src/lib/icon/decorators/icon.decorator';
@@ -29,6 +28,15 @@ export class InputsComponent implements OnInit, OnDestroy {
   @Button({label: 'Toggle Disabled'})
   disableButton: ButtonConfiguration;
 
+  @InputConfig({label: 'Text Input'})
+  textConfig: InputConfiguration;
+
+  @InputConfig({label: 'Password'})
+  passwordConfig: InputConfiguration;
+
+  @InputConfig({label: 'Switch'})
+  switchConfig: InputConfiguration;
+
   @InputConfig({label: 'Drop Down'})
   dropDownConfig: InputConfiguration;
 
@@ -49,6 +57,9 @@ export class InputsComponent implements OnInit, OnDestroy {
     this.formGroup = this.formBuilder.group({
       dropdown: [undefined],
       typeAhead: [undefined],
+      textField: [undefined],
+      password: [undefined],
+      switch: [undefined]
     });
   }
 
