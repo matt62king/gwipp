@@ -18,6 +18,10 @@
     <app-inputs></app-inputs>
   </div>
 
+  <div *ngIf="(portlets$ | async)?.interactive" class="m-5">
+    <app-interactive></app-interactive>
+  </div>
+
   <div *ngIf="(portlets$ | async)?.lists" class="m-5">
     <app-list></app-list>
   </div>

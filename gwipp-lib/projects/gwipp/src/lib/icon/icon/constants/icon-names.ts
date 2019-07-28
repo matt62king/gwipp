@@ -3,6 +3,7 @@ export class IconNames {
   public static CARET_DOWN = 'fas fa-caret-down';
   public static CHECK = 'fas fa-check';
   public static CHECK_CIRCLE_FAR = 'far fa-check-circle';
+  public static CHECK_SQUARE = 'fas check-square';
   public static CLOSE_WINDOW_FAR = 'far fa-window-close';
   public static ELLIPSIS_H = 'fas fa-ellipsis-h';
   public static EXCLAMATION_TRIANGLE = 'fas fa-exclamation-triangle';
@@ -10,6 +11,7 @@ export class IconNames {
   public static EYE = 'fas fa-eye';
   public static EYE_SLASH = 'fas fa-eye-slash';
   public static LOCK = 'fas fa-lock';
+  public static PEN = 'fas fa-pen';
   public static SEARCH = 'fas fa-search';
   public static SPINNER = 'fas fa-spinner';
   public static TERMINAL = 'fas fa-terminal';

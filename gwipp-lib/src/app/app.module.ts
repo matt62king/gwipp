@@ -13,6 +13,7 @@ import {AppGridModule} from './grid/grid.module';
 import {ListModule} from './list/list.module';
 import {MenusModule} from './menus/menus.module';
 import {OverlaysModule} from './overlays/overlays.module';
+import {InteractiveModule} from './interactive/interactive.module';
 
 @NgModule({
   declarations: [
@@ -31,6 +32,7 @@ import {OverlaysModule} from './overlays/overlays.module';
     GwippModule,
     OverlayModule,
     ToastModule,
+    InteractiveModule
   ],
   providers: [],
   exports: [],

@@ -57,6 +57,17 @@
 
           <gwipp-menu-item>
             <ng-template menu-item-detail>
+              <div class="d-flex flex-row" (click)="toggle($event, 'interactive')">
+                <div class="flex-fill">Interactive</div>
+                <div *ngIf="portlets.interactive" class="text-muted">
+                  <gwipp-icon [config]="checkIcon"></gwipp-icon>
+                </div>
+              </div>
+            </ng-template>
+          </gwipp-menu-item>
+
+          <gwipp-menu-item>
+            <ng-template menu-item-detail>
               <div class="d-flex flex-row" (click)="toggle($event, 'lists')">
                 <div class="flex-fill">Lists</div>
                 <div *ngIf="portlets.lists" class="text-muted">
