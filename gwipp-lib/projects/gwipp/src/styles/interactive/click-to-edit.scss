@@ -1,0 +1,48 @@
+@import "~node_modules/bootstrap/scss/bootstrap";
+
+@import "~node_modules/bootstrap/scss/functions";
+@import "~node_modules/bootstrap/scss/variables";
+@import "~node_modules/bootstrap/scss/mixins";
+
+@import "../constants/constants";
+@import "../constants/functions";
+@import "../mixins/boarders";
+@import "../mixins/mixins";
+@import "../effects/colors";
+@import "../effects/effects";
+
+.click-to-edit {
+  &-container {
+    position: relative;
+    @include clickable;
+
+    &-active {
+      @include border(gray('400'));
+    }
+
+    &:hover {
+      @include border(gray('400'));
+    }
+  }
+
+  &-action {
+    @extend .p-2;
+    z-index: $z-click-to-edit-action;
+    right: 0px;
+    @include drop-view;
+    @include border-bottom(gray('400'));
+    @include border-right(gray('400'));
+    @include border-left(gray('400'));
+  }
+
+  &-detail {
+    @extend .p-2;
+  }
+
+  &-icon {
+    @extend .p-2;
+    color: gray('600');
+    background-color: gray('400');
+    @include fill-space;
+  }
+}

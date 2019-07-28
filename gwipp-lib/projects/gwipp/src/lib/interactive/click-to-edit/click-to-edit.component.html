@@ -1,0 +1,29 @@
+<div>
+  <div class="d-flex flex-row click-to-edit-container" [class.click-to-edit-container-active]="!isReadOnly() || showEditOption">
+    <div class="d-flex flex-row" (click)="toggleEditMode()" (mouseenter)="toggleShowEditOption()" (mouseleave)="toggleShowEditOption()">
+      <div *ngIf="isReadOnly(); then readOnly else edit"></div>
+
+      <ng-template #readOnly>
+        <div class="click-to-edit-detail">
+          <ng-container *ngTemplateOutlet="readDetail"></ng-container>
+        </div>
+      </ng-template>
+
+      <ng-template #edit>
+        <div class="click-to-edit-detail">
+          <ng-container *ngTemplateOutlet="editDetail"></ng-container>
+        </div>
+      </ng-template>
+
+      <div *ngIf="!isReadOnly() || showEditOption" class="align-self-stretch click-to-edit-icon">
+        <div class="d-flex flex-column justify-content-center h-100">
+          <gwipp-icon [config]="penIcon"></gwipp-icon>
+        </div>
+      </div>
+    </div>
+
+    <div *ngIf="!isReadOnly()" class="click-to-edit-action">
+      <ng-container *ngTemplateOutlet="actionDetail"></ng-container>
+    </div>
+  </div>
+</div>
