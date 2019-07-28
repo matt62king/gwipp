@@ -44,5 +44,5 @@ describe('ClickToEditComponent', () => {
   it('should toggle show edit option', () => {
     component.toggleShowEditOption();
     expect(component.showEditOption).toBeTruthy();
-  })
+  });
 });
