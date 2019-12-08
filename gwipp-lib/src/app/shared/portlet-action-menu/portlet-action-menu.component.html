@@ -1,0 +1,20 @@
+<gwipp-action-menu>
+  <div drop-menu>
+    <ng-template drop-menu-detail>
+      <gwipp-menu>
+
+        <gwipp-menu-item>
+          <ng-template menu-item-detail>
+            <div class="d-flex flex-row align-items-center w-200 px-1" (click)="removePortlet(portletKey)">
+              <div class="mr-4 text-muted">
+                <gwipp-icon [config]="closeIcon"></gwipp-icon>
+              </div>
+              <div>Close</div>
+            </div>
+          </ng-template>
+        </gwipp-menu-item>
+
+      </gwipp-menu>
+    </ng-template>
+  </div>
+</gwipp-action-menu>

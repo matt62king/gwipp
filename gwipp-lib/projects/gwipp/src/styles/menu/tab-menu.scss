@@ -19,7 +19,7 @@
   }
 
   &-item-selected {
-    border-bottom: $gwipp-border-thick $primary-color solid;
+    border-bottom: $gwipp-border-thick theme("primary") solid;
     color: theme("primary");
   }
 }

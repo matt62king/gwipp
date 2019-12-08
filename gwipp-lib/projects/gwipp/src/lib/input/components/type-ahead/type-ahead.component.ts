@@ -1,15 +1,30 @@
-import {Component, ContentChild, ElementRef, forwardRef, Input, OnInit, TemplateRef, ViewChild} from '@angular/core';
+import {
+  Component,
+  ContentChild,
+  ElementRef,
+  forwardRef,
+  Inject,
+  Input,
+  OnInit,
+  TemplateRef,
+  ViewChild
+} from '@angular/core';
 import {BaseInputComponent} from '../../foundation/base-input.component';
 import {ControlValueAccessor, NG_VALUE_ACCESSOR} from '@angular/forms';
 import {TypeAheadDetailDirective} from './templates/type-ahead-detail.directive';
 import {TypeAheadSelectionDirective} from './templates/type-ahead-selection.directive';
 import {TypeAheadService} from './service/type-ahead.service';
-import {TypeAheadState} from './model/type-ahead-state';
+import {TypeAheadInput} from './model/type-ahead-input';
 import {InputConfiguration} from '../../foundation/configuration/input-configuration';
 import {Observable, of} from 'rxjs';
 import {SelectionOption} from '../../foundation/shared/model/selectionOption';
 import {TypeAheadPlaceholderDirective} from './templates/type-ahead-placeholder.directive';
 import {TypeAheadNoDataDirective} from './templates/type-ahead-no-data.directive';
+import {Consumer, Patch, Set} from 'grippio-gstate';
+import {StateKey} from '@angular/platform-browser';
+import {GwippStateKey} from '../../../foundation/state/state-keys';
+import {TypeAheadOptions} from './model/type-ahead-options';
+import {takeUntil} from 'rxjs/operators';
 
 @Component({
   selector: 'gwipp-type-ahead',
@@ -35,10 +50,12 @@ export class TypeAheadComponent extends BaseInputComponent implements ControlVal
   @ContentChild(TypeAheadNoDataDirective, {read: TemplateRef})
   noData: TemplateRef<any>;
 
+  @Consumer(GwippStateKey.TYPE_AHEAD_OPTIONS)
+  options$: Observable<TypeAheadOptions>;
+
   @Input() valueKey: string;
 
-  state: TypeAheadState = {fieldId: '', input: ''};
-  options$: Observable<SelectionOption<any>[]>;
+  typeAheadInput: TypeAheadInput = {fieldId: '', input: ''};
   allOptions: SelectionOption<any>[] = [];
   selectedValue: SelectionOption<any>;
   hasFocus: boolean;
@@ -52,16 +69,16 @@ export class TypeAheadComponent extends BaseInputComponent implements ControlVal
     this.changeFunction = this.localChangeFunction;
   }
 
-  private readonly setConfig = (config: InputConfiguration) => this.state = {...this.state, ...{fieldId: config.fieldId}};
+  private readonly setConfig = (config: InputConfiguration) => this.typeAheadInput = {...this.typeAheadInput, ...{fieldId: config.fieldId}};
 
   @Input()
   set options(options: SelectionOption<any>[]) {
     this.allOptions = options;
-    this.options$ = of(options);
+    this.options$ = of({options});
   }
 
   shouldDropDown(): boolean {
-    return this.hasFocus && this.allOptions.length > 0;
+    return this.hasFocus;
   }
 
   toggleFocus(): void {
@@ -81,9 +98,12 @@ export class TypeAheadComponent extends BaseInputComponent implements ControlVal
   }
 
   forwardTextInput(input: string): void {
-    this.state = {...this.state, ...{input}};
-    this.service.dispatch(this.state);
+    this.typeAheadInput = {...this.typeAheadInput, ...{input}};
+    this.service.dispatch(this.typeAheadInput);
+    this.patchInput(this.typeAheadInput);
   }
+
+  @Patch(GwippStateKey.TYPE_AHEAD_INPUT) patchInput = (input: TypeAheadInput): TypeAheadInput => input;
 
   selectValue(value: SelectionOption<any>): void {
     this.selectedValue = value;
@@ -115,5 +135,12 @@ export class TypeAheadComponent extends BaseInputComponent implements ControlVal
   }
 
   writeValue(obj: any): void {
+    if (obj == null) {
+      this.selectedValue = undefined;
+      this.onChange(obj);
+    } else {
+      this.selectedValue = {value: obj};
+      this.forwardChange(this.selectedValue);
+    }
   }
 }

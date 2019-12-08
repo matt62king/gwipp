@@ -2,116 +2,39 @@
 
 <div class="mt-5" (click)="closeNavMenu()">
 
-  <div class="mx-5 mb-5">
+  <div *ngIf="(portlets$ | async)?.blocks" class="mx-5 mb-5">
     <app-blocks></app-blocks>
   </div>
 
-  <div class="m-5">
+  <div *ngIf="(portlets$ | async)?.buttons" class="m-5">
     <app-buttons></app-buttons>
   </div>
 
-  <div class="m-5">
-    <gwipp-portlet>
-      <ng-template portlet-title>
-        <div class="p-2 font-weight-bold text-light">
-          Grids
-        </div>
-      </ng-template>
-
-      <ng-template portlet-detail>
-        <div class="p-3">
-          <app-basic-grid></app-basic-grid>
-        </div>
-      </ng-template>
-    </gwipp-portlet>
+  <div *ngIf="(portlets$ | async)?.grids" class="m-5">
+    <app-basic-grid></app-basic-grid>
   </div>
 
-  <!-- Inputs -->
-  <div class="m-5">
+  <div *ngIf="(portlets$ | async)?.inputs" class="m-5">
     <app-inputs></app-inputs>
   </div>
 
-  <!-- Lists -->
-  <div class="m-5">
-    <gwipp-portlet>
-      <ng-template portlet-title>
-        <div class="p-2 font-weight-bold text-light">
-          Lists
-        </div>
-      </ng-template>
-
-      <ng-template portlet-detail>
-        <app-expandable-list></app-expandable-list>
-      </ng-template>
-    </gwipp-portlet>
+  <div *ngIf="(portlets$ | async)?.interactive" class="m-5">
+    <app-interactive></app-interactive>
   </div>
 
-  <!-- Menus -->
-  <div class="m-5">
+  <div *ngIf="(portlets$ | async)?.lists" class="m-5">
+    <app-list></app-list>
+  </div>
+
+  <div *ngIf="(portlets$ | async)?.menus" class="m-5">
     <app-menus></app-menus>
   </div>
 
-  <div class="mt-1 w-25">
-    <gwipp-form [formGroup]="formGroup" (formEvent)="onFormEvent($event)" #form>
-      <gwipp-text-field [configuration]="inputConfig" [formControl]="formGroup.controls['name']"></gwipp-text-field>
-      <gwipp-password-field class="mt-2" [configuration]="passwordConfig" [hasStrength]="true"
-                            [formControl]="formGroup.controls['password']"></gwipp-password-field>
-      <gwipp-switch class="mt-2" [configuration]="switchConfig" [formControl]="formGroup.controls['agree']"></gwipp-switch>
-    </gwipp-form>
+  <div *ngIf="(portlets$ | async)?.overlays" class="m-5">
+    <app-overlays></app-overlays>
   </div>
-
-  <div class="d-flex flex-row mt-5 mx-2">
-    <gwipp-button [buttonConfig]="toastButton" (buttonClick)="toast(toastDetail)"></gwipp-button>
-  </div>
-
-  <ng-template toast-detail #toastDetail>
-    <div class="text-dark">
-      Toaster detail
-    </div>
-  </ng-template>
 
   <gwipp-toast></gwipp-toast>
+  <gwipp-overlay-view></gwipp-overlay-view>
 
-  <div class="d-flex flex-row mt-5 mx-2">
-    <gwipp-button [buttonConfig]="overlayButton" (buttonClick)="overlay(overlayTitle, overlayDetail)"></gwipp-button>
-  </div>
 </div>
-
-<gwipp-overlay-view></gwipp-overlay-view>
-
-<ng-template overlay-title #overlayTitle>
-  <div class="text-primary h4">
-    Test Overlay
-  </div>
-</ng-template>
-
-<ng-template overlay-detail #overlayDetail>
-  <gwipp-tab-menu>
-    <gwipp-tab-item>
-      <ng-template tab-item-title>
-        Tab 1
-      </ng-template>
-      <ng-template tab-item-detail>
-        Tab 1 Detail
-      </ng-template>
-    </gwipp-tab-item>
-
-    <gwipp-tab-item>
-      <ng-template tab-item-title>
-        Tab 2
-      </ng-template>
-      <ng-template tab-item-detail>
-        Tab 2 Detail
-      </ng-template>
-    </gwipp-tab-item>
-
-    <gwipp-tab-item>
-      <ng-template tab-item-title>
-        Tab 3
-      </ng-template>
-      <ng-template tab-item-detaildetail>
-        Tab 3 Detail
-      </ng-template>
-    </gwipp-tab-item>
-  </gwipp-tab-menu>
-</ng-template>

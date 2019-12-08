@@ -1,0 +1,46 @@
+<gwipp-portlet>
+  <ng-template portlet-title>
+    <div class="d-flex flex-row align-items-center p-2 font-weight-bold text-light">
+      <div class="flex-fill">
+        Overlays
+      </div>
+
+      <app-portlet-action-menu portletKey="overlays"></app-portlet-action-menu>
+    </div>
+  </ng-template>
+
+  <ng-template portlet-detail>
+    <div class="d-flex flex-row">
+      <div>
+        <gwipp-button [buttonConfig]="toastButton" (buttonClick)="toast(toastDetail)"></gwipp-button>
+      </div>
+
+      <div class="ml-2">
+        <gwipp-button [buttonConfig]="overlayButton" (buttonClick)="overlay(overlayTitle, overlayDetail)"></gwipp-button>
+      </div>
+    </div>
+
+  </ng-template>
+</gwipp-portlet>
+
+<ng-template toast-detail #toastDetail>
+  <div class="text-dark">
+    Toaster detail
+  </div>
+</ng-template>
+
+
+<ng-template overlay-title #overlayTitle>
+  <div class="text-primary h4">
+    Model Title
+  </div>
+</ng-template>
+
+<ng-template overlay-detail #overlayDetail>
+  <div class="d-flex flex-column">
+    <span>Model Content</span>
+    <div class="d-flex flex-row mt-2 justify-content-end">
+      <gwipp-button [buttonConfig]="cancelButton" (buttonClick)="closeOverlay()"></gwipp-button>
+    </div>
+  </div>
+</ng-template>

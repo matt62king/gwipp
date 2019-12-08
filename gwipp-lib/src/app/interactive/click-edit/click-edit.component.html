@@ -1,0 +1,23 @@
+<div class="d-flex flex-row align-items-center p-3" [formGroup]="formGroup">
+  <gwipp-click-to-edit [id]="clickToEditId">
+    <ng-template readDetail>
+      {{ getClickToEditValue() }}
+    </ng-template>
+
+    <ng-template editDetail>
+      <gwipp-text-field [configuration]="editField" formControlName="clickToEdit"></gwipp-text-field>
+    </ng-template>
+
+    <ng-template actionDetail>
+      <div class="d-flex flex-row text-muted">
+        <div>
+          <gwipp-icon-button [iconConfig]="check" (buttonClick)="close()"></gwipp-icon-button>
+        </div>
+
+        <div class="ml-2">
+          <gwipp-icon-button [iconConfig]="times" (buttonClick)="cancel()"></gwipp-icon-button>
+        </div>
+      </div>
+    </ng-template>
+  </gwipp-click-to-edit>
+</div>

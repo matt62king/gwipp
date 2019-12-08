@@ -5,12 +5,15 @@ import {InputConfiguration} from '../../../projects/gwipp/src/lib/input/foundati
 import {Button} from '../../../projects/gwipp/src/lib/button/decorators/button.decorator';
 import {ButtonConfiguration} from '../../../projects/gwipp/src/lib/button/foundation/configuation/button-configuration';
 import {FormBuilder, FormGroup} from '@angular/forms';
-import {TypeAheadService} from '../../../projects/gwipp/src/lib/input/components/type-ahead/service/type-ahead.service';
-import {Subject} from 'rxjs';
+import {Observable, Observer, Subject} from 'rxjs';
 import {takeUntil} from 'rxjs/operators';
 import {Icon} from '../../../projects/gwipp/src/lib/icon/decorators/icon.decorator';
 import {IconNames} from '../../../projects/gwipp/src/lib/icon/icon/constants/icon-names';
 import {IconConfiguration} from '../../../projects/gwipp/src/lib/icon/foundation/config/icon-configuration';
+import {Consumer, Patch} from 'grippio-gstate';
+import {GwippStateKey} from '../../../projects/gwipp/src/lib/foundation/state/state-keys';
+import {TypeAheadOptions} from '../../../projects/gwipp/src/lib/input/components/type-ahead/model/type-ahead-options';
+import {TypeAheadInput} from '../../../projects/gwipp/src/lib/input/components/type-ahead/model/type-ahead-input';
 
 @Component({
   selector: 'app-inputs',
@@ -19,8 +22,20 @@ import {IconConfiguration} from '../../../projects/gwipp/src/lib/icon/foundation
 export class InputsComponent implements OnInit, OnDestroy {
   private destroy$ = new Subject();
 
+  @Consumer(GwippStateKey.TYPE_AHEAD_INPUT)
+  typeAhead$: Observable<TypeAheadInput>;
+
   @Button({label: 'Toggle Disabled'})
   disableButton: ButtonConfiguration;
+
+  @InputConfig({label: 'Text Input'})
+  textConfig: InputConfiguration;
+
+  @InputConfig({label: 'Password'})
+  passwordConfig: InputConfiguration;
+
+  @InputConfig({label: 'Switch'})
+  switchConfig: InputConfiguration;
 
   @InputConfig({label: 'Drop Down'})
   dropDownConfig: InputConfiguration;
@@ -32,11 +47,9 @@ export class InputsComponent implements OnInit, OnDestroy {
   searchIcon: IconConfiguration;
 
   selectItems: SelectionOption<string>[] = [{value: 'One'}, {value: 'Two'}, {value: 'Three'}];
-  typeAheadItems: SelectionOption<string>[] = [];
   formGroup: FormGroup;
 
-  constructor(private readonly formBuilder: FormBuilder,
-              private readonly typeAhead: TypeAheadService) {
+  constructor(private readonly formBuilder: FormBuilder) {
     this.buildForm();
   }
 
@@ -44,17 +57,25 @@ export class InputsComponent implements OnInit, OnDestroy {
     this.formGroup = this.formBuilder.group({
       dropdown: [undefined],
       typeAhead: [undefined],
+      textField: [undefined],
+      password: [undefined],
+      switch: [undefined]
     });
   }
 
   ngOnInit(): void {
-    this.typeAhead.state()
+    this.typeAhead$
       .pipe(takeUntil(this.destroy$))
       .subscribe((input) => {
         const regex = new RegExp(input.input, 'i');
-        this.typeAheadItems = this.selectItems.filter((item) => regex.test(item.value));
+        const items = this.selectItems.filter((item) => regex.test(item.value));
+
+        this.patchOptions(items);
       });
   }
+
+  @Patch(GwippStateKey.TYPE_AHEAD_OPTIONS) patchOptions = (options: SelectionOption<string>[]): TypeAheadOptions =>
+    ({fieldId: 'demo', options})
 
   ngOnDestroy(): void {
     this.destroy$.next(true);

@@ -32,3 +32,7 @@
     transform: scale(1);
   }
 }
+
+.gwipp-disabled {
+  @include disabled-cursor;
+}

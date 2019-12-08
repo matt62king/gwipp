@@ -5,6 +5,7 @@
 @import '../constants/constants';
 @import '../mixins/mixins';
 @import '../effects/colors';
+@import "../effects/effects";
 
 $slider-size: 17px;
 $transition-speed: .2s;
@@ -52,5 +53,9 @@ $transition-speed: .2s;
 
   & input:checked + .switch-slider:before {
     transform: translateX($slider-size + 2px);
+  }
+
+  & input:disabled + .switch-slider {
+    @include disabled-cursor;
   }
 }

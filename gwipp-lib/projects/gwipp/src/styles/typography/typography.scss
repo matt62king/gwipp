@@ -15,7 +15,7 @@
 }
 
 @mixin text-primary {
-  color: $primary-color;
+  color: theme("primary");
 }
 
 .link {

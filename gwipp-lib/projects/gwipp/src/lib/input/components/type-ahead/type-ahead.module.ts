@@ -8,6 +8,7 @@ import {StyleModule} from '../../../foundation/style/style.module';
 import {TypeAheadPlaceholderDirective} from './templates/type-ahead-placeholder.directive';
 import {TypeAheadNoDataDirective} from './templates/type-ahead-no-data.directive';
 import {InputTemplateModule} from '../../foundation/templates/input-template.module';
+import {TypeAheadServiceModule} from './service/type-ahead-service.module';
 
 @NgModule({
   declarations: [
@@ -21,6 +22,7 @@ import {InputTemplateModule} from '../../foundation/templates/input-template.mod
     CommonModule,
     InputServicesModule,
     InputTemplateModule,
+    TypeAheadServiceModule,
     StyleModule
   ],
   exports: [

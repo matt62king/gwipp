@@ -1,7 +1,11 @@
 <gwipp-portlet>
   <ng-template portlet-title>
-    <div class="p-2 font-weight-bold text-light">
-      Inputs
+    <div class="d-flex flex-row align-items-center p-2 font-weight-bold text-light">
+      <div class="flex-fill">
+        Inputs
+      </div>
+
+      <app-portlet-action-menu portletKey="inputs"></app-portlet-action-menu>
     </div>
   </ng-template>
 
@@ -9,6 +13,14 @@
     <div class="d-flex flex-column mt-3" [formGroup]="formGroup">
       <div class="d-flex flex-row justify-content-center">
         <gwipp-button [buttonConfig]="disableButton" (buttonClick)="toggleDisable()"></gwipp-button>
+      </div>
+
+      <div class="mt-2 mx-5 py-2">
+        <gwipp-text-field [configuration]="textConfig" formControlName="textField"></gwipp-text-field>
+      </div>
+
+      <div class="mt-2 mx-5 py-2">
+        <gwipp-password-field [configuration]="passwordConfig" formControlName="password"></gwipp-password-field>
       </div>
 
       <!-- Drop down -->
@@ -30,7 +42,7 @@
 
       <!-- Type Ahead -->
       <div class="mt-2 mx-5 py-2">
-        <gwipp-type-ahead [configuration]="typeAheadConfig" [options]="typeAheadItems" formControlName="typeAhead">
+        <gwipp-type-ahead [configuration]="typeAheadConfig" formControlName="typeAhead">
           <ng-template groupAddOnLeft>
             <div class="text-muted mr-2">
               <gwipp-icon [config]="searchIcon"></gwipp-icon>
@@ -60,6 +72,11 @@
           </ng-template>
         </gwipp-type-ahead>
       </div>
+
+      <div class="mt-2 mx-5 py-2">
+        <gwipp-switch [configuration]="switchConfig" formControlName="switch"></gwipp-switch>
+      </div>
+
     </div>
   </ng-template>
 </gwipp-portlet>

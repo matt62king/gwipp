@@ -23,7 +23,10 @@ export * from './lib/form/foundation/consts/form-mode';
 export * from './lib/form/foundation/event/form-event';
 export * from './lib/form/foundation/event/form-event-type';
 
+export * from './lib/foundation/component/gwipp-component';
 export * from './lib/foundation/event/gwipp-event';
+export * from './lib/foundation/model/editMode';
+export * from './lib/foundation/state/state-keys';
 export * from './lib/foundation/style/colors/colors';
 export * from './lib/foundation/style/style.module';
 
@@ -56,6 +59,8 @@ export * from './lib/input/components/switch/switch.component';
 export * from './lib/input/components/switch/switch.module';
 export * from './lib/input/components/text-field/text-field.component';
 export * from './lib/input/components/text-field/text-field.module';
+export * from './lib/input/components/type-ahead/model/type-ahead-options';
+export * from './lib/input/components/type-ahead/model/type-ahead-input';
 export * from './lib/input/components/type-ahead/service/type-ahead.service';
 export * from './lib/input/components/type-ahead/templates/type-ahead-detail.directive';
 export * from './lib/input/components/type-ahead/templates/type-ahead-no-data.directive';
@@ -70,6 +75,13 @@ export * from './lib/input/foundation/shared/model/selectionOption';
 export * from './lib/input/foundation/templates/group-add-on-left.directive';
 export * from './lib/input/foundation/templates/group-add-on-right.directive';
 export * from './lib/input/foundation/templates/input-template.module';
+
+export * from './lib/interactive/click-to-edit/click-to-edit.component';
+export * from './lib/interactive/click-to-edit/click-to-edit.module';
+export * from './lib/interactive/click-to-edit/state/click-to-edit-state';
+export * from './lib/interactive/click-to-edit/templates/action-detail.directive';
+export * from './lib/interactive/click-to-edit/templates/edit-detail.directive';
+export * from './lib/interactive/click-to-edit/templates/read-detail.directive';
 
 export * from './lib/lists/expandable-list/expandable-list.component';
 export * from './lib/lists/expandable-list/expandable-list.module';

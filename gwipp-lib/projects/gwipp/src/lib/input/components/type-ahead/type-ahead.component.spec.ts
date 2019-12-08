@@ -1,11 +1,12 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { TypeAheadComponent } from './type-ahead.component';
-import {TypeAheadService} from './service/type-ahead.service';
 import {InputServicesModule} from '../../input-services.module';
 import {StyleModule} from '../../../foundation/style/style.module';
 import {CommonModule} from '@angular/common';
 import {SelectionOption} from '../../foundation/shared/model/selectionOption';
+import {GstateModule} from 'grippio-gstate';
+import {TypeAheadService} from './service/type-ahead.service';
 
 describe('TypeAheadComponent', () => {
   let component: TypeAheadComponent;
@@ -16,18 +17,15 @@ describe('TypeAheadComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       declarations: [ TypeAheadComponent ],
-      imports: [ CommonModule, InputServicesModule, StyleModule ],
+      imports: [ CommonModule, InputServicesModule, StyleModule, GstateModule.forRoot()],
       providers: [ TypeAheadService ]
-    })
-    .compileComponents();
-  }));
+    }).compileComponents();
 
-  beforeEach(() => {
     fixture = TestBed.createComponent(TypeAheadComponent);
     component = fixture.componentInstance;
 
     fixture.detectChanges();
-  });
+  }));
 
   it('should create', () => {
     expect(component).toBeTruthy();
